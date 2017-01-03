@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemView" customModule="Digital_Yard_Sale" customModuleProvider="target">
             <connections>
+                <outlet property="addToCartButton" destination="eSp-fs-iab" id="0fT-HD-f7V"/>
                 <outlet property="itemCondition" destination="6tJ-mY-kR1" id="7UN-v4-BHw"/>
                 <outlet property="itemDescription" destination="k4m-bZ-Lxu" id="CRg-oG-91j"/>
                 <outlet property="itemName" destination="UL5-iF-lXw" id="tZg-2z-ztP"/>
@@ -52,6 +53,11 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSp-fs-iab">
+                    <frame key="frameInset" minX="261" minY="68" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>

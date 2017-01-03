@@ -59,7 +59,7 @@ class LoginView:UIView {
 
         print("trying to validate login information")
         
-        users = realm.objects(User.self);
+        users = realm.objects(User.self)
         
         for i in 0..<users.count {
             let userT = users[i]

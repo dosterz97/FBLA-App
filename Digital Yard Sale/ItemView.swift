@@ -55,9 +55,13 @@ class ItemView: UIView {
         itemDescription.text = activeItem.itemDescription
         itemPrice.text = activeItem.price.description
         itemCondition.text = activeItem.conditionRating.description
+        
+        //set up button target
+        addToCartButton.addTarget(self, action: #selector(cartButtonPressed), for: .touchUpInside)
     }
     
-    func doSomethingElse() {
-        
+    func cartButtonPressed() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let userNum = appDelegate.userID
     }
 }
