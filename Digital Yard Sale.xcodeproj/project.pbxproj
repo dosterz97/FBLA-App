@@ -15,16 +15,124 @@
 		3B0F02EC1DEE2DDD005BD9A1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F02EB1DEE2DDD005BD9A1 /* HomeViewController.swift */; };
 		3B0F02EE1DEE2E81005BD9A1 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F02ED1DEE2E81005BD9A1 /* AboutViewController.swift */; };
 		3B0F02F01DEE2EE5005BD9A1 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F02EF1DEE2EE5005BD9A1 /* ShopViewController.swift */; };
-		3B0F02F41DEE2F0B005BD9A1 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F02F31DEE2F0B005BD9A1 /* ReviewViewController.swift */; };
 		3B0F02F61DEE308E005BD9A1 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0F02F51DEE308E005BD9A1 /* HomeView.xib */; };
 		3B0F02F81DEE30A1005BD9A1 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0F02F71DEE30A1005BD9A1 /* AboutView.xib */; };
 		3B0F02FA1DEE30A8005BD9A1 /* ShopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0F02F91DEE30A8005BD9A1 /* ShopView.xib */; };
 		3B0F02FC1DEE30B4005BD9A1 /* ReviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0F02FB1DEE30B4005BD9A1 /* ReviewView.xib */; };
-		3B0F02FE1DEE30E9005BD9A1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F02FD1DEE30E9005BD9A1 /* Home.swift */; };
-		3B0F03001DEE30F6005BD9A1 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F02FF1DEE30F6005BD9A1 /* About.swift */; };
-		3B0F03021DEE3102005BD9A1 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F03011DEE3102005BD9A1 /* Shop.swift */; };
-		3B0F03041DEE3111005BD9A1 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F03031DEE3111005BD9A1 /* Review.swift */; };
+		BD1ABD1C1E15ABD500EC997F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD191E15ABD500EC997F /* RegistrationView.swift */; };
+		BD1ABD1D1E15ABD500EC997F /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */; };
+		BD1ABD1E1E15ABD500EC997F /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD1ABD1B1E15ABD500EC997F /* WelcomeView.xib */; };
+		BD1ABD2D1E15AE4E00EC997F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD2C1E15AE4E00EC997F /* User.swift */; };
+		BD1ABD4D1E15B89E00EC997F /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1ABD4B1E15B89E00EC997F /* Realm.framework */; };
+		BD1ABD4E1E15B89E00EC997F /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD1ABD4B1E15B89E00EC997F /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BD1ABD4F1E15B89E00EC997F /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1ABD4C1E15B89E00EC997F /* RealmSwift.framework */; };
+		BD1ABD501E15B89E00EC997F /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD1ABD4C1E15B89E00EC997F /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BD1ABD581E15C9E600EC997F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD571E15C9E600EC997F /* ProfileViewController.swift */; };
+		BD1ABD5A1E15CA2600EC997F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD591E15CA2600EC997F /* ProfileView.swift */; };
+		BD1ABD5C1E15CA3100EC997F /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD1ABD5B1E15CA3100EC997F /* ProfileView.xib */; };
+		BD1ABD5E1E15D02A00EC997F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD5D1E15D02A00EC997F /* Item.swift */; };
+		BD1ABD601E15D27200EC997F /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD5F1E15D27200EC997F /* Review.swift */; };
+		BD1ABD621E1B05CF00EC997F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD611E1B05CF00EC997F /* Category.swift */; };
+		BDDA1B931E0B196F00CBE6E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1B921E0B196F00CBE6E8 /* LoginViewController.swift */; };
+		BDDA1B981E0B1D0E00CBE6E8 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1B971E0B1D0E00CBE6E8 /* WelcomeView.swift */; };
+		BDDA1BCB1E0B269C00CBE6E8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDA1BBE1E0B265500CBE6E8 /* Alamofire.framework */; };
+		BDDA1BCC1E0B269C00CBE6E8 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BDDA1BBE1E0B265500CBE6E8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BDDA1BD31E0B810000CBE6E8 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1BD21E0B810000CBE6E8 /* WelcomeViewController.swift */; };
+		BDDA1BDD1E0F916E00CBE6E8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1BDC1E0F916E00CBE6E8 /* LoginView.swift */; };
+		BDDA1BE61E0F932F00CBE6E8 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDA1BE51E0F932F00CBE6E8 /* LoginView.xib */; };
+		BDDA1BE81E108BCF00CBE6E8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1BE71E108BCF00CBE6E8 /* HomeView.swift */; };
+		BDDA1BEA1E10CC6A00CBE6E8 /* Navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1BE91E10CC6A00CBE6E8 /* Navbar.swift */; };
+		BDDA1BEC1E10CC7700CBE6E8 /* NavbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDA1BEB1E10CC7700CBE6E8 /* NavbarView.xib */; };
+		BDDA1BEE1E11B7D600CBE6E8 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1BED1E11B7D600CBE6E8 /* ShopView.swift */; };
+		BDDA1BF01E12F00100CBE6E8 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1BEF1E12F00100CBE6E8 /* AboutView.swift */; };
+		BDDA1BF21E12FA2F00CBE6E8 /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1BF11E12FA2F00CBE6E8 /* ViewControllerUtils.swift */; };
+		BDDA1BF41E12FD6100CBE6E8 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1BF31E12FD6100CBE6E8 /* CartViewController.swift */; };
+		BDDA1BF61E12FE6C00CBE6E8 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1BF51E12FE6C00CBE6E8 /* CartView.swift */; };
+		BDDA1BF81E12FE7600CBE6E8 /* CartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDA1BF71E12FE7600CBE6E8 /* CartView.xib */; };
+		BDDA1BFA1E1300BF00CBE6E8 /* RegistrationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDA1BF91E1300BF00CBE6E8 /* RegistrationView.xib */; };
+		BDDA1BFC1E1300D000CBE6E8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1BFB1E1300D000CBE6E8 /* RegistrationViewController.swift */; };
+		BDDA1C041E13094800CBE6E8 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1C031E13094800CBE6E8 /* CategoryViewController.swift */; };
+		BDDA1C061E13098000CBE6E8 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1C051E13098000CBE6E8 /* CategoryView.swift */; };
+		BDDA1C081E1309B300CBE6E8 /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDA1C071E1309B300CBE6E8 /* CategoryView.xib */; };
+		BDDA1C0A1E1309DF00CBE6E8 /* ItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDA1C091E1309DF00CBE6E8 /* ItemView.xib */; };
+		BDDA1C0C1E1309F200CBE6E8 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1C0B1E1309F200CBE6E8 /* ItemViewController.swift */; };
+		BDDA1C0E1E1309FB00CBE6E8 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1C0D1E1309FB00CBE6E8 /* ItemView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BDDA1BBD1E0B265500CBE6E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDDA1BB21E0B265400CBE6E8 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		BDDA1BBF1E0B265500CBE6E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDDA1BB21E0B265400CBE6E8 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		BDDA1BC11E0B265500CBE6E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDDA1BB21E0B265400CBE6E8 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire macOS";
+		};
+		BDDA1BC31E0B265500CBE6E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDDA1BB21E0B265400CBE6E8 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire macOS Tests";
+		};
+		BDDA1BC51E0B265500CBE6E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDDA1BB21E0B265400CBE6E8 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		BDDA1BC71E0B265500CBE6E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDDA1BB21E0B265400CBE6E8 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		BDDA1BC91E0B265500CBE6E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDDA1BB21E0B265400CBE6E8 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+		BDDA1BCD1E0B269C00CBE6E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDDA1BB21E0B265400CBE6E8 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BDDA1BCF1E0B269C00CBE6E8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BD1ABD4E1E15B89E00EC997F /* Realm.framework in Embed Frameworks */,
+				BDDA1BCC1E0B269C00CBE6E8 /* Alamofire.framework in Embed Frameworks */,
+				BD1ABD501E15B89E00EC997F /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3B0F02D61DEE2BC7005BD9A1 /* Digital Yard Sale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Digital Yard Sale.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,15 +145,45 @@
 		3B0F02EB1DEE2DDD005BD9A1 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3B0F02ED1DEE2E81005BD9A1 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		3B0F02EF1DEE2EE5005BD9A1 /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
-		3B0F02F31DEE2F0B005BD9A1 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewViewController.swift; path = ../ReviewViewController.swift; sourceTree = "<group>"; };
 		3B0F02F51DEE308E005BD9A1 /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		3B0F02F71DEE30A1005BD9A1 /* AboutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
 		3B0F02F91DEE30A8005BD9A1 /* ShopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopView.xib; sourceTree = "<group>"; };
 		3B0F02FB1DEE30B4005BD9A1 /* ReviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewView.xib; sourceTree = "<group>"; };
-		3B0F02FD1DEE30E9005BD9A1 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		3B0F02FF1DEE30F6005BD9A1 /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
-		3B0F03011DEE3102005BD9A1 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
-		3B0F03031DEE3111005BD9A1 /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		BD1ABD191E15ABD500EC997F /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		BD1ABD1B1E15ABD500EC997F /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
+		BD1ABD2C1E15AE4E00EC997F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BD1ABD4B1E15B89E00EC997F /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		BD1ABD4C1E15B89E00EC997F /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		BD1ABD571E15C9E600EC997F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BD1ABD591E15CA2600EC997F /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		BD1ABD5B1E15CA3100EC997F /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		BD1ABD5D1E15D02A00EC997F /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		BD1ABD5F1E15D27200EC997F /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		BD1ABD611E1B05CF00EC997F /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		BDDA1B921E0B196F00CBE6E8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BDDA1B971E0B1D0E00CBE6E8 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		BDDA1BB21E0B265400CBE6E8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		BDDA1BD21E0B810000CBE6E8 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		BDDA1BDC1E0F916E00CBE6E8 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BDDA1BE51E0F932F00CBE6E8 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		BDDA1BE71E108BCF00CBE6E8 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BDDA1BE91E10CC6A00CBE6E8 /* Navbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navbar.swift; sourceTree = "<group>"; };
+		BDDA1BEB1E10CC7700CBE6E8 /* NavbarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavbarView.xib; sourceTree = "<group>"; };
+		BDDA1BED1E11B7D600CBE6E8 /* ShopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		BDDA1BEF1E12F00100CBE6E8 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		BDDA1BF11E12FA2F00CBE6E8 /* ViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
+		BDDA1BF31E12FD6100CBE6E8 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		BDDA1BF51E12FE6C00CBE6E8 /* CartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		BDDA1BF71E12FE7600CBE6E8 /* CartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartView.xib; sourceTree = "<group>"; };
+		BDDA1BF91E1300BF00CBE6E8 /* RegistrationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationView.xib; sourceTree = "<group>"; };
+		BDDA1BFB1E1300D000CBE6E8 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		BDDA1C031E13094800CBE6E8 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		BDDA1C051E13098000CBE6E8 /* CategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		BDDA1C071E1309B300CBE6E8 /* CategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
+		BDDA1C091E1309DF00CBE6E8 /* ItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemView.xib; sourceTree = "<group>"; };
+		BDDA1C0B1E1309F200CBE6E8 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		BDDA1C0D1E1309FB00CBE6E8 /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +191,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD1ABD4D1E15B89E00EC997F /* Realm.framework in Frameworks */,
+				BDDA1BCB1E0B269C00CBE6E8 /* Alamofire.framework in Frameworks */,
+				BD1ABD4F1E15B89E00EC997F /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +203,9 @@
 		3B0F02CD1DEE2BC7005BD9A1 = {
 			isa = PBXGroup;
 			children = (
+				BD1ABD4B1E15B89E00EC997F /* Realm.framework */,
+				BD1ABD4C1E15B89E00EC997F /* RealmSwift.framework */,
+				BDDA1BB21E0B265400CBE6E8 /* Alamofire.xcodeproj */,
 				3B0F02D81DEE2BC7005BD9A1 /* Digital Yard Sale */,
 				3B0F02D71DEE2BC7005BD9A1 /* Products */,
 			);
@@ -82,22 +226,63 @@
 				3B0F02E01DEE2BC7005BD9A1 /* Assets.xcassets */,
 				3B0F02DD1DEE2BC7005BD9A1 /* Main.storyboard */,
 				3B0F02DB1DEE2BC7005BD9A1 /* ViewController.swift */,
-				3B0F02EB1DEE2DDD005BD9A1 /* HomeViewController.swift */,
 				3B0F02ED1DEE2E81005BD9A1 /* AboutViewController.swift */,
+				BDDA1BF31E12FD6100CBE6E8 /* CartViewController.swift */,
+				BDDA1C031E13094800CBE6E8 /* CategoryViewController.swift */,
+				3B0F02EB1DEE2DDD005BD9A1 /* HomeViewController.swift */,
+				BDDA1C0B1E1309F200CBE6E8 /* ItemViewController.swift */,
+				BDDA1B921E0B196F00CBE6E8 /* LoginViewController.swift */,
+				BD1ABD571E15C9E600EC997F /* ProfileViewController.swift */,
+				BDDA1BFB1E1300D000CBE6E8 /* RegistrationViewController.swift */,
+				BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */,
 				3B0F02EF1DEE2EE5005BD9A1 /* ShopViewController.swift */,
-				3B0F02F31DEE2F0B005BD9A1 /* ReviewViewController.swift */,
-				3B0F02E21DEE2BC7005BD9A1 /* LaunchScreen.storyboard */,
-				3B0F02F51DEE308E005BD9A1 /* HomeView.xib */,
+				BDDA1BD21E0B810000CBE6E8 /* WelcomeViewController.swift */,
 				3B0F02F71DEE30A1005BD9A1 /* AboutView.xib */,
-				3B0F02F91DEE30A8005BD9A1 /* ShopView.xib */,
+				BDDA1BF71E12FE7600CBE6E8 /* CartView.xib */,
+				BDDA1C071E1309B300CBE6E8 /* CategoryView.xib */,
+				3B0F02F51DEE308E005BD9A1 /* HomeView.xib */,
+				BDDA1C091E1309DF00CBE6E8 /* ItemView.xib */,
+				BDDA1BE51E0F932F00CBE6E8 /* LoginView.xib */,
+				BDDA1BEB1E10CC7700CBE6E8 /* NavbarView.xib */,
+				BD1ABD5B1E15CA3100EC997F /* ProfileView.xib */,
+				BDDA1BF91E1300BF00CBE6E8 /* RegistrationView.xib */,
 				3B0F02FB1DEE30B4005BD9A1 /* ReviewView.xib */,
-				3B0F02FD1DEE30E9005BD9A1 /* Home.swift */,
-				3B0F02FF1DEE30F6005BD9A1 /* About.swift */,
-				3B0F03011DEE3102005BD9A1 /* Shop.swift */,
-				3B0F03031DEE3111005BD9A1 /* Review.swift */,
+				3B0F02F91DEE30A8005BD9A1 /* ShopView.xib */,
+				BD1ABD1B1E15ABD500EC997F /* WelcomeView.xib */,
+				BDDA1BEF1E12F00100CBE6E8 /* AboutView.swift */,
+				BDDA1BF51E12FE6C00CBE6E8 /* CartView.swift */,
+				BDDA1C051E13098000CBE6E8 /* CategoryView.swift */,
+				BDDA1BE71E108BCF00CBE6E8 /* HomeView.swift */,
+				BDDA1C0D1E1309FB00CBE6E8 /* ItemView.swift */,
+				BDDA1BDC1E0F916E00CBE6E8 /* LoginView.swift */,
+				BD1ABD591E15CA2600EC997F /* ProfileView.swift */,
+				BDDA1BE91E10CC6A00CBE6E8 /* Navbar.swift */,
+				BD1ABD191E15ABD500EC997F /* RegistrationView.swift */,
+				BDDA1BED1E11B7D600CBE6E8 /* ShopView.swift */,
+				BDDA1B971E0B1D0E00CBE6E8 /* WelcomeView.swift */,
 				3B0F02E51DEE2BC7005BD9A1 /* Info.plist */,
+				3B0F02E21DEE2BC7005BD9A1 /* LaunchScreen.storyboard */,
+				BDDA1BF11E12FA2F00CBE6E8 /* ViewControllerUtils.swift */,
+				BD1ABD5D1E15D02A00EC997F /* Item.swift */,
+				BD1ABD611E1B05CF00EC997F /* Category.swift */,
+				BD1ABD2C1E15AE4E00EC997F /* User.swift */,
+				BD1ABD5F1E15D27200EC997F /* Review.swift */,
 			);
 			path = "Digital Yard Sale";
+			sourceTree = "<group>";
+		};
+		BDDA1BB31E0B265400CBE6E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDDA1BBE1E0B265500CBE6E8 /* Alamofire.framework */,
+				BDDA1BC01E0B265500CBE6E8 /* Alamofire iOS Tests.xctest */,
+				BDDA1BC21E0B265500CBE6E8 /* Alamofire.framework */,
+				BDDA1BC41E0B265500CBE6E8 /* Alamofire macOS Tests.xctest */,
+				BDDA1BC61E0B265500CBE6E8 /* Alamofire.framework */,
+				BDDA1BC81E0B265500CBE6E8 /* Alamofire tvOS Tests.xctest */,
+				BDDA1BCA1E0B265500CBE6E8 /* Alamofire.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,10 +295,13 @@
 				3B0F02D21DEE2BC7005BD9A1 /* Sources */,
 				3B0F02D31DEE2BC7005BD9A1 /* Frameworks */,
 				3B0F02D41DEE2BC7005BD9A1 /* Resources */,
+				BDDA1BCF1E0B269C00CBE6E8 /* Embed Frameworks */,
+				BD1ABD251E15AC9600EC997F /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BDDA1BCE1E0B269C00CBE6E8 /* PBXTargetDependency */,
 			);
 			name = "Digital Yard Sale";
 			productName = "Digital Yard Sale";
@@ -147,12 +335,70 @@
 			mainGroup = 3B0F02CD1DEE2BC7005BD9A1;
 			productRefGroup = 3B0F02D71DEE2BC7005BD9A1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BDDA1BB31E0B265400CBE6E8 /* Products */;
+					ProjectRef = BDDA1BB21E0B265400CBE6E8 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3B0F02D51DEE2BC7005BD9A1 /* Digital Yard Sale */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BDDA1BBE1E0B265500CBE6E8 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = BDDA1BBD1E0B265500CBE6E8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BDDA1BC01E0B265500CBE6E8 /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = BDDA1BBF1E0B265500CBE6E8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BDDA1BC21E0B265500CBE6E8 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = BDDA1BC11E0B265500CBE6E8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BDDA1BC41E0B265500CBE6E8 /* Alamofire macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire macOS Tests.xctest";
+			remoteRef = BDDA1BC31E0B265500CBE6E8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BDDA1BC61E0B265500CBE6E8 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = BDDA1BC51E0B265500CBE6E8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BDDA1BC81E0B265500CBE6E8 /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = BDDA1BC71E0B265500CBE6E8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BDDA1BCA1E0B265500CBE6E8 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = BDDA1BC91E0B265500CBE6E8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3B0F02D41DEE2BC7005BD9A1 /* Resources */ = {
@@ -161,35 +407,86 @@
 			files = (
 				3B0F02FA1DEE30A8005BD9A1 /* ShopView.xib in Resources */,
 				3B0F02F81DEE30A1005BD9A1 /* AboutView.xib in Resources */,
+				BDDA1BEC1E10CC7700CBE6E8 /* NavbarView.xib in Resources */,
+				BD1ABD1E1E15ABD500EC997F /* WelcomeView.xib in Resources */,
+				BDDA1BFA1E1300BF00CBE6E8 /* RegistrationView.xib in Resources */,
+				BDDA1BE61E0F932F00CBE6E8 /* LoginView.xib in Resources */,
 				3B0F02E41DEE2BC7005BD9A1 /* LaunchScreen.storyboard in Resources */,
 				3B0F02F61DEE308E005BD9A1 /* HomeView.xib in Resources */,
 				3B0F02FC1DEE30B4005BD9A1 /* ReviewView.xib in Resources */,
+				BDDA1BF81E12FE7600CBE6E8 /* CartView.xib in Resources */,
 				3B0F02E11DEE2BC7005BD9A1 /* Assets.xcassets in Resources */,
+				BD1ABD5C1E15CA3100EC997F /* ProfileView.xib in Resources */,
 				3B0F02DF1DEE2BC7005BD9A1 /* Main.storyboard in Resources */,
+				BDDA1C0A1E1309DF00CBE6E8 /* ItemView.xib in Resources */,
+				BDDA1C081E1309B300CBE6E8 /* CategoryView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BD1ABD251E15AC9600EC997F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3B0F02D21DEE2BC7005BD9A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD1ABD1D1E15ABD500EC997F /* ReviewViewController.swift in Sources */,
+				BDDA1C041E13094800CBE6E8 /* CategoryViewController.swift in Sources */,
+				BDDA1BD31E0B810000CBE6E8 /* WelcomeViewController.swift in Sources */,
+				BDDA1B931E0B196F00CBE6E8 /* LoginViewController.swift in Sources */,
 				3B0F02DC1DEE2BC7005BD9A1 /* ViewController.swift in Sources */,
-				3B0F03001DEE30F6005BD9A1 /* About.swift in Sources */,
+				BDDA1BF61E12FE6C00CBE6E8 /* CartView.swift in Sources */,
 				3B0F02DA1DEE2BC7005BD9A1 /* AppDelegate.swift in Sources */,
-				3B0F02F41DEE2F0B005BD9A1 /* ReviewViewController.swift in Sources */,
+				BDDA1B981E0B1D0E00CBE6E8 /* WelcomeView.swift in Sources */,
+				BDDA1BE81E108BCF00CBE6E8 /* HomeView.swift in Sources */,
+				BD1ABD601E15D27200EC997F /* Review.swift in Sources */,
+				BDDA1C0E1E1309FB00CBE6E8 /* ItemView.swift in Sources */,
+				BD1ABD5E1E15D02A00EC997F /* Item.swift in Sources */,
+				BDDA1C061E13098000CBE6E8 /* CategoryView.swift in Sources */,
 				3B0F02F01DEE2EE5005BD9A1 /* ShopViewController.swift in Sources */,
-				3B0F03041DEE3111005BD9A1 /* Review.swift in Sources */,
+				BD1ABD1C1E15ABD500EC997F /* RegistrationView.swift in Sources */,
+				BDDA1C0C1E1309F200CBE6E8 /* ItemViewController.swift in Sources */,
+				BD1ABD5A1E15CA2600EC997F /* ProfileView.swift in Sources */,
+				BDDA1BF01E12F00100CBE6E8 /* AboutView.swift in Sources */,
 				3B0F02EE1DEE2E81005BD9A1 /* AboutViewController.swift in Sources */,
-				3B0F03021DEE3102005BD9A1 /* Shop.swift in Sources */,
+				BDDA1BEE1E11B7D600CBE6E8 /* ShopView.swift in Sources */,
+				BDDA1BFC1E1300D000CBE6E8 /* RegistrationViewController.swift in Sources */,
+				BDDA1BEA1E10CC6A00CBE6E8 /* Navbar.swift in Sources */,
+				BDDA1BF41E12FD6100CBE6E8 /* CartViewController.swift in Sources */,
+				BD1ABD2D1E15AE4E00EC997F /* User.swift in Sources */,
+				BDDA1BDD1E0F916E00CBE6E8 /* LoginView.swift in Sources */,
+				BD1ABD621E1B05CF00EC997F /* Category.swift in Sources */,
+				BD1ABD581E15C9E600EC997F /* ProfileViewController.swift in Sources */,
 				3B0F02EC1DEE2DDD005BD9A1 /* HomeViewController.swift in Sources */,
-				3B0F02FE1DEE30E9005BD9A1 /* Home.swift in Sources */,
+				BDDA1BF21E12FA2F00CBE6E8 /* ViewControllerUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BDDA1BCE1E0B269C00CBE6E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = BDDA1BCD1E0B269C00CBE6E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3B0F02DD1DEE2BC7005BD9A1 /* Main.storyboard */ = {
@@ -307,8 +604,14 @@
 		3B0F02E91DEE2BC7005BD9A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Digital Yard Sale/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "quarkworks.Digital-Yard-Sale";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -319,8 +622,14 @@
 		3B0F02EA1DEE2BC7005BD9A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Digital Yard Sale/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "quarkworks.Digital-Yard-Sale";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -347,6 +656,7 @@
 				3B0F02EA1DEE2BC7005BD9A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

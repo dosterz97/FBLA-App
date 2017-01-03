@@ -1,91 +1,265 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lb6-Ac-eqF">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="Izc-S6-pwv">
-            <objects>
-                <viewController id="xIt-ES-kAN" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="m3R-AU-94e"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZvM-HX-T18"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KsI-TA-cTb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RuD-Zj-fy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-98" y="-664"/>
-        </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Digital_Yard_Sale" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="Digital_Yard_Sale" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="WelcomeView" customModule="Digital_Yard_Sale" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tCf-PF-ia3"/>
+                    <connections>
+                        <outlet property="loginView" destination="8bC-Xf-vdC" id="0ad-yj-DLb"/>
+                        <segue destination="g18-PZ-mmR" kind="show" identifier="WelcomeToLoginSegueID" id="dNZ-ww-0Qk"/>
+                        <segue destination="lVd-L8-bbC" kind="show" identifier="WelcomeToRegistrationSegueID" id="eBj-vg-h00"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="964" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="reG-gM-jTX">
+        <!--Registration View Controller-->
+        <scene sceneID="09G-Gj-E2D">
             <objects>
-                <viewController id="b7j-1R-DwO" sceneMemberID="viewController">
+                <viewController id="lVd-L8-bbC" customClass="RegistrationViewController" customModule="Digital_Yard_Sale" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GFS-ek-wxQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="zR6-Nq-h4l"/>
+                        <viewControllerLayoutGuide type="top" id="L1i-Ac-WIU"/>
+                        <viewControllerLayoutGuide type="bottom" id="veL-9X-vrz"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vBk-Gw-6BM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hSF-IA-ZwP">
-                                <rect key="frame" x="16" y="93" width="343" height="554"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LtK-u2-pvU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="815" y="129"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="HXV-7W-Xmc">
-            <objects>
-                <viewController id="cFJ-WG-aHG" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qG5-16-UxZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="lou-2f-72D"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="g9y-nh-fH9">
+                    <view key="view" contentMode="scaleToFill" id="2xI-z6-JuI" customClass="RegistrationView" customModule="Digital_Yard_Sale" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="registerView" destination="2xI-z6-JuI" id="blR-GR-Zf1"/>
+                        <segue destination="YTP-3g-ua6" kind="show" identifier="RegistrationToHomeSegueID" id="mf7-1Q-nRB"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eqH-ZU-cTn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B8T-Gg-DIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-98" y="828"/>
+            <point key="canvasLocation" x="1812" y="662.51874062968523"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="CGA-QW-gn3">
+            <objects>
+                <viewController id="XbN-dT-DCE" customClass="ProfileViewController" customModule="Digital_Yard_Sale" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wuh-y9-FrV"/>
+                        <viewControllerLayoutGuide type="bottom" id="nCC-Mz-eJ7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RA7-za-GWK" customClass="ProfileView" customModule="Digital_Yard_Sale" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="profileView" destination="RA7-za-GWK" id="aKF-IP-mYv"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ProfileToWelcomeSegueID" id="KfB-rq-Mm0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hNY-B5-3NP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1779" y="-1172"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="35m-dg-f23">
+            <objects>
+                <viewController id="g18-PZ-mmR" customClass="LoginViewController" customModule="Digital_Yard_Sale" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gfW-4q-6rm"/>
+                        <viewControllerLayoutGuide type="bottom" id="Iqe-YM-nEj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AZd-pD-plm" customClass="LoginView" customModule="Digital_Yard_Sale" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginView" destination="AZd-pD-plm" id="kXp-tB-2Zn"/>
+                        <segue destination="YTP-3g-ua6" kind="show" identifier="LoginToHomeSegueID" id="7po-yx-qax"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80g-Pj-UsI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="-250.52473763118442"/>
+        </scene>
+        <!--Shop View Controller-->
+        <scene sceneID="6Zx-2h-GSS">
+            <objects>
+                <viewController id="z0B-be-nXB" customClass="ShopViewController" customModule="Digital_Yard_Sale" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sVz-0L-cok"/>
+                        <viewControllerLayoutGuide type="bottom" id="PwH-x4-C2B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yCf-Er-Ldz" customClass="ShopView" customModule="Digital_Yard_Sale" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="shopView" destination="yCf-Er-Ldz" id="g39-JS-4Rm"/>
+                        <segue destination="Rv9-AT-gkD" kind="show" identifier="ShopToCategorySegueID" id="4h5-P1-yeh"/>
+                        <segue destination="YTP-3g-ua6" kind="show" identifier="ShopToHomeSegueID" id="Fd9-7L-O0n"/>
+                        <segue destination="hKg-nV-Odw" kind="show" identifier="ShopToAboutSegueID" id="P0q-cK-ydE"/>
+                        <segue destination="g5a-m8-FD0" kind="show" identifier="ShopToCartSegueID" id="qy3-TQ-Zta"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Iy-XY-fdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3198" y="-627"/>
+        </scene>
+        <!--Category View Controller-->
+        <scene sceneID="0X5-ea-hSz">
+            <objects>
+                <viewController id="Rv9-AT-gkD" customClass="CategoryViewController" customModule="Digital_Yard_Sale" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EcF-ii-mUK"/>
+                        <viewControllerLayoutGuide type="bottom" id="fwq-No-q9a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bhd-Rf-kKc" customClass="CategoryView" customModule="Digital_Yard_Sale" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="categoryView" destination="Bhd-Rf-kKc" id="IaW-Yr-bIE"/>
+                        <segue destination="vZO-eJ-sWS" kind="show" identifier="CategoryToItemSegueID" id="BwR-Bz-bWa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vqB-8L-0Su" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4193" y="-627"/>
+        </scene>
+        <!--Item View Controller-->
+        <scene sceneID="6Rw-vQ-lS1">
+            <objects>
+                <viewController id="vZO-eJ-sWS" customClass="ItemViewController" customModule="Digital_Yard_Sale" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iO3-Gn-6UV"/>
+                        <viewControllerLayoutGuide type="bottom" id="O3g-kc-IEU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ycj-Sa-b0I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DPi-eD-vAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5055" y="-627"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="G28-Dd-2YB">
+            <objects>
+                <viewController id="hKg-nV-Odw" customClass="AboutViewController" customModule="Digital_Yard_Sale" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lw1-0Q-0eA"/>
+                        <viewControllerLayoutGuide type="bottom" id="jUK-IW-2UX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dRk-8i-Vbq" customClass="AboutView" customModule="Digital_Yard_Sale" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="aboutView" destination="dRk-8i-Vbq" id="GDX-xr-fzY"/>
+                        <segue destination="YTP-3g-ua6" kind="show" identifier="AboutToHomeSegueID" id="CxG-eg-VSq"/>
+                        <segue destination="z0B-be-nXB" kind="show" identifier="AboutToShopSegueID" id="j3p-dR-3Ou"/>
+                        <segue destination="g5a-m8-FD0" kind="show" identifier="AboutToCartSegueID" id="BKz-fA-lFQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JlK-YM-FIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5054" y="914"/>
+        </scene>
+        <!--Cart View Controller-->
+        <scene sceneID="bp1-lw-N0C">
+            <objects>
+                <viewController id="g5a-m8-FD0" customClass="CartViewController" customModule="Digital_Yard_Sale" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Ye-WU-rQv"/>
+                        <viewControllerLayoutGuide type="bottom" id="1ow-xG-54Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rN7-i8-y7O" customClass="CartView" customModule="Digital_Yard_Sale" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="cartView" destination="rN7-i8-y7O" id="443-I2-I8K"/>
+                        <segue destination="vZO-eJ-sWS" kind="show" identifier="CartToItemSegueID" id="PMj-Tb-3Yv"/>
+                        <segue destination="YTP-3g-ua6" kind="show" identifier="CartToHomeSegueID" id="VqY-fr-ema"/>
+                        <segue destination="z0B-be-nXB" kind="show" identifier="CartToShopSegueID" id="CjI-21-Fvk"/>
+                        <segue destination="hKg-nV-Odw" kind="show" identifier="CartToAboutSegueID" id="DLv-xl-5Zm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d32-Ew-F9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3066" y="1293"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="4FV-Tq-A3J">
+            <objects>
+                <viewController id="YTP-3g-ua6" customClass="HomeViewController" customModule="Digital_Yard_Sale" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SU4-6E-IR7"/>
+                        <viewControllerLayoutGuide type="bottom" id="cnx-Nu-GDt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I5q-GN-CKf" customClass="HomeView" customModule="Digital_Yard_Sale" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="homeView" destination="I5q-GN-CKf" id="H9J-ta-PPc"/>
+                        <segue destination="z0B-be-nXB" kind="show" identifier="HomeToShopSegueID" id="K3R-RY-dY2"/>
+                        <segue destination="hKg-nV-Odw" kind="show" identifier="HomeToAboutSegueID" id="6rh-Yn-PKP"/>
+                        <segue destination="g5a-m8-FD0" kind="show" identifier="HomeToCartSegueID" id="Pm3-b7-mxW"/>
+                        <segue destination="XbN-dT-DCE" kind="show" identifier="HomeToProfileSegueID" id="A9R-dV-WYY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gyT-8e-Dy7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2836" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TRF-I8-ZNa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lb6-Ac-eqF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OGn-V5-6Ts">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HiA-tt-hNo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jeT-AI-SKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="K3R-RY-dY2"/>
+        <segue reference="Fd9-7L-O0n"/>
+        <segue reference="KfB-rq-Mm0"/>
+        <segue reference="P0q-cK-ydE"/>
+        <segue reference="qy3-TQ-Zta"/>
+        <segue reference="PMj-Tb-3Yv"/>
+    </inferredMetricsTieBreakers>
 </document>

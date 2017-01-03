@@ -6,9 +6,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutView" customModule="Digital_Yard_Sale" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CartView" customModule="Digital_Yard_Sale" customModuleProvider="target">
             <connections>
-                <outlet property="navbar" destination="Myj-ue-7rp" id="Dok-Px-ilU"/>
+                <outlet property="navbar" destination="7Tc-KK-6XE" id="tXc-Jc-T9p"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -16,14 +16,14 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Myj-ue-7rp" customClass="Navbar" customModule="Digital_Yard_Sale" customModuleProvider="target">
-                    <frame key="frameInset" minY="524" width="375" height="143"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Tc-KK-6XE" customClass="Navbar" customModule="Digital_Yard_Sale" customModuleProvider="target">
+                    <frame key="frameInset" minY="515" width="375" height="152"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="34.5" y="79.5"/>
+            <point key="canvasLocation" x="124.5" y="54.5"/>
         </view>
     </objects>
 </document>

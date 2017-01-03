@@ -1,31 +1,36 @@
-/*
- AboutViewController.swift
- Displays the view for the about page given by the nib
- and handles any transitions to other view controllers from this page
- */
+//
+//  CartViewController.swift
+//  Digital Yard Sale
+//
+//  Created by Zachary Doster on 12/27/16.
+//  Copyright © 2016 Zachary Doster. All rights reserved.
+//
 
 import UIKit
 
-class AboutViewController: UIViewController,MainViewDelegate {
+class CartViewController: UIViewController, MainViewDelegate {
     
-    @IBOutlet var aboutView: AboutView!
-    
+    @IBOutlet var cartView: CartView!
+
+    //needed initializers
     override func viewDidLoad() {
         super.viewDidLoad()
-        aboutView.aboutDelegate = self
+        cartView.cartDelegate = self
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     //show the navigation bar on this page
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
     }
     
+    //segue with ID given from the main view delegate
     func navbarButtonPressed(sender: String) {
         self.performSegue(withIdentifier: sender, sender: nil)
     }
+    
+    //there is no profile button on this page
     func profileButtonPressed(sender: AnyObject) {
         //do nothing
     }

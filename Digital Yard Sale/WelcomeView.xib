@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeView" customModule="Digital_Yard_Sale" customModuleProvider="target">
+            <connections>
+                <outlet property="greetingBackground" destination="TwU-LQ-l1p" id="U0h-74-ddh"/>
+                <outlet property="greetingLabel" destination="9Cz-Yx-UdC" id="Cex-AU-Ppd"/>
+                <outlet property="loginButton" destination="Mkz-1g-hiZ" id="NQu-LB-r23"/>
+                <outlet property="registerButton" destination="TzY-AP-Bl6" id="P8c-s2-GjG"/>
+                <outlet property="welcomeBackground" destination="1ZO-y7-HLW" id="lQ8-fi-scf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="402" height="728"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ZO-y7-HLW">
+                    <frame key="frameInset" minX="94" width="187" height="667"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mkz-1g-hiZ">
+                    <state key="normal" title="Login"/>
+                </button>
+                <view alpha="0.80000000000000004" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TwU-LQ-l1p">
+                    <frame key="frameInset" minY="41" width="496" height="125"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cz-Yx-UdC">
+                            <frame key="frameInset" minX="113" minY="23" width="188" height="82"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="9Cz-Yx-UdC" firstAttribute="centerY" secondItem="TwU-LQ-l1p" secondAttribute="centerY" id="JKU-IM-Z5G"/>
+                        <constraint firstItem="9Cz-Yx-UdC" firstAttribute="centerX" secondItem="TwU-LQ-l1p" secondAttribute="centerX" id="hTj-k1-uPW"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzY-AP-Bl6">
+                    <state key="normal" title="Registration"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="TwU-LQ-l1p" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3m7-eu-Dbn"/>
+                <constraint firstAttribute="bottom" secondItem="TwU-LQ-l1p" secondAttribute="bottom" constant="566" id="8P3-bx-8w3"/>
+                <constraint firstAttribute="bottom" secondItem="TzY-AP-Bl6" secondAttribute="bottom" constant="61" id="JhM-Vr-qpw"/>
+                <constraint firstItem="1ZO-y7-HLW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="YLZ-ZW-j6E"/>
+                <constraint firstItem="TzY-AP-Bl6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="dcW-Wd-Iul"/>
+                <constraint firstAttribute="trailing" secondItem="Mkz-1g-hiZ" secondAttribute="trailing" constant="37" id="fR3-4Y-rm3"/>
+                <constraint firstItem="1ZO-y7-HLW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gsw-I7-tn5"/>
+                <constraint firstAttribute="bottom" secondItem="Mkz-1g-hiZ" secondAttribute="bottom" constant="64" id="saT-uf-I6n"/>
+                <constraint firstItem="TwU-LQ-l1p" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="41" id="yX2-zd-bvJ"/>
+                <constraint firstAttribute="trailing" secondItem="TwU-LQ-l1p" secondAttribute="trailing" id="zeH-BK-hUM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-32" y="77"/>
+        </view>
+    </objects>
+</document>
