@@ -69,6 +69,8 @@ class LoginView:UIView {
                     print("correct password")
                     //call segue to home screen
                     loginDelegate?.loginInformationVerified()
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appDelegate.userID = i
                 }
                 else {
                     print("incorrect password")

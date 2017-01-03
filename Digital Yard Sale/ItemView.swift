@@ -8,23 +8,56 @@
 
 import UIKit
 
+protocol ItemDelegate: AnyObject {
+    func addItemToCart(sender: Item)
+}
+
 class ItemView: UIView {
+    
+    @IBOutlet var itemName: UILabel!
+    
+    @IBOutlet var itemDescription: UILabel!
+    
+    @IBOutlet var itemPrice: UILabel!
+    
+    @IBOutlet var itemCondition: UILabel!
+    
+    @IBOutlet var itemPicture: UIImageView!
+    
+    @IBOutlet var addToCartButton: UIButton!
+    
+    var activeItem: Item!
+    
+    weak var itemDelegate: ItemDelegate!
+    
     //required intializers
     override init(frame aFrame: CGRect) {
         super.init(frame: aFrame)
     }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupView()
     }
+    
     func setupView() {
         //basic nib setup
         let bundle = Bundle(for: type(of:self))
-        let nib = UINib.init(nibName: "CartView", bundle: bundle)
+        let nib = UINib.init(nibName: "ItemView", bundle: bundle)
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         view.frame = bounds
         addSubview(view)
     }
     
-
+    func setupLabels() {
+        //set up the text for the item labels
+        itemName.text = activeItem.itemName
+        itemDescription.text = activeItem.itemDescription
+        itemPrice.text = activeItem.price.description
+        itemCondition.text = activeItem.conditionRating.description
+    }
+    
+    func doSomethingElse() {
+        
+    }
 }

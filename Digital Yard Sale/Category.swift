@@ -15,9 +15,12 @@ class Category: Object {
     
     dynamic var picURL = ""
     
-    convenience init(nameT: String, picURLT: String) {
+    var items = List<Item>()
+    
+    convenience init(nameT: String, picURLT: String, itemsT: List<Item>) {
         self.init()
         name = nameT
         picURL = picURLT
+        items = itemsT
     }
 }

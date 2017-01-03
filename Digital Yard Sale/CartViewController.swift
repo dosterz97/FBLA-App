@@ -17,9 +17,11 @@ class CartViewController: UIViewController, MainViewDelegate {
         super.viewDidLoad()
         cartView.cartDelegate = self
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     //show the navigation bar on this page
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false

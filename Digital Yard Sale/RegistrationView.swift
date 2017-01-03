@@ -61,11 +61,8 @@ class RegistrationView: UIView {
         try! realm.write {
             realm.add(user)
             users = realm.objects(User.self);
-            for i in 0..<users.count {
-                let userT = users[i]
-                print(userT.username)
-            }
-
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.userID = users.count - 1
         }
         
         

@@ -15,10 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var realm: Realm!
     
+    var userID: Int?
+    
     let realmConfig = Realm.Configuration(
         // Set the new schema version. This must be greater than the previously used
         // version (if you've never set a schema version before, the version is 0).
-        schemaVersion: 4,
+        schemaVersion: 6,
         
         // Set the block which will be called automatically when opening a Realm with
         // a schema version lower than the one set above

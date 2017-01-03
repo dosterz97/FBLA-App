@@ -19,6 +19,8 @@ class User: Object {
     
     dynamic var money = 0
     
+    var userCart = List<Item>()
+    
     convenience init(usernameT: String, passwordT: String, emailT: String) {
         self.init()
         self.username = usernameT
