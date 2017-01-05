@@ -19,11 +19,11 @@ class Item: Object {
     
     dynamic var conditionRating = 5
     
-    dynamic var category = 0
+    dynamic var category: Category?
     
     var reviews = List<Review>()
     
-    convenience init(itemNameT: String, itemDescriptionT: String, priceT: Int, conditionRatingT: Int, categoryT: Int) {
+    convenience init(itemNameT: String, itemDescriptionT: String, priceT: Int, conditionRatingT: Int, categoryT: Category) {
         self.init()
         itemName = itemNameT
         itemDescription = itemDescriptionT

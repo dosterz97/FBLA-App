@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemViewController : UIViewController {
+class ItemViewController : UIViewController, ItemDelegate {
     
     var item: Item!
     
@@ -18,6 +18,7 @@ class ItemViewController : UIViewController {
         itemView.activeItem = item
         super.viewDidLoad()
         itemView.setupLabels()
+        itemView.itemDelegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,6 +28,12 @@ class ItemViewController : UIViewController {
     //show the navigation bar on this page
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    //go back to the page previously on where item was
+    func addItemToCart(sender: Item) {
+        print("heyhey")
+        self.dismiss(animated: true, completion: nil)//THIS DOESNT WORK WHY
     }
     
 }

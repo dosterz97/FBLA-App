@@ -19,12 +19,15 @@ class User: Object {
     
     dynamic var money = 0
     
+    dynamic var userID = -1
+    
     var userCart = List<Item>()
     
-    convenience init(usernameT: String, passwordT: String, emailT: String) {
+    convenience init(usernameT: String, passwordT: String, emailT: String, userIDT: Int) {
         self.init()
         self.username = usernameT
         self.password = passwordT
         self.email = emailT
+        self.userID = userIDT
     }    
 }

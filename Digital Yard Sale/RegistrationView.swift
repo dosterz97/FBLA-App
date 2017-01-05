@@ -57,17 +57,14 @@ class RegistrationView: UIView {
         
         var users : Results<User>!
         
-        let user = User(usernameT: (usernameField?.text)!, passwordT: (passwordField?.text)!, emailT: (emailField?.text)!)
+        
         try! realm.write {
-            realm.add(user)
             users = realm.objects(User.self);
+            let user = User(usernameT: (usernameField?.text)!, passwordT: (passwordField?.text)!, emailT: (emailField?.text)!, userIDT: users.count)
+            realm.add(user)
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.userID = users.count - 1
         }
-        
-        
-        
-        
         registerDelegate.registerFieldsValid(sender: self)
     }
 }

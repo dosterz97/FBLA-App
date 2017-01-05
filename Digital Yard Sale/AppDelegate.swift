@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let realmConfig = Realm.Configuration(
         // Set the new schema version. This must be greater than the previously used
         // version (if you've never set a schema version before, the version is 0).
-        schemaVersion: 6,
+        schemaVersion: 9,
         
         // Set the block which will be called automatically when opening a Realm with
         // a schema version lower than the one set above
@@ -65,7 +65,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 

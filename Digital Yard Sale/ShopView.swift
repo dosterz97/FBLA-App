@@ -50,10 +50,10 @@ class ShopView: UIView, NavbarDelegate {
         self.categoryList.delegate = self
         
         //setup the categories data
-        if (categories.count == 0) {
-            let a = Item(itemNameT: "Jordans", itemDescriptionT: "The coolest used shoes", priceT: 20, conditionRatingT: 4, categoryT: 0)
+        if (categories.count != -1) {
+            
             let itemsTemp = List<Item>()
-            itemsTemp.append(a)
+            
             let t = Category(nameT: "Clothes", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg", itemsT: itemsTemp)
             categories.append(t)
             let u = Category(nameT: "Toys", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg", itemsT: itemsTemp)
@@ -62,6 +62,8 @@ class ShopView: UIView, NavbarDelegate {
             categories.append(v)
             let w = Category(nameT: "Other", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg", itemsT: itemsTemp)
             categories.append(w)
+            let a = Item(itemNameT: "Jordans", itemDescriptionT: "The coolest used shoes", priceT: 20, conditionRatingT: 4, categoryT: t)
+            t.items.append(a)
         }
     }
     

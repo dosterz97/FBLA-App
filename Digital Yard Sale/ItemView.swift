@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 protocol ItemDelegate: AnyObject {
     func addItemToCart(sender: Item)
@@ -63,5 +64,17 @@ class ItemView: UIView {
     func cartButtonPressed() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let userNum = appDelegate.userID
+        
+        let realm = AppDelegate.getInstance().realm!
+        
+        try! realm.write {
+            let users = realm.objects(User.self);
+            let user = users[userNum!]
+            user.userCart.append(activeItem)
+            print(user.userCart[0].itemName)
+            print(user.username)
+        }
+        print("cartButtonPressed")
+        itemDelegate.addItemToCart(sender: self.activeItem)
     }
 }
