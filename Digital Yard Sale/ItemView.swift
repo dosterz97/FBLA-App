@@ -11,6 +11,7 @@ import RealmSwift
 
 protocol ItemDelegate: AnyObject {
     func addItemToCart(sender: Item)
+    func goToItemComments(sender: Item)
 }
 
 class ItemView: UIView {
@@ -26,6 +27,8 @@ class ItemView: UIView {
     @IBOutlet var itemPicture: UIImageView!
     
     @IBOutlet var addToCartButton: UIButton!
+    
+    @IBOutlet var commentButton: UIButton!
     
     var activeItem: Item!
     
@@ -59,22 +62,27 @@ class ItemView: UIView {
         
         //set up button target
         addToCartButton.addTarget(self, action: #selector(cartButtonPressed), for: .touchUpInside)
+        commentButton.addTarget(self, action: #selector(commentButtonPressed), for: .touchUpInside)
     }
     
     func cartButtonPressed() {
+        //get the users ID
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let userNum = appDelegate.userID
         
         let realm = AppDelegate.getInstance().realm!
         
+        //Add the item to the cart
         try! realm.write {
             let users = realm.objects(User.self);
             let user = users[userNum!]
             user.userCart.append(activeItem)
-            print(user.userCart[0].itemName)
-            print(user.username)
         }
-        print("cartButtonPressed")
+        
         itemDelegate.addItemToCart(sender: self.activeItem)
+    }
+    
+    func commentButtonPressed() {
+        itemDelegate.goToItemComments(sender: activeItem)
     }
 }

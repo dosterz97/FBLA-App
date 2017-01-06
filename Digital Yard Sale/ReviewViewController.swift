@@ -7,15 +7,29 @@
 import UIKit
 
 class ReviewViewController: UIViewController {
+    
+    @IBOutlet var reviewView: ReviewView!
+    
+    var item: Item!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        reviewView.activeItem = item
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     //show the navigation bar on this page
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+    }
+}
+
+extension ReviewViewController: ItemViewControllerDelegate {
+    func commentButtonClicked(sender: Item) {
+        item = sender
     }
 }

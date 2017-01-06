@@ -61,7 +61,6 @@ class Navbar: UIView {
     }
     
     func buttonPressed(sender: UIButton) {
-        print("navbar button has been pressed: \(sender.tag)")
         navDelegate.navbarButtonPressed(sender: sender)
     }
 }

@@ -45,22 +45,18 @@ class CartView: UIView, NavbarDelegate {
     func navbarButtonPressed(sender: UIButton) {
         //home
         if (sender.tag == ButtonTags.home.rawValue) {
-            print("home button has been selected")
             cartDelegate.navbarButtonPressed(sender: "CartToHomeSegueID")
         }
             //shop
         else if (sender.tag == ButtonTags.shop.rawValue) {
-            print("shop button has been selected")
             cartDelegate.navbarButtonPressed(sender: "CartToShopSegueID")
         }
             //cart
         else if (sender.tag == ButtonTags.cart.rawValue) {
-            print("cart button has been selected")
             //do nothing
         }
             //about
         else if (sender.tag == ButtonTags.about.rawValue) {
-            print("about button has been selected")
             cartDelegate.navbarButtonPressed(sender: "CartToAboutSegueID")
         }
 

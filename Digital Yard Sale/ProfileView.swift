@@ -16,6 +16,14 @@ class ProfileView: UIView {
     
     @IBOutlet var logoutButton: UIButton!
     
+    @IBOutlet var usernameLabel: UILabel!
+    
+    @IBOutlet var username: UILabel!
+    
+    @IBOutlet var moneySpentLabel: UILabel!
+    
+    @IBOutlet var moneySpent: UILabel!
+    
     weak var profileDel: profileDelegate!
     
     //required intializers

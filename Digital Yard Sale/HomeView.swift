@@ -53,22 +53,18 @@ class HomeView: UIView, NavbarDelegate {
     func navbarButtonPressed(sender: UIButton) {
         //home
         if (sender.tag == ButtonTags.home.rawValue) {
-            print("home button has been selected but already on home page")
             //do nothing
         }
         //shop
         else if (sender.tag == ButtonTags.shop.rawValue) {
-            print("shop button has been selected")
             homeDelegate.navbarButtonPressed(sender: "HomeToShopSegueID")
         }
         //cart
         else if (sender.tag == ButtonTags.cart.rawValue) {
-            print("cart button has been selected")
             homeDelegate.navbarButtonPressed(sender: "HomeToCartSegueID")
         }
         //about
         else if (sender.tag == ButtonTags.about.rawValue) {
-            print("about button has been selected")
             homeDelegate.navbarButtonPressed(sender: "HomeToAboutSegueID")
         }
     }

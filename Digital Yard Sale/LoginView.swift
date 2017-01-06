@@ -56,24 +56,19 @@ class LoginView:UIView {
         let realm = AppDelegate.getInstance().realm!
 
         var users: Results<User>!
-
-        print("trying to validate login information")
         
         users = realm.objects(User.self)
         
         for i in 0..<users.count {
             let userT = users[i]
             if(usernameField?.text == userT.username) {
-                print("user name exists")
                 if(passwordField?.text == userT.password) {
-                    print("correct password")
                     //call segue to home screen
                     loginDelegate?.loginInformationVerified()
                     let appDelegate = UIApplication.shared.delegate as! AppDelegate
                     appDelegate.userID = i
                 }
                 else {
-                    print("incorrect password")
                 }
             }
         }

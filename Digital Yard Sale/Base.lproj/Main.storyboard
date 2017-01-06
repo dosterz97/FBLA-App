@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lb6-Ac-eqF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lb6-Ac-eqF">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -158,11 +158,33 @@
                     </view>
                     <connections>
                         <outlet property="itemView" destination="ycj-Sa-b0I" id="6qk-b8-fNy"/>
+                        <segue destination="IHp-rs-ceA" kind="show" identifier="ItemToReviewSegueID" id="l0z-1S-PaN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPi-eD-vAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5055" y="-627"/>
+        </scene>
+        <!--Review View Controller-->
+        <scene sceneID="kfs-B8-w1m">
+            <objects>
+                <viewController id="IHp-rs-ceA" customClass="ReviewViewController" customModule="Digital_Yard_Sale" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eSo-UQ-jOz"/>
+                        <viewControllerLayoutGuide type="bottom" id="pwc-P3-zd0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9fp-35-jYn" customClass="ReviewView" customModule="Digital_Yard_Sale" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="reviewView" destination="9fp-35-jYn" id="8L8-6P-6bC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rsv-HA-Nwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5946" y="-626"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="G28-Dd-2YB">

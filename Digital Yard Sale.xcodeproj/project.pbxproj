@@ -19,6 +19,7 @@
 		3B0F02F81DEE30A1005BD9A1 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0F02F71DEE30A1005BD9A1 /* AboutView.xib */; };
 		3B0F02FA1DEE30A8005BD9A1 /* ShopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0F02F91DEE30A8005BD9A1 /* ShopView.xib */; };
 		3B0F02FC1DEE30B4005BD9A1 /* ReviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0F02FB1DEE30B4005BD9A1 /* ReviewView.xib */; };
+		BD0E2D091E1FF9960079C6D9 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E2D081E1FF9960079C6D9 /* ReviewView.swift */; };
 		BD1ABD1C1E15ABD500EC997F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD191E15ABD500EC997F /* RegistrationView.swift */; };
 		BD1ABD1D1E15ABD500EC997F /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */; };
 		BD1ABD1E1E15ABD500EC997F /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD1ABD1B1E15ABD500EC997F /* WelcomeView.xib */; };
@@ -149,6 +150,7 @@
 		3B0F02F71DEE30A1005BD9A1 /* AboutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
 		3B0F02F91DEE30A8005BD9A1 /* ShopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopView.xib; sourceTree = "<group>"; };
 		3B0F02FB1DEE30B4005BD9A1 /* ReviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewView.xib; sourceTree = "<group>"; };
+		BD0E2D081E1FF9960079C6D9 /* ReviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		BD1ABD191E15ABD500EC997F /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		BD1ABD1B1E15ABD500EC997F /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				BD1ABD591E15CA2600EC997F /* ProfileView.swift */,
 				BDDA1BE91E10CC6A00CBE6E8 /* Navbar.swift */,
 				BD1ABD191E15ABD500EC997F /* RegistrationView.swift */,
+				BD0E2D081E1FF9960079C6D9 /* ReviewView.swift */,
 				BDDA1BED1E11B7D600CBE6E8 /* ShopView.swift */,
 				BDDA1B971E0B1D0E00CBE6E8 /* WelcomeView.swift */,
 				3B0F02E51DEE2BC7005BD9A1 /* Info.plist */,
@@ -456,6 +459,7 @@
 				BDDA1B981E0B1D0E00CBE6E8 /* WelcomeView.swift in Sources */,
 				BDDA1BE81E108BCF00CBE6E8 /* HomeView.swift in Sources */,
 				BD1ABD601E15D27200EC997F /* Review.swift in Sources */,
+				BD0E2D091E1FF9960079C6D9 /* ReviewView.swift in Sources */,
 				BDDA1C0E1E1309FB00CBE6E8 /* ItemView.swift in Sources */,
 				BD1ABD5E1E15D02A00EC997F /* Item.swift in Sources */,
 				BDDA1C061E13098000CBE6E8 /* CategoryView.swift in Sources */,

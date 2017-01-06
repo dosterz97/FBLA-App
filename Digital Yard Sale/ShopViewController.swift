@@ -48,6 +48,7 @@ class ShopViewController: UIViewController, MainViewDelegate, ShopViewDelegate {
             shopDelegate = categoryVC
         }
     }
+    
     //segue to the category page, load the list based upon which category is sent
     func categoryPressed(sender: Category) {
         self.performSegue(withIdentifier: "ShopToCategorySegueID", sender: nil)

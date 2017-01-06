@@ -17,5 +17,7 @@ class Review: Object {
         
     convenience init(reviewerT: String, reviewT: String) {
         self.init()
+        reviewerUsername = reviewerT
+        review = reviewT
     }
 }

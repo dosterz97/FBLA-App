@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import RealmSwift
+
+protocol ItemViewControllerDelegate: AnyObject {
+    func commentButtonClicked(sender: Item)
+}
 
 class ItemViewController : UIViewController, ItemDelegate {
     
@@ -14,10 +19,12 @@ class ItemViewController : UIViewController, ItemDelegate {
     
     @IBOutlet var itemView: ItemView!
     
+    weak var itemDelegate: ItemViewControllerDelegate!
+    
     override func viewDidLoad() {
-        itemView.activeItem = item
+        itemView.activeItem = item//set the views item to that of the one passed by the category delegate
         super.viewDidLoad()
-        itemView.setupLabels()
+        itemView.setupLabels()//set up labels after the view is loaded when data is present
         itemView.itemDelegate = self
     }
     
@@ -32,10 +39,21 @@ class ItemViewController : UIViewController, ItemDelegate {
     
     //go back to the page previously on where item was
     func addItemToCart(sender: Item) {
-        print("heyhey")
         self.dismiss(animated: true, completion: nil)//THIS DOESNT WORK WHY
     }
     
+    //Go to the page with the items comments
+    func goToItemComments(sender:Item) {
+        self.performSegue(withIdentifier: "ItemToReviewSegueID", sender: nil)
+        self.itemDelegate.commentButtonClicked(sender: sender)
+    }
+    
+    //set the category delegate to be the current item VC
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let reviewVC = segue.destination as? ReviewViewController {
+            itemDelegate = reviewVC
+        }
+    }
 }
 
 extension ItemViewController : CategoryViewControllerDelegate {

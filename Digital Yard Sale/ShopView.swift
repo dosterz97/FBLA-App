@@ -70,22 +70,18 @@ class ShopView: UIView, NavbarDelegate {
     func navbarButtonPressed(sender: UIButton) {
         //home
         if (sender.tag == ButtonTags.home.rawValue) {
-            print("home button has been selected")
             shopDelegate.navbarButtonPressed(sender: "ShopToHomeSegueID")
         }
         //shop
         else if (sender.tag == ButtonTags.shop.rawValue) {
-            print("shop button has been selected")
             //do nothing
         }
         //cart
         else if (sender.tag == ButtonTags.cart.rawValue) {
-            print("cart button has been selected")
             shopDelegate.navbarButtonPressed(sender: "ShopToCartSegueID")
         }
         //about
         else if (sender.tag == ButtonTags.about.rawValue) {
-            print("about button has been selected")
             shopDelegate.navbarButtonPressed(sender: "ShopToAboutSegueID")
         }
     }
