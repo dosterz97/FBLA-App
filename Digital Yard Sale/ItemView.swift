@@ -11,7 +11,7 @@ import RealmSwift
 
 protocol ItemDelegate: AnyObject {
     func addItemToCart(sender: Item)
-    func goToItemComments(sender: Item)
+    func goToItemComments(sender: Int)
 }
 
 class ItemView: UIView {
@@ -83,6 +83,6 @@ class ItemView: UIView {
     }
     
     func commentButtonPressed() {
-        itemDelegate.goToItemComments(sender: activeItem)
+        itemDelegate.goToItemComments(sender: activeItem.itemID)
     }
 }

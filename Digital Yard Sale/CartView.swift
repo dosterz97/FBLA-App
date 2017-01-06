@@ -78,7 +78,6 @@ extension CartView: UITableViewDataSource {
             let users = realm.objects(User.self);
             let user = users[userNum!]
             numberOfItems = user.userCart.count
-            print(user.username)
         }
         return numberOfItems
     }

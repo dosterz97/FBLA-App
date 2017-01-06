@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 protocol ItemViewControllerDelegate: AnyObject {
-    func commentButtonClicked(sender: Item)
+    func commentButtonClicked(sender: Int)
 }
 
 class ItemViewController : UIViewController, ItemDelegate {
@@ -43,7 +43,7 @@ class ItemViewController : UIViewController, ItemDelegate {
     }
     
     //Go to the page with the items comments
-    func goToItemComments(sender:Item) {
+    func goToItemComments(sender: Int) {
         self.performSegue(withIdentifier: "ItemToReviewSegueID", sender: nil)
         self.itemDelegate.commentButtonClicked(sender: sender)
     }

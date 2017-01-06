@@ -10,20 +10,18 @@ import UIKit
 import RealmSwift
 
 protocol ShopViewDelegate: AnyObject {
-    func categoryPressed(sender: Category)
+    func categoryPressed(sender: Int)
 }
 
 class ShopView: UIView, NavbarDelegate {
     
     @IBOutlet var navbar: Navbar!
     
-    @IBOutlet var categoryList: UITableView!
+    @IBOutlet var categoryTable: UITableView!
     
     weak var shopDelegate: MainViewDelegate!
     
     weak var categoryDelegate: ShopViewDelegate!
-    
-    var categories = [Category]()
     
     //needed initializers
     override init(frame aFrame: CGRect){
@@ -45,25 +43,37 @@ class ShopView: UIView, NavbarDelegate {
         addSubview(view)
         
         //table setup
-        self.categoryList.register(UITableViewCell.self, forCellReuseIdentifier: "CHANGEME")
-        self.categoryList.dataSource = self
-        self.categoryList.delegate = self
+        self.categoryTable.register(UITableViewCell.self, forCellReuseIdentifier: "CHANGEME")
+        self.categoryTable.dataSource = self
+        self.categoryTable.delegate = self
+        
+        let realm = AppDelegate.getInstance().realm!
+        
+        //all categories from the realm
+        let categoryList = realm.objects(Category.self)
         
         //setup the categories data
-        if (categories.count != -1) {
+        if (categoryList.count < 1) {
             
+            
+
             let itemsTemp = List<Item>()
             
             let t = Category(nameT: "Clothes", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg", itemsT: itemsTemp)
-            categories.append(t)
             let u = Category(nameT: "Toys", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg", itemsT: itemsTemp)
-            categories.append(u)
             let v = Category(nameT: "Games", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg", itemsT: itemsTemp)
-            categories.append(v)
             let w = Category(nameT: "Other", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg", itemsT: itemsTemp)
-            categories.append(w)
             let a = Item(itemNameT: "Jordans", itemDescriptionT: "The coolest used shoes", priceT: 20, conditionRatingT: 4, categoryT: t)
             t.items.append(a)
+            let b = Item(itemNameT: "two", itemDescriptionT: "", priceT: 0, conditionRatingT: 5, categoryT: t)
+            t.items.append(b)
+            
+            try! realm.write {
+                realm.add(t)
+                realm.add(u)
+                realm.add(v)
+                realm.add(w)
+            }
         }
     }
     
@@ -90,12 +100,19 @@ class ShopView: UIView, NavbarDelegate {
 //table view extensions
 extension ShopView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
+        let realm = AppDelegate.getInstance().realm!
+        
+        let categoryList = realm.objects(Category.self)
+
+        return categoryList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CHANGEME", for: indexPath)
-        cell.textLabel?.text = categories[indexPath.row].name
+        let realm = AppDelegate.getInstance().realm!
+        let categoryList = realm.objects(Category.self)
+
+        cell.textLabel?.text = categoryList[indexPath.row].name
         return cell
     }
 }
@@ -103,9 +120,9 @@ extension ShopView: UITableViewDataSource {
 extension ShopView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard
-            let selectedRow = categoryList.indexPathForSelectedRow?.row
+            (categoryTable.indexPathForSelectedRow?.row) != nil
             else {return}
-        let category = categories[selectedRow]
-        categoryDelegate.categoryPressed(sender: category)
+        
+        categoryDelegate.categoryPressed(sender: indexPath.row)
     }
 }

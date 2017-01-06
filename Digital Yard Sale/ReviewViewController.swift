@@ -10,7 +10,7 @@ class ReviewViewController: UIViewController {
     
     @IBOutlet var reviewView: ReviewView!
     
-    var item: Item!
+    var item: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class ReviewViewController: UIViewController {
 }
 
 extension ReviewViewController: ItemViewControllerDelegate {
-    func commentButtonClicked(sender: Item) {
+    func commentButtonClicked(sender: Int) {
         item = sender
     }
 }

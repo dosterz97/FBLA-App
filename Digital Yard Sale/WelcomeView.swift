@@ -53,7 +53,6 @@ class WelcomeView: UIView {
                 return
             }
             self.welcomeBackground.image = UIImage(data: data)
-        
         }
         
         //give the buttons call to action

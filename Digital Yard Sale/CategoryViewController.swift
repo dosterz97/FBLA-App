@@ -16,7 +16,7 @@ class CategoryViewController: UIViewController, CategoryViewDelegate  {
     
     @IBOutlet var categoryView: CategoryView!
     
-    var category: Category!
+    var category: Int!
     
     weak var categoryDelegate: CategoryViewControllerDelegate!
     
@@ -50,7 +50,7 @@ class CategoryViewController: UIViewController, CategoryViewDelegate  {
 }
 
 extension CategoryViewController: ShopViewControllerDelegate {
-    func setCategory(sender: Category) {
+    func setCategory(sender: Int) {
         self.category = sender
     }
 }

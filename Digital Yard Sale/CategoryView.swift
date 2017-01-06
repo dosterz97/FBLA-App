@@ -19,7 +19,7 @@ class CategoryView: UIView {
     
     @IBOutlet var itemList: UITableView!
     
-    var activeCategory: Category!
+    var activeCategory: Int!
     
     //required intializers
     override init(frame aFrame: CGRect) {
@@ -50,12 +50,17 @@ class CategoryView: UIView {
 //table view extensions
 extension CategoryView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return activeCategory.items.count
+        let realm = AppDelegate.getInstance().realm!
+        let category = realm.objects(Category.self)[activeCategory]
+        return category.items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CHANGEME", for: indexPath)
-        cell.textLabel?.text = activeCategory.items[indexPath.row].itemName
+        let realm = AppDelegate.getInstance().realm!
+        let category = realm.objects(Category.self)[activeCategory]
+
+        cell.textLabel?.text = category.items[indexPath.row].itemName
         return cell
     }
 }
@@ -65,7 +70,9 @@ extension CategoryView: UITableViewDelegate {
         guard
             let selectedRow = itemList.indexPathForSelectedRow?.row
             else {return}
-        let item = activeCategory.items[selectedRow]
+        let realm = AppDelegate.getInstance().realm!
+        let category = realm.objects(Category.self)[activeCategory]
+        let item = category.items[selectedRow]
         categoryDel.itemSelected(sender: item)
     }
 }

@@ -17,10 +17,21 @@ class Category: Object {
     
     var items = List<Item>()
     
+    dynamic var categoryID = -1
+    
     convenience init(nameT: String, picURLT: String, itemsT: List<Item>) {
         self.init()
         name = nameT
         picURL = picURLT
         items = itemsT
+        
+        let realm = AppDelegate.getInstance().realm!
+        let categories = realm.objects(Category.self)
+        categoryID = categories.count
+        
+        for _ in 0..<categories.count {
+            print (categories.description)
+        }
+        print(categories.count)
     }
 }

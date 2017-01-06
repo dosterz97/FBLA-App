@@ -21,6 +21,8 @@ class Item: Object {
     
     dynamic var category: Category?
     
+    dynamic var itemID = -1
+    
     var reviews = List<Review>()
     
     convenience init(itemNameT: String, itemDescriptionT: String, priceT: Int, conditionRatingT: Int, categoryT: Category) {
@@ -30,5 +32,9 @@ class Item: Object {
         price = priceT
         conditionRating = conditionRatingT 
         category = categoryT
+        
+        let realm = AppDelegate.getInstance().realm!
+        let items = realm.objects(Item.self)
+        itemID = items.count
     }
 }

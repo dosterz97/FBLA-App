@@ -17,7 +17,7 @@ class ReviewView: UIView {
     
     @IBOutlet var userComment: UITextField!
     
-    var activeItem: Item!
+    var activeItem: Int!
     
     //required intializers
     override init(frame aFrame: CGRect) {
@@ -47,21 +47,29 @@ class ReviewView: UIView {
     
     //adds a comment to the lis
     func addComment() {
+        print(activeItem)
+
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let userNum = appDelegate.userID
         
         let realm = AppDelegate.getInstance().realm!
         
-        var user = User()
+        var user = User()//The current user
+        var item = Item()//The item to add the comment to
         //Add the item to the cart
-        try! realm.write {
-            let users = realm.objects(User.self);
-            user = users[userNum!]
-        }
+        
+        let users = realm.objects(User.self)
+        user = users[userNum!]
+        let items = realm.objects(Item.self)
+        
+        item = items[activeItem]
 
+        //Add the comment to the list
         if (userComment.hasText) {
             let t = Review(reviewerT: user.username, reviewT: (userComment.attributedText?.string)!)
-            activeItem.reviews.append(t)
+            try! realm.write {
+                item.reviews.append(t)
+            }
             commentList.reloadData()
         }
     }
@@ -70,12 +78,18 @@ class ReviewView: UIView {
 //table view extensions
 extension ReviewView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return activeItem.reviews.count
+        let realm = AppDelegate.getInstance().realm!
+        let item = realm.objects(Item.self)[activeItem]
+        return item.reviews.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CHANGEME", for: indexPath)
-        cell.textLabel?.text = activeItem.reviews[indexPath.row].review.description
+        
+        let realm = AppDelegate.getInstance().realm!
+        let item = realm.objects(Item.self)[activeItem]
+        
+        cell.textLabel?.text = item.reviews[indexPath.row].review.description
         return cell
     }
 }
