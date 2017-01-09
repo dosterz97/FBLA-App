@@ -19,7 +19,7 @@ class CategoryView: UIView {
     
     @IBOutlet var itemList: UITableView!
     
-    var activeCategory: Int!
+    var activeCategory: Category!
     
     //required intializers
     override init(frame aFrame: CGRect) {
@@ -51,15 +51,31 @@ class CategoryView: UIView {
 extension CategoryView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let realm = AppDelegate.getInstance().realm!
-        let category = realm.objects(Category.self)[activeCategory]
+        let categories = realm.objects(Category.self)
+        var category: Category!
+        for i in 0..<categories.count {
+            if(categories[i].name == activeCategory.name) {
+                category = categories[i]
+                
+                print (categories[i].name)
+                print (activeCategory.name)
+                print (categories[i].items.count)
+            }
+        }
         return category.items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CHANGEME", for: indexPath)
         let realm = AppDelegate.getInstance().realm!
-        let category = realm.objects(Category.self)[activeCategory]
-
+        let categories = realm.objects(Category.self)
+        var category: Category!
+        for i in 0..<categories.count {
+            if(categories[i].name == activeCategory.name) {
+                category = categories[i]
+            }
+        }
+        
         cell.textLabel?.text = category.items[indexPath.row].itemName
         return cell
     }
@@ -71,7 +87,14 @@ extension CategoryView: UITableViewDelegate {
             let selectedRow = itemList.indexPathForSelectedRow?.row
             else {return}
         let realm = AppDelegate.getInstance().realm!
-        let category = realm.objects(Category.self)[activeCategory]
+        let categories = realm.objects(Category.self)
+        var category: Category!
+        for i in 0..<categories.count {
+            if(categories[i].name == activeCategory.name) {
+                category = categories[i]
+            }
+        }
+        
         let item = category.items[selectedRow]
         categoryDel.itemSelected(sender: item)
     }

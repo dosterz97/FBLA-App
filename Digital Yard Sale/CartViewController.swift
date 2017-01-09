@@ -8,14 +8,17 @@
 
 import UIKit
 
-class CartViewController: UIViewController, MainViewDelegate {
+class CartViewController: UIViewController, MainViewDelegate, CategoryViewControllerDelegate, CartToItemDelegate {
     
     @IBOutlet var cartView: CartView!
+    
+    weak var cartDelegate: CategoryViewControllerDelegate!
 
     //needed initializers
     override func viewDidLoad() {
         super.viewDidLoad()
         cartView.cartDelegate = self
+        cartView.cartToItemDelegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,5 +38,28 @@ class CartViewController: UIViewController, MainViewDelegate {
     //there is no profile button on this page
     func profileButtonPressed(sender: AnyObject) {
         //do nothing
+    }
+    
+    //segue to the Item that has been selected
+    func itemClicked(sender: Item) {
+        self.performSegue(withIdentifier: "CartToItemSegueID", sender: nil)
+        self.cartDelegate.itemClicked(sender: sender)
+    }
+    
+    //set the cart delegate to be the current item VC
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let itemVC = segue.destination as? ItemViewController {
+            cartDelegate = itemVC
+        }
+    }
+    
+    //work around multiple inheritance
+    func itemSelected(sender: Item) {
+        itemClicked(sender: sender)
+    }
+
+    //segue to payment page 
+    func checkOutPressed() {
+        self.performSegue(withIdentifier: "CartToPaymentSegueID", sender: nil)
     }
 }

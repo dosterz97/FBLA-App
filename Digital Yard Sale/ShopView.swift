@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 protocol ShopViewDelegate: AnyObject {
-    func categoryPressed(sender: Int)
+    func categoryPressed(sender: Category)
 }
 
 class ShopView: UIView, NavbarDelegate {
@@ -55,14 +55,11 @@ class ShopView: UIView, NavbarDelegate {
         //setup the categories data
         if (categoryList.count < 1) {
             
+            let t = Category(nameT: "Clothes", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg")
+            let u = Category(nameT: "Toys", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg")
+            let v = Category(nameT: "Games", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg")
+            let w = Category(nameT: "Other", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg")
             
-
-            let itemsTemp = List<Item>()
-            
-            let t = Category(nameT: "Clothes", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg", itemsT: itemsTemp)
-            let u = Category(nameT: "Toys", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg", itemsT: itemsTemp)
-            let v = Category(nameT: "Games", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg", itemsT: itemsTemp)
-            let w = Category(nameT: "Other", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg", itemsT: itemsTemp)
             let a = Item(itemNameT: "Jordans", itemDescriptionT: "The coolest used shoes", priceT: 20, conditionRatingT: 4, categoryT: t)
             t.items.append(a)
             let b = Item(itemNameT: "two", itemDescriptionT: "", priceT: 0, conditionRatingT: 5, categoryT: t)
@@ -73,6 +70,7 @@ class ShopView: UIView, NavbarDelegate {
                 realm.add(u)
                 realm.add(v)
                 realm.add(w)
+                
             }
         }
     }
@@ -104,7 +102,7 @@ extension ShopView: UITableViewDataSource {
         
         let categoryList = realm.objects(Category.self)
 
-        return categoryList.count
+        return categoryList.count//Number of categories in realm
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -112,7 +110,7 @@ extension ShopView: UITableViewDataSource {
         let realm = AppDelegate.getInstance().realm!
         let categoryList = realm.objects(Category.self)
 
-        cell.textLabel?.text = categoryList[indexPath.row].name
+        cell.textLabel?.text = categoryList[indexPath.row].name//Set the text for each cell
         return cell
     }
 }
@@ -122,7 +120,9 @@ extension ShopView: UITableViewDelegate {
         guard
             (categoryTable.indexPathForSelectedRow?.row) != nil
             else {return}
-        
-        categoryDelegate.categoryPressed(sender: indexPath.row)
+        let realm = AppDelegate.getInstance().realm!
+        let categoryList = realm.objects(Category.self)
+
+        categoryDelegate.categoryPressed(sender: categoryList[indexPath.row])//Move to category page based on indexRow
     }
 }

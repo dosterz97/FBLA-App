@@ -8,13 +8,22 @@
 
 import UIKit
 
+protocol CartToItemDelegate: AnyObject {
+    func itemSelected(sender: Item)
+    func checkOutPressed()
+}
+
 class CartView: UIView, NavbarDelegate {
     
     @IBOutlet var navbar: Navbar!
     
     @IBOutlet var cartList: UITableView!
     
+    @IBOutlet var checkOutButton: UIButton!
+    
     weak var cartDelegate: MainViewDelegate!
+    
+    weak var cartToItemDelegate: CartToItemDelegate!
     
     //required intializers
     override init(frame aFrame: CGRect) {
@@ -39,6 +48,8 @@ class CartView: UIView, NavbarDelegate {
         self.cartList.register(UITableViewCell.self, forCellReuseIdentifier: "CHANGEME")
         self.cartList.dataSource = self
         self.cartList.delegate = self
+        
+        self.checkOutButton.addTarget(self, action: #selector(checkOutPressed), for: .touchUpInside)
     }
     
     //when a navbar button is pressed, segue using the main view delegate
@@ -59,7 +70,10 @@ class CartView: UIView, NavbarDelegate {
         else if (sender.tag == ButtonTags.about.rawValue) {
             cartDelegate.navbarButtonPressed(sender: "CartToAboutSegueID")
         }
-
+    }
+    
+    func checkOutPressed () {
+        cartToItemDelegate.checkOutPressed()
     }
 }
 
@@ -106,7 +120,23 @@ extension CartView: UITableViewDataSource {
 extension CartView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard
-            let selectedRow = cartList.indexPathForSelectedRow?.row
+            (cartList.indexPathForSelectedRow?.row) != nil
             else {return}
+        
+        //get the current user ID
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let userNum = appDelegate.userID
+        
+        //open the realm to find the user
+        let realm = AppDelegate.getInstance().realm!
+        var item: Item!
+        try! realm.write {
+            let users = realm.objects(User.self);
+            let user = users[userNum!]
+            item = user.userCart[indexPath.row]
+        }
+
+        
+        cartToItemDelegate.itemSelected(sender: item)
     }
 }

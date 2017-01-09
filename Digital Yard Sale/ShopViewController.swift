@@ -7,7 +7,7 @@
 import UIKit
 
 protocol ShopViewControllerDelegate: AnyObject {
-    func setCategory(sender: Int)
+    func setCategory(sender: Category)
 }
 
 class ShopViewController: UIViewController, MainViewDelegate, ShopViewDelegate {
@@ -50,7 +50,7 @@ class ShopViewController: UIViewController, MainViewDelegate, ShopViewDelegate {
     }
     
     //segue to the category page, load the list based upon which category is sent
-    func categoryPressed(sender: Int) {
+    func categoryPressed(sender: Category) {
         self.performSegue(withIdentifier: "ShopToCategorySegueID", sender: nil)
         self.shopDelegate.setCategory(sender: sender)
     }

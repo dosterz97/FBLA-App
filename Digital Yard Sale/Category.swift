@@ -19,7 +19,7 @@ class Category: Object {
     
     dynamic var categoryID = -1
     
-    convenience init(nameT: String, picURLT: String, itemsT: List<Item>) {
+    convenience init(nameT: String, picURLT: String, itemsT: List<Item> = List<Item>()) {
         self.init()
         name = nameT
         picURL = picURLT
@@ -29,9 +29,6 @@ class Category: Object {
         let categories = realm.objects(Category.self)
         categoryID = categories.count
         
-        for _ in 0..<categories.count {
-            print (categories.description)
-        }
         print(categories.count)
     }
 }
