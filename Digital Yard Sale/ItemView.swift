@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Alamofire
 
 protocol ItemDelegate: AnyObject {
     func addItemToCart(sender: Item)
@@ -57,12 +58,38 @@ class ItemView: UIView {
         //set up the text for the item labels
         itemName.text = activeItem.itemName
         itemDescription.text = activeItem.itemDescription
-        itemPrice.text = activeItem.price.description
-        itemCondition.text = activeItem.conditionRating.description
+        itemPrice.text = "$" + activeItem.price.description
+        
+        var conditionText: String?
+        switch activeItem.conditionRating {
+        case 1:
+            conditionText = "Bad"
+        case 2:
+            conditionText = "Worn"
+        case 3:
+            conditionText = "Decent"
+        case 4:
+            conditionText = "Good"
+        case 5:
+            conditionText = "Great"
+        default:
+            conditionText = "Unkown"
+        }
+        itemCondition.text = "Condition: " + conditionText!
         
         //set up button target
         addToCartButton.addTarget(self, action: #selector(cartButtonPressed), for: .touchUpInside)
         commentButton.addTarget(self, action: #selector(commentButtonPressed), for: .touchUpInside)
+        
+        //load item image
+        Alamofire.request("https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg").responseData { response in
+            guard let data = response.result.value else {
+                debugPrint(response)
+                return
+            }
+            self.itemPicture.contentMode = .scaleAspectFit
+            self.itemPicture.image = UIImage(data: data)
+        }
     }
     
     func cartButtonPressed() {

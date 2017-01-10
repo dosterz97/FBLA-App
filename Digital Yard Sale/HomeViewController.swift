@@ -13,6 +13,7 @@ class HomeViewController: UIViewController, MainViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         homeView.homeDelegate = self
+        self.navigationItem.title = "Home"
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

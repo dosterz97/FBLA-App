@@ -56,10 +56,6 @@ extension CategoryView: UITableViewDataSource {
         for i in 0..<categories.count {
             if(categories[i].name == activeCategory.name) {
                 category = categories[i]
-                
-                print (categories[i].name)
-                print (activeCategory.name)
-                print (categories[i].items.count)
             }
         }
         return category.items.count
@@ -94,7 +90,7 @@ extension CategoryView: UITableViewDelegate {
                 category = categories[i]
             }
         }
-        
+        self.itemList.deselectRow(at: indexPath, animated: true)
         let item = category.items[selectedRow]
         categoryDel.itemSelected(sender: item)
     }

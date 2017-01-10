@@ -20,7 +20,7 @@ class ShopViewController: UIViewController, MainViewDelegate, ShopViewDelegate {
         super.viewDidLoad()
         shopView.shopDelegate = self
         shopView.categoryDelegate = self
-        
+        self.navigationItem.title = "Shop"
     }
     
     override func didReceiveMemoryWarning() {

@@ -60,9 +60,9 @@ class ShopView: UIView, NavbarDelegate {
             let v = Category(nameT: "Games", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg")
             let w = Category(nameT: "Other", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg")
             
-            let a = Item(itemNameT: "Jordans", itemDescriptionT: "The coolest used shoes", priceT: 20, conditionRatingT: 4, categoryT: t)
+            let a = Item(itemNameT: "Jordans", itemDescriptionT: "Cool Shoes", priceT: 20, conditionRatingT: 3, categoryT: t, picURL: "http://images.footlocker.com/pi/23581001/zoom/jordan-horizon-mens")
             t.items.append(a)
-            let b = Item(itemNameT: "two", itemDescriptionT: "", priceT: 0, conditionRatingT: 5, categoryT: t)
+            let b = Item(itemNameT: "two", itemDescriptionT: "", priceT: 0, conditionRatingT: 5, categoryT: t, picURL: "http://images.footlocker.com/pi/23581001/zoom/jordan-horizon-mens")
             t.items.append(b)
             
             try! realm.write {

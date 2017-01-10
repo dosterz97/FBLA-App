@@ -15,6 +15,7 @@ class ReviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         reviewView.activeItem = item
+        self.navigationItem.title = "Comments"
     }
     
     override func didReceiveMemoryWarning() {

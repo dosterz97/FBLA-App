@@ -19,6 +19,9 @@
 		3B0F02F81DEE30A1005BD9A1 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0F02F71DEE30A1005BD9A1 /* AboutView.xib */; };
 		3B0F02FA1DEE30A8005BD9A1 /* ShopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0F02F91DEE30A8005BD9A1 /* ShopView.xib */; };
 		3B0F02FC1DEE30B4005BD9A1 /* ReviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0F02FB1DEE30B4005BD9A1 /* ReviewView.xib */; };
+		3B28777A1E255F3B006E2A22 /* GeneralInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2877791E255F3B006E2A22 /* GeneralInfo.swift */; };
+		3B2877831E256CAF006E2A22 /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2877821E256CAF006E2A22 /* ChartView.xib */; };
+		3B2877851E256CBC006E2A22 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2877841E256CBC006E2A22 /* ChartView.swift */; };
 		BD0E2D091E1FF9960079C6D9 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E2D081E1FF9960079C6D9 /* ReviewView.swift */; };
 		BD1ABD1C1E15ABD500EC997F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD191E15ABD500EC997F /* RegistrationView.swift */; };
 		BD1ABD1D1E15ABD500EC997F /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */; };
@@ -153,6 +156,9 @@
 		3B0F02F71DEE30A1005BD9A1 /* AboutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
 		3B0F02F91DEE30A8005BD9A1 /* ShopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopView.xib; sourceTree = "<group>"; };
 		3B0F02FB1DEE30B4005BD9A1 /* ReviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewView.xib; sourceTree = "<group>"; };
+		3B2877791E255F3B006E2A22 /* GeneralInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInfo.swift; sourceTree = "<group>"; };
+		3B2877821E256CAF006E2A22 /* ChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartView.xib; sourceTree = "<group>"; };
+		3B2877841E256CBC006E2A22 /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartView.swift; path = ../ChartView.swift; sourceTree = "<group>"; };
 		BD0E2D081E1FF9960079C6D9 /* ReviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		BD1ABD191E15ABD500EC997F /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +256,7 @@
 				3B0F02F71DEE30A1005BD9A1 /* AboutView.xib */,
 				BDDA1BF71E12FE7600CBE6E8 /* CartView.xib */,
 				BDDA1C071E1309B300CBE6E8 /* CategoryView.xib */,
+				3B2877821E256CAF006E2A22 /* ChartView.xib */,
 				3B0F02F51DEE308E005BD9A1 /* HomeView.xib */,
 				BDDA1C091E1309DF00CBE6E8 /* ItemView.xib */,
 				BDDA1BE51E0F932F00CBE6E8 /* LoginView.xib */,
@@ -290,6 +297,7 @@
 				BDDA1BEF1E12F00100CBE6E8 /* AboutView.swift */,
 				BDDA1BF51E12FE6C00CBE6E8 /* CartView.swift */,
 				BDDA1C051E13098000CBE6E8 /* CategoryView.swift */,
+				3B2877841E256CBC006E2A22 /* ChartView.swift */,
 				BDDA1BE71E108BCF00CBE6E8 /* HomeView.swift */,
 				BDDA1C0D1E1309FB00CBE6E8 /* ItemView.swift */,
 				BDDA1BDC1E0F916E00CBE6E8 /* LoginView.swift */,
@@ -311,6 +319,7 @@
 				BD1ABD611E1B05CF00EC997F /* Category.swift */,
 				BD1ABD2C1E15AE4E00EC997F /* User.swift */,
 				BD1ABD5F1E15D27200EC997F /* Review.swift */,
+				3B2877791E255F3B006E2A22 /* GeneralInfo.swift */,
 			);
 			name = "Realm Objects";
 			sourceTree = "<group>";
@@ -462,6 +471,7 @@
 				BDDA1BF81E12FE7600CBE6E8 /* CartView.xib in Resources */,
 				3B0F02E11DEE2BC7005BD9A1 /* Assets.xcassets in Resources */,
 				BD1ABD5C1E15CA3100EC997F /* ProfileView.xib in Resources */,
+				3B2877831E256CAF006E2A22 /* ChartView.xib in Resources */,
 				3B0F02DF1DEE2BC7005BD9A1 /* Main.storyboard in Resources */,
 				BDDA1C0A1E1309DF00CBE6E8 /* ItemView.xib in Resources */,
 				BDDA1C081E1309B300CBE6E8 /* CategoryView.xib in Resources */,
@@ -511,12 +521,14 @@
 				BDDA1C0C1E1309F200CBE6E8 /* ItemViewController.swift in Sources */,
 				BD1ABD5A1E15CA2600EC997F /* ProfileView.swift in Sources */,
 				BDDA1BF01E12F00100CBE6E8 /* AboutView.swift in Sources */,
+				3B28777A1E255F3B006E2A22 /* GeneralInfo.swift in Sources */,
 				3B0F02EE1DEE2E81005BD9A1 /* AboutViewController.swift in Sources */,
 				BDDA1BEE1E11B7D600CBE6E8 /* ShopView.swift in Sources */,
 				BDDA1BFC1E1300D000CBE6E8 /* RegistrationViewController.swift in Sources */,
 				BDDA1BEA1E10CC6A00CBE6E8 /* Navbar.swift in Sources */,
 				BDDA1BF41E12FD6100CBE6E8 /* CartViewController.swift in Sources */,
 				BD568F551E24479D001DAF21 /* PaymentViewController.swift in Sources */,
+				3B2877851E256CBC006E2A22 /* ChartView.swift in Sources */,
 				BD1ABD2D1E15AE4E00EC997F /* User.swift in Sources */,
 				BDDA1BDD1E0F916E00CBE6E8 /* LoginView.swift in Sources */,
 				BD1ABD621E1B05CF00EC997F /* Category.swift in Sources */,

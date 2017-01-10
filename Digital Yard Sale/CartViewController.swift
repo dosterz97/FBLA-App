@@ -19,6 +19,7 @@ class CartViewController: UIViewController, MainViewDelegate, CategoryViewContro
         super.viewDidLoad()
         cartView.cartDelegate = self
         cartView.cartToItemDelegate = self
+        self.navigationItem.title = "Cart"
     }
     
     override func didReceiveMemoryWarning() {

@@ -15,6 +15,7 @@ class ProfileViewController: UIViewController, profileDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         profileView.profileDel = self
+        self.navigationItem.title = "Profile"
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

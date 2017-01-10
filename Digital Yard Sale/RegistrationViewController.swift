@@ -16,7 +16,8 @@ class RegistrationViewController: UIViewController, RegistrationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerView.registerDelegate = self
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationItem.title = "Registration"
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

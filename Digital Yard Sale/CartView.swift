@@ -135,8 +135,7 @@ extension CartView: UITableViewDelegate {
             let user = users[userNum!]
             item = user.userCart[indexPath.row]
         }
-
-        
+        self.cartList.deselectRow(at: indexPath, animated: true)
         cartToItemDelegate.itemSelected(sender: item)
     }
 }

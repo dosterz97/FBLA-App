@@ -23,15 +23,18 @@ class Item: Object {
     
     dynamic var itemID = -1
     
+    dynamic var picURL = ""
+    
     var reviews = List<Review>()
     
-    convenience init(itemNameT: String, itemDescriptionT: String, priceT: Int, conditionRatingT: Int, categoryT: Category) {
+    convenience init(itemNameT: String, itemDescriptionT: String, priceT: Int, conditionRatingT: Int, categoryT: Category,picURL: String) {
         self.init()
-        itemName = itemNameT
-        itemDescription = itemDescriptionT
-        price = priceT
-        conditionRating = conditionRatingT 
-        category = categoryT
+        self.itemName = itemNameT
+        self.itemDescription = itemDescriptionT
+        self.price = priceT
+        self.conditionRating = conditionRatingT
+        self.category = categoryT
+        self.picURL = picURL
         
         let realm = AppDelegate.getInstance().realm!
         let items = realm.objects(Item.self)

@@ -28,7 +28,5 @@ class Category: Object {
         let realm = AppDelegate.getInstance().realm!
         let categories = realm.objects(Category.self)
         categoryID = categories.count
-        
-        print(categories.count)
     }
 }

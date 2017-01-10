@@ -13,6 +13,7 @@ class AboutViewController: UIViewController,MainViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         aboutView.aboutDelegate = self
+        self.navigationItem.title = "About"
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

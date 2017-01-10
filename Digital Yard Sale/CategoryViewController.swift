@@ -24,6 +24,7 @@ class CategoryViewController: UIViewController, CategoryViewDelegate  {
         super.viewDidLoad()
         categoryView.categoryDel = self
         categoryView.activeCategory = category
+        self.navigationItem.title = category.name
     }
     
     override func didReceiveMemoryWarning() {

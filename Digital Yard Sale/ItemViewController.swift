@@ -26,6 +26,7 @@ class ItemViewController : UIViewController, ItemDelegate {
         super.viewDidLoad()
         itemView.setupLabels()//set up labels after the view is loaded when data is present
         itemView.itemDelegate = self
+        self.navigationItem.title = item.itemName
     }
     
     override func didReceiveMemoryWarning() {
