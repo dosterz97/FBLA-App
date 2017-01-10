@@ -22,13 +22,19 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEz-E1-ohc" customClass="Navbar" customModule="Digital_Yard_Sale" customModuleProvider="target">
-                    <frame key="frameInset" minY="524" width="375" height="143"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEz-E1-ohc" customClass="Navbar" customModule="Digital_Yard_Sale" customModuleProvider="target">
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="d34-NQ-mQq"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="aEz-E1-ohc" secondAttribute="bottom" id="FSl-lM-zKM"/>
+                <constraint firstAttribute="trailing" secondItem="aEz-E1-ohc" secondAttribute="trailing" id="Z2C-Y7-EYZ"/>
+                <constraint firstItem="aEz-E1-ohc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ujE-n0-0Md"/>
+            </constraints>
             <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>

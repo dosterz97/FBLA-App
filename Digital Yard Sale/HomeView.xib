@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,12 +17,13 @@
             <rect key="frame" x="0.0" y="0.0" width="443" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eks-9p-pcI" customClass="Navbar" customModule="Digital_Yard_Sale" customModuleProvider="target">
-                    <frame key="frameInset" minY="551" width="443" height="116"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eks-9p-pcI" customClass="Navbar" customModule="Digital_Yard_Sale" customModuleProvider="target">
                     <color key="backgroundColor" red="0.0" green="0.79340988609999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="D3f-CU-SHZ"/>
+                    </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppF-eX-Bph">
-                    <frame key="frameInset" minX="356" minY="50" width="44" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppF-eX-Bph">
                     <state key="normal" title="Profile"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precent Raised" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyj-h1-SRB">
@@ -53,7 +53,6 @@
                 <constraint firstItem="eks-9p-pcI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4P4-MZ-are"/>
                 <constraint firstAttribute="trailing" secondItem="eks-9p-pcI" secondAttribute="trailing" id="Dt7-xT-10O"/>
                 <constraint firstItem="ppF-eX-Bph" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="FeV-ac-c5U"/>
-                <constraint firstItem="eks-9p-pcI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.66" id="U2m-5l-yVH"/>
                 <constraint firstAttribute="trailing" secondItem="ppF-eX-Bph" secondAttribute="trailing" constant="31" id="X11-MN-ydc"/>
                 <constraint firstAttribute="bottom" secondItem="eks-9p-pcI" secondAttribute="bottom" id="vVS-7k-43J"/>
             </constraints>

@@ -233,19 +233,20 @@
 				3B0F02D91DEE2BC7005BD9A1 /* AppDelegate.swift */,
 				3B0F02E01DEE2BC7005BD9A1 /* Assets.xcassets */,
 				3B0F02DD1DEE2BC7005BD9A1 /* Main.storyboard */,
-				3B0F02ED1DEE2E81005BD9A1 /* AboutViewController.swift */,
-				3B0F02DB1DEE2BC7005BD9A1 /* ViewController.swift */,
-				BDDA1BF31E12FD6100CBE6E8 /* CartViewController.swift */,
-				BDDA1C031E13094800CBE6E8 /* CategoryViewController.swift */,
-				3B0F02EB1DEE2DDD005BD9A1 /* HomeViewController.swift */,
-				BDDA1C0B1E1309F200CBE6E8 /* ItemViewController.swift */,
-				BDDA1B921E0B196F00CBE6E8 /* LoginViewController.swift */,
-				BD568F541E24479D001DAF21 /* PaymentViewController.swift */,
-				BD1ABD571E15C9E600EC997F /* ProfileViewController.swift */,
-				BDDA1BFB1E1300D000CBE6E8 /* RegistrationViewController.swift */,
-				BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */,
-				3B0F02EF1DEE2EE5005BD9A1 /* ShopViewController.swift */,
-				BDDA1BD21E0B810000CBE6E8 /* WelcomeViewController.swift */,
+				BD568F621E245855001DAF21 /* NIBS */,
+				BD568F651E245895001DAF21 /* Realm Objects */,
+				BD568F641E24587A001DAF21 /* Views */,
+				BD568F631E245866001DAF21 /* View Controllers */,
+				3B0F02E21DEE2BC7005BD9A1 /* LaunchScreen.storyboard */,
+				3B0F02E51DEE2BC7005BD9A1 /* Info.plist */,
+				BDDA1BF11E12FA2F00CBE6E8 /* ViewControllerUtils.swift */,
+			);
+			path = "Digital Yard Sale";
+			sourceTree = "<group>";
+		};
+		BD568F621E245855001DAF21 /* NIBS */ = {
+			isa = PBXGroup;
+			children = (
 				3B0F02F71DEE30A1005BD9A1 /* AboutView.xib */,
 				BDDA1BF71E12FE7600CBE6E8 /* CartView.xib */,
 				BDDA1C071E1309B300CBE6E8 /* CategoryView.xib */,
@@ -259,6 +260,33 @@
 				3B0F02FB1DEE30B4005BD9A1 /* ReviewView.xib */,
 				3B0F02F91DEE30A8005BD9A1 /* ShopView.xib */,
 				BD1ABD1B1E15ABD500EC997F /* WelcomeView.xib */,
+			);
+			name = NIBS;
+			sourceTree = "<group>";
+		};
+		BD568F631E245866001DAF21 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3B0F02ED1DEE2E81005BD9A1 /* AboutViewController.swift */,
+				3B0F02DB1DEE2BC7005BD9A1 /* ViewController.swift */,
+				BDDA1BF31E12FD6100CBE6E8 /* CartViewController.swift */,
+				BDDA1C031E13094800CBE6E8 /* CategoryViewController.swift */,
+				3B0F02EB1DEE2DDD005BD9A1 /* HomeViewController.swift */,
+				BDDA1C0B1E1309F200CBE6E8 /* ItemViewController.swift */,
+				BDDA1B921E0B196F00CBE6E8 /* LoginViewController.swift */,
+				BD568F541E24479D001DAF21 /* PaymentViewController.swift */,
+				BD1ABD571E15C9E600EC997F /* ProfileViewController.swift */,
+				BDDA1BFB1E1300D000CBE6E8 /* RegistrationViewController.swift */,
+				BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */,
+				3B0F02EF1DEE2EE5005BD9A1 /* ShopViewController.swift */,
+				BDDA1BD21E0B810000CBE6E8 /* WelcomeViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		BD568F641E24587A001DAF21 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				BDDA1BEF1E12F00100CBE6E8 /* AboutView.swift */,
 				BDDA1BF51E12FE6C00CBE6E8 /* CartView.swift */,
 				BDDA1C051E13098000CBE6E8 /* CategoryView.swift */,
@@ -272,15 +300,19 @@
 				BD0E2D081E1FF9960079C6D9 /* ReviewView.swift */,
 				BDDA1BED1E11B7D600CBE6E8 /* ShopView.swift */,
 				BDDA1B971E0B1D0E00CBE6E8 /* WelcomeView.swift */,
-				3B0F02E51DEE2BC7005BD9A1 /* Info.plist */,
-				3B0F02E21DEE2BC7005BD9A1 /* LaunchScreen.storyboard */,
-				BDDA1BF11E12FA2F00CBE6E8 /* ViewControllerUtils.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BD568F651E245895001DAF21 /* Realm Objects */ = {
+			isa = PBXGroup;
+			children = (
 				BD1ABD5D1E15D02A00EC997F /* Item.swift */,
 				BD1ABD611E1B05CF00EC997F /* Category.swift */,
 				BD1ABD2C1E15AE4E00EC997F /* User.swift */,
 				BD1ABD5F1E15D27200EC997F /* Review.swift */,
 			);
-			path = "Digital Yard Sale";
+			name = "Realm Objects";
 			sourceTree = "<group>";
 		};
 		BDDA1BB31E0B265400CBE6E8 /* Products */ = {
