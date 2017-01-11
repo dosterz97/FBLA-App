@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum ButtonTags: Int {
+    case home = 0,shop,cart,about,login,register
+}
+
 class WelcomeViewController: UIViewController,WelcomeDelegate {
     
     @IBOutlet var loginView: WelcomeView!

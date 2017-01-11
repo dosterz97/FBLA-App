@@ -24,6 +24,8 @@ class PaymentView: UIView {
     
     @IBOutlet var finishedButton: UIButton!
     
+    var total: Double!
+    
     //required intializers
     override init(frame aFrame: CGRect) {
         super.init(frame: aFrame)
@@ -42,9 +44,28 @@ class PaymentView: UIView {
         addSubview(view)
         
         finishedButton.addTarget(self, action: #selector(doneWithForm), for: .touchUpInside)
+        
+        //get the current user ID
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let userNum = appDelegate.userID
+        
+        //open the realm to find the user
+        let realm = AppDelegate.getInstance().realm!
+        var user = User()
+        try! realm.write {
+            let users = realm.objects(User.self);
+            user = users[userNum!]
+        }
+        
+        for item in user.userCart {
+            total = item.price
+        }
+        
+        print(total)
     }
     
     func doneWithForm() {
+        //validate information
         guard  cardNumberField.hasText,
         securityCodeField.hasText,
         expirationDateField.hasText,
@@ -52,7 +73,15 @@ class PaymentView: UIView {
         lastNameField.hasText,
         addressField.hasText
         else { return }
-        print("success")
+
+        //Update the money raised
+        
+        
+        //Remove items from the realm
+        
+
+        //Remove items from the users cart
+        
     }
 }
 

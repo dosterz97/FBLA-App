@@ -13,9 +13,7 @@ protocol ShopViewDelegate: AnyObject {
     func categoryPressed(sender: Category)
 }
 
-class ShopView: UIView, NavbarDelegate {
-    
-    @IBOutlet var navbar: Navbar!
+class ShopView: UIView {
     
     @IBOutlet var categoryTable: UITableView!
     
@@ -30,7 +28,6 @@ class ShopView: UIView, NavbarDelegate {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)
         setupView()
-        navbar.navDelegate = self
     }
     
     //set up the nib
@@ -74,25 +71,7 @@ class ShopView: UIView, NavbarDelegate {
             }
         }
     }
-    
-    func navbarButtonPressed(sender: UIButton) {
-        //home
-        if (sender.tag == ButtonTags.home.rawValue) {
-            shopDelegate.navbarButtonPressed(sender: "ShopToHomeSegueID")
-        }
-        //shop
-        else if (sender.tag == ButtonTags.shop.rawValue) {
-            //do nothing
-        }
-        //cart
-        else if (sender.tag == ButtonTags.cart.rawValue) {
-            shopDelegate.navbarButtonPressed(sender: "ShopToCartSegueID")
-        }
-        //about
-        else if (sender.tag == ButtonTags.about.rawValue) {
-            shopDelegate.navbarButtonPressed(sender: "ShopToAboutSegueID")
-        }
-    }
+
 }
 
 //table view extensions
@@ -122,7 +101,7 @@ extension ShopView: UITableViewDelegate {
             else {return}
         let realm = AppDelegate.getInstance().realm!
         let categoryList = realm.objects(Category.self)
-
+        self.categoryTable.deselectRow(at: indexPath, animated: true)
         categoryDelegate.categoryPressed(sender: categoryList[indexPath.row])//Move to category page based on indexRow
     }
 }

@@ -58,7 +58,7 @@ class ItemView: UIView {
         //set up the text for the item labels
         itemName.text = activeItem.itemName
         itemDescription.text = activeItem.itemDescription
-        itemPrice.text = "$" + activeItem.price.description
+        itemPrice.text = "$" + activeItem.priceAsString
         
         var conditionText: String?
         switch activeItem.conditionRating {

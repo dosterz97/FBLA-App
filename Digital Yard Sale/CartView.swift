@@ -13,17 +13,21 @@ protocol CartToItemDelegate: AnyObject {
     func checkOutPressed()
 }
 
-class CartView: UIView, NavbarDelegate {
-    
-    @IBOutlet var navbar: Navbar!
+class CartView: UIView {
     
     @IBOutlet var cartList: UITableView!
     
     @IBOutlet var checkOutButton: UIButton!
     
+    @IBOutlet var costLabel: UILabel!
+    
     weak var cartDelegate: MainViewDelegate!
     
     weak var cartToItemDelegate: CartToItemDelegate!
+    
+    var itemsInCart: Bool?
+    
+    var total: Double?
     
     //required intializers
     override init(frame aFrame: CGRect) {
@@ -33,7 +37,50 @@ class CartView: UIView, NavbarDelegate {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupView()
-        navbar.navDelegate = self
+    }
+    
+    func viewLoading() {
+        //get the current user ID
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let userNum = appDelegate.userID
+
+        //open the realm to find the user
+        let realm = AppDelegate.getInstance().realm!
+        var user = User()
+        try! realm.write {
+            let users = realm.objects(User.self);
+            user = users[userNum!]
+        }
+        
+        if (user.userCart.count == 0) {
+            checkOutButton.backgroundColor = .gray
+            itemsInCart = false
+        }
+        else {
+            let myGreen = UIColor(colorLiteralRed: 27/255, green: 123/255, blue: 70/255, alpha: 1)
+            checkOutButton.backgroundColor = myGreen
+            itemsInCart = true
+        }
+        
+        total = 0
+        //open the realm to find the user
+        for item in user.userCart {
+            total? += item.price
+        }
+        
+        costLabel.text = "$0.00"
+        if (total != 0) {
+            //set the string of price to two places
+            let numberFormatter = NumberFormatter()
+            numberFormatter.minimumFractionDigits = 2
+            numberFormatter.maximumFractionDigits = 2
+
+            let tempNum = NSNumber(value: total!)
+            let temp = numberFormatter.string(from: tempNum)
+            costLabel.text = "$" + temp!
+        }
+        cartList.reloadData()
+        
     }
     
     func setupView() {
@@ -52,28 +99,10 @@ class CartView: UIView, NavbarDelegate {
         self.checkOutButton.addTarget(self, action: #selector(checkOutPressed), for: .touchUpInside)
     }
     
-    //when a navbar button is pressed, segue using the main view delegate
-    func navbarButtonPressed(sender: UIButton) {
-        //home
-        if (sender.tag == ButtonTags.home.rawValue) {
-            cartDelegate.navbarButtonPressed(sender: "CartToHomeSegueID")
-        }
-            //shop
-        else if (sender.tag == ButtonTags.shop.rawValue) {
-            cartDelegate.navbarButtonPressed(sender: "CartToShopSegueID")
-        }
-            //cart
-        else if (sender.tag == ButtonTags.cart.rawValue) {
-            //do nothing
-        }
-            //about
-        else if (sender.tag == ButtonTags.about.rawValue) {
-            cartDelegate.navbarButtonPressed(sender: "CartToAboutSegueID")
-        }
-    }
-    
     func checkOutPressed () {
-        cartToItemDelegate.checkOutPressed()
+        if(itemsInCart!) {
+            cartToItemDelegate.checkOutPressed()
+        }
     }
 }
 

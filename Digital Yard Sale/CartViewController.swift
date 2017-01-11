@@ -28,7 +28,8 @@ class CartViewController: UIViewController, MainViewDelegate, CategoryViewContro
     
     //show the navigation bar on this page
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = true
+        cartView.viewLoading()
     }
     
     //segue with ID given from the main view delegate

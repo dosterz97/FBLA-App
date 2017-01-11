@@ -13,9 +13,8 @@ protocol MainViewDelegate: AnyObject {
     func profileButtonPressed(sender:AnyObject)
 }
 
-class HomeView: UIView, NavbarDelegate {
+class HomeView: UIView {
     
-    @IBOutlet var homeNav: Navbar!
     
     @IBOutlet var profileButton: UIButton!
     
@@ -34,7 +33,6 @@ class HomeView: UIView, NavbarDelegate {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)
         viewSetup()
-        homeNav.navDelegate = self
     }
     
     //set up the nib
@@ -59,25 +57,5 @@ class HomeView: UIView, NavbarDelegate {
     //the profile button
     func profileButtonPressed(sender:AnyObject) {
         homeDelegate.profileButtonPressed(sender: sender)
-    }
-    
-    
-    func navbarButtonPressed(sender: UIButton) {
-        //home
-        if (sender.tag == ButtonTags.home.rawValue) {
-            //do nothing
-        }
-        //shop
-        else if (sender.tag == ButtonTags.shop.rawValue) {
-            homeDelegate.navbarButtonPressed(sender: "HomeToShopSegueID")
-        }
-        //cart
-        else if (sender.tag == ButtonTags.cart.rawValue) {
-            homeDelegate.navbarButtonPressed(sender: "HomeToCartSegueID")
-        }
-        //about
-        else if (sender.tag == ButtonTags.about.rawValue) {
-            homeDelegate.navbarButtonPressed(sender: "HomeToAboutSegueID")
-        }
     }
 }

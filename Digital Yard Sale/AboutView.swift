@@ -8,11 +8,9 @@
 
 import UIKit
 
-class AboutView: UIView, NavbarDelegate {
+class AboutView: UIView {
     
     weak var aboutDelegate: MainViewDelegate!
-    
-    @IBOutlet var navbar: Navbar!
     
     //required initializers
     override init(frame aFrame: CGRect) {
@@ -21,7 +19,6 @@ class AboutView: UIView, NavbarDelegate {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupView()
-        navbar.navDelegate = self
     }
     
     //setup the view
@@ -32,25 +29,5 @@ class AboutView: UIView, NavbarDelegate {
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         view.frame = bounds
         addSubview(view)
-    }
-    
-    func navbarButtonPressed(sender: UIButton) {
-        //home
-        if (sender.tag == ButtonTags.home.rawValue) {
-            aboutDelegate.navbarButtonPressed(sender: "AboutToHomeSegueID")
-        }
-            //shop
-        else if (sender.tag == ButtonTags.shop.rawValue) {
-            aboutDelegate.navbarButtonPressed(sender: "AboutToShopSegueID")
-        }
-            //cart
-        else if (sender.tag == ButtonTags.cart.rawValue) {
-            aboutDelegate.navbarButtonPressed(sender: "AboutToCartSegueID")
-        }
-            //about
-        else if (sender.tag == ButtonTags.about.rawValue) {
-            //do nothing
-        }
-
     }
 }

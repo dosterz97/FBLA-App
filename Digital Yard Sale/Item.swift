@@ -15,7 +15,9 @@ class Item: Object {
     
     dynamic var itemDescription = ""
     
-    dynamic var price = 0
+    dynamic var price = Double(0.00)
+    
+    dynamic var priceAsString = ""
     
     dynamic var conditionRating = 5
     
@@ -27,7 +29,7 @@ class Item: Object {
     
     var reviews = List<Review>()
     
-    convenience init(itemNameT: String, itemDescriptionT: String, priceT: Int, conditionRatingT: Int, categoryT: Category,picURL: String) {
+    convenience init(itemNameT: String, itemDescriptionT: String, priceT: Double, conditionRatingT: Int, categoryT: Category,picURL: String) {
         self.init()
         self.itemName = itemNameT
         self.itemDescription = itemDescriptionT
@@ -35,6 +37,15 @@ class Item: Object {
         self.conditionRating = conditionRatingT
         self.category = categoryT
         self.picURL = picURL
+        
+        //set the string of price to two places
+        let numberFormatter = NumberFormatter()
+        numberFormatter.minimumFractionDigits = 2
+        numberFormatter.maximumFractionDigits = 2
+        
+        let tempNum = NSNumber(value: price)
+        let temp = numberFormatter.string(from: tempNum)
+        self.priceAsString = temp!
         
         let realm = AppDelegate.getInstance().realm!
         let items = realm.objects(Item.self)

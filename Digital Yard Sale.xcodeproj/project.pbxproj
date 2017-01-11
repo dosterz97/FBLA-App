@@ -40,6 +40,7 @@
 		BD568F551E24479D001DAF21 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD568F541E24479D001DAF21 /* PaymentViewController.swift */; };
 		BD568F5E1E2447AA001DAF21 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD568F5D1E2447AA001DAF21 /* PaymentView.swift */; };
 		BD568F601E2447B9001DAF21 /* PaymentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD568F5F1E2447B9001DAF21 /* PaymentView.xib */; };
+		BDABD2011E25A16D0010B99E /* MyTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDABD2001E25A16D0010B99E /* MyTabBarViewController.swift */; };
 		BDDA1B931E0B196F00CBE6E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1B921E0B196F00CBE6E8 /* LoginViewController.swift */; };
 		BDDA1B981E0B1D0E00CBE6E8 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1B971E0B1D0E00CBE6E8 /* WelcomeView.swift */; };
 		BDDA1BCB1E0B269C00CBE6E8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDA1BBE1E0B265500CBE6E8 /* Alamofire.framework */; };
@@ -48,8 +49,6 @@
 		BDDA1BDD1E0F916E00CBE6E8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1BDC1E0F916E00CBE6E8 /* LoginView.swift */; };
 		BDDA1BE61E0F932F00CBE6E8 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDA1BE51E0F932F00CBE6E8 /* LoginView.xib */; };
 		BDDA1BE81E108BCF00CBE6E8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1BE71E108BCF00CBE6E8 /* HomeView.swift */; };
-		BDDA1BEA1E10CC6A00CBE6E8 /* Navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1BE91E10CC6A00CBE6E8 /* Navbar.swift */; };
-		BDDA1BEC1E10CC7700CBE6E8 /* NavbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDA1BEB1E10CC7700CBE6E8 /* NavbarView.xib */; };
 		BDDA1BEE1E11B7D600CBE6E8 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1BED1E11B7D600CBE6E8 /* ShopView.swift */; };
 		BDDA1BF01E12F00100CBE6E8 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1BEF1E12F00100CBE6E8 /* AboutView.swift */; };
 		BDDA1BF21E12FA2F00CBE6E8 /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1BF11E12FA2F00CBE6E8 /* ViewControllerUtils.swift */; };
@@ -175,6 +174,7 @@
 		BD568F541E24479D001DAF21 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		BD568F5D1E2447AA001DAF21 /* PaymentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		BD568F5F1E2447B9001DAF21 /* PaymentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentView.xib; sourceTree = "<group>"; };
+		BDABD2001E25A16D0010B99E /* MyTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarViewController.swift; sourceTree = "<group>"; };
 		BDDA1B921E0B196F00CBE6E8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BDDA1B971E0B1D0E00CBE6E8 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		BDDA1BB21E0B265400CBE6E8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
@@ -182,8 +182,6 @@
 		BDDA1BDC1E0F916E00CBE6E8 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BDDA1BE51E0F932F00CBE6E8 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		BDDA1BE71E108BCF00CBE6E8 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		BDDA1BE91E10CC6A00CBE6E8 /* Navbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navbar.swift; sourceTree = "<group>"; };
-		BDDA1BEB1E10CC7700CBE6E8 /* NavbarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavbarView.xib; sourceTree = "<group>"; };
 		BDDA1BED1E11B7D600CBE6E8 /* ShopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		BDDA1BEF1E12F00100CBE6E8 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		BDDA1BF11E12FA2F00CBE6E8 /* ViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
@@ -260,7 +258,6 @@
 				3B0F02F51DEE308E005BD9A1 /* HomeView.xib */,
 				BDDA1C091E1309DF00CBE6E8 /* ItemView.xib */,
 				BDDA1BE51E0F932F00CBE6E8 /* LoginView.xib */,
-				BDDA1BEB1E10CC7700CBE6E8 /* NavbarView.xib */,
 				BD568F5F1E2447B9001DAF21 /* PaymentView.xib */,
 				BD1ABD5B1E15CA3100EC997F /* ProfileView.xib */,
 				BDDA1BF91E1300BF00CBE6E8 /* RegistrationView.xib */,
@@ -281,6 +278,7 @@
 				3B0F02EB1DEE2DDD005BD9A1 /* HomeViewController.swift */,
 				BDDA1C0B1E1309F200CBE6E8 /* ItemViewController.swift */,
 				BDDA1B921E0B196F00CBE6E8 /* LoginViewController.swift */,
+				BDABD2001E25A16D0010B99E /* MyTabBarViewController.swift */,
 				BD568F541E24479D001DAF21 /* PaymentViewController.swift */,
 				BD1ABD571E15C9E600EC997F /* ProfileViewController.swift */,
 				BDDA1BFB1E1300D000CBE6E8 /* RegistrationViewController.swift */,
@@ -303,7 +301,6 @@
 				BDDA1BDC1E0F916E00CBE6E8 /* LoginView.swift */,
 				BD568F5D1E2447AA001DAF21 /* PaymentView.swift */,
 				BD1ABD591E15CA2600EC997F /* ProfileView.swift */,
-				BDDA1BE91E10CC6A00CBE6E8 /* Navbar.swift */,
 				BD1ABD191E15ABD500EC997F /* RegistrationView.swift */,
 				BD0E2D081E1FF9960079C6D9 /* ReviewView.swift */,
 				BDDA1BED1E11B7D600CBE6E8 /* ShopView.swift */,
@@ -460,7 +457,6 @@
 			files = (
 				3B0F02FA1DEE30A8005BD9A1 /* ShopView.xib in Resources */,
 				3B0F02F81DEE30A1005BD9A1 /* AboutView.xib in Resources */,
-				BDDA1BEC1E10CC7700CBE6E8 /* NavbarView.xib in Resources */,
 				BD1ABD1E1E15ABD500EC997F /* WelcomeView.xib in Resources */,
 				BDDA1BFA1E1300BF00CBE6E8 /* RegistrationView.xib in Resources */,
 				BDDA1BE61E0F932F00CBE6E8 /* LoginView.xib in Resources */,
@@ -517,6 +513,7 @@
 				BD1ABD5E1E15D02A00EC997F /* Item.swift in Sources */,
 				BDDA1C061E13098000CBE6E8 /* CategoryView.swift in Sources */,
 				3B0F02F01DEE2EE5005BD9A1 /* ShopViewController.swift in Sources */,
+				BDABD2011E25A16D0010B99E /* MyTabBarViewController.swift in Sources */,
 				BD1ABD1C1E15ABD500EC997F /* RegistrationView.swift in Sources */,
 				BDDA1C0C1E1309F200CBE6E8 /* ItemViewController.swift in Sources */,
 				BD1ABD5A1E15CA2600EC997F /* ProfileView.swift in Sources */,
@@ -525,7 +522,6 @@
 				3B0F02EE1DEE2E81005BD9A1 /* AboutViewController.swift in Sources */,
 				BDDA1BEE1E11B7D600CBE6E8 /* ShopView.swift in Sources */,
 				BDDA1BFC1E1300D000CBE6E8 /* RegistrationViewController.swift in Sources */,
-				BDDA1BEA1E10CC6A00CBE6E8 /* Navbar.swift in Sources */,
 				BDDA1BF41E12FD6100CBE6E8 /* CartViewController.swift in Sources */,
 				BD568F551E24479D001DAF21 /* PaymentViewController.swift in Sources */,
 				3B2877851E256CBC006E2A22 /* ChartView.swift in Sources */,
