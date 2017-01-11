@@ -11,9 +11,9 @@ import RealmSwift
 
 class GeneralInfo: Object {
     
-    dynamic var moneyRaised = 0
+    dynamic var moneyRaised = 0.0
     
-    convenience init(moneyRaised: Int) {
+    convenience init(moneyRaised: Double) {
         self.init()
         self.moneyRaised = moneyRaised
     }

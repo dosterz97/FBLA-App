@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PaymentView: UIView {
+class PaymentView: UIView, UITextFieldDelegate {
     
     @IBOutlet var cardNumberField: UITextField!
     
@@ -23,6 +23,8 @@ class PaymentView: UIView {
     @IBOutlet var addressField: UITextField!
     
     @IBOutlet var finishedButton: UIButton!
+    
+    @IBOutlet var totalCost: UILabel!
     
     var total: Double!
     
@@ -43,8 +45,12 @@ class PaymentView: UIView {
         view.frame = bounds
         addSubview(view)
         
-        finishedButton.addTarget(self, action: #selector(doneWithForm), for: .touchUpInside)
+        addressField.delegate = self
         
+        finishedButton.addTarget(self, action: #selector(doneWithForm), for: .touchUpInside)
+    }
+    
+    func viewAppearing() {
         //get the current user ID
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let userNum = appDelegate.userID
@@ -60,8 +66,9 @@ class PaymentView: UIView {
         for item in user.userCart {
             total = item.price
         }
-        
         print(total)
+        
+        
     }
     
     func doneWithForm() {
@@ -75,12 +82,33 @@ class PaymentView: UIView {
         else { return }
 
         //Update the money raised
+        AppDelegate.getInstance().money? += total
         
         
-        //Remove items from the realm
+        //get the current user ID
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let userNum = appDelegate.userID
         
+        //open the realm to find the user
+        let realm = AppDelegate.getInstance().realm!
+        var user = User()
+        try! realm.write {
+            //Remove items from the users cart
+            let users = realm.objects(User.self);
+            user = users[userNum!]
+            user.userCart.removeAll()
+            
+            //Remove items from the realm
+        }
+        
+        //end editing
+        // UITextFieldDelegate
+        func textFieldShouldReturn(textField: UITextField) -> Bool {
+            // User finished typing (hit return): hide the keyboard.
+            textField.resignFirstResponder()
+            return true
+        }
 
-        //Remove items from the users cart
         
     }
 }

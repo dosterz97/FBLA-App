@@ -17,12 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var userID: Int?
     
-    var money: Int?
+    var money: Double?
     
     let realmConfig = Realm.Configuration(
         // Set the new schema version. This must be greater than the previously used
         // version (if you've never set a schema version before, the version is 0).
-        schemaVersion: 20,
+        schemaVersion: 21,
         
         // Set the block which will be called automatically when opening a Realm with
         // a schema version lower than the one set above
@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         try! realm.write {
             let t = realm.objects(GeneralInfo.self)
             if (t.count == 0) {
-                let firstRun = GeneralInfo(moneyRaised: 6700)
+                let firstRun = GeneralInfo(moneyRaised: 6700.00)
                 realm.add(firstRun)
             }
             money = t[0].moneyRaised

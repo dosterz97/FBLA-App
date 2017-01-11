@@ -23,6 +23,7 @@ class HomeViewController: UIViewController, MainViewDelegate {
     //hide the navigation bar on this page
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+        homeView.viewAppearing()
     }
     
     //the home view will give the segue ID upon type of button pressed
@@ -32,6 +33,6 @@ class HomeViewController: UIViewController, MainViewDelegate {
     
     //home view segues to profile view
     func profileButtonPressed(sender: AnyObject) {
-        self.performSegue(withIdentifier: "HomeToProfileSegueID", sender: nil)
+        self.performSegue(withIdentifier: "HomeToWelcomeSegueID", sender: nil)
     }
 }

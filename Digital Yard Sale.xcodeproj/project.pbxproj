@@ -27,9 +27,6 @@
 		BD1ABD1D1E15ABD500EC997F /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */; };
 		BD1ABD1E1E15ABD500EC997F /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD1ABD1B1E15ABD500EC997F /* WelcomeView.xib */; };
 		BD1ABD2D1E15AE4E00EC997F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD2C1E15AE4E00EC997F /* User.swift */; };
-		BD1ABD581E15C9E600EC997F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD571E15C9E600EC997F /* ProfileViewController.swift */; };
-		BD1ABD5A1E15CA2600EC997F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD591E15CA2600EC997F /* ProfileView.swift */; };
-		BD1ABD5C1E15CA3100EC997F /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD1ABD5B1E15CA3100EC997F /* ProfileView.xib */; };
 		BD1ABD5E1E15D02A00EC997F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD5D1E15D02A00EC997F /* Item.swift */; };
 		BD1ABD601E15D27200EC997F /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD5F1E15D27200EC997F /* Review.swift */; };
 		BD1ABD621E1B05CF00EC997F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD611E1B05CF00EC997F /* Category.swift */; };
@@ -163,9 +160,6 @@
 		BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		BD1ABD1B1E15ABD500EC997F /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
 		BD1ABD2C1E15AE4E00EC997F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		BD1ABD571E15C9E600EC997F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		BD1ABD591E15CA2600EC997F /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		BD1ABD5B1E15CA3100EC997F /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
 		BD1ABD5D1E15D02A00EC997F /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		BD1ABD5F1E15D27200EC997F /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		BD1ABD611E1B05CF00EC997F /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -259,7 +253,6 @@
 				BDDA1C091E1309DF00CBE6E8 /* ItemView.xib */,
 				BDDA1BE51E0F932F00CBE6E8 /* LoginView.xib */,
 				BD568F5F1E2447B9001DAF21 /* PaymentView.xib */,
-				BD1ABD5B1E15CA3100EC997F /* ProfileView.xib */,
 				BDDA1BF91E1300BF00CBE6E8 /* RegistrationView.xib */,
 				3B0F02FB1DEE30B4005BD9A1 /* ReviewView.xib */,
 				3B0F02F91DEE30A8005BD9A1 /* ShopView.xib */,
@@ -272,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				3B0F02ED1DEE2E81005BD9A1 /* AboutViewController.swift */,
-				3B0F02DB1DEE2BC7005BD9A1 /* ViewController.swift */,
 				BDDA1BF31E12FD6100CBE6E8 /* CartViewController.swift */,
 				BDDA1C031E13094800CBE6E8 /* CategoryViewController.swift */,
 				3B0F02EB1DEE2DDD005BD9A1 /* HomeViewController.swift */,
@@ -280,10 +272,10 @@
 				BDDA1B921E0B196F00CBE6E8 /* LoginViewController.swift */,
 				BDABD2001E25A16D0010B99E /* MyTabBarViewController.swift */,
 				BD568F541E24479D001DAF21 /* PaymentViewController.swift */,
-				BD1ABD571E15C9E600EC997F /* ProfileViewController.swift */,
 				BDDA1BFB1E1300D000CBE6E8 /* RegistrationViewController.swift */,
 				BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */,
 				3B0F02EF1DEE2EE5005BD9A1 /* ShopViewController.swift */,
+				3B0F02DB1DEE2BC7005BD9A1 /* ViewController.swift */,
 				BDDA1BD21E0B810000CBE6E8 /* WelcomeViewController.swift */,
 			);
 			name = "View Controllers";
@@ -300,11 +292,10 @@
 				BDDA1C0D1E1309FB00CBE6E8 /* ItemView.swift */,
 				BDDA1BDC1E0F916E00CBE6E8 /* LoginView.swift */,
 				BD568F5D1E2447AA001DAF21 /* PaymentView.swift */,
-				BD1ABD591E15CA2600EC997F /* ProfileView.swift */,
 				BD1ABD191E15ABD500EC997F /* RegistrationView.swift */,
 				BD0E2D081E1FF9960079C6D9 /* ReviewView.swift */,
-				BDDA1BED1E11B7D600CBE6E8 /* ShopView.swift */,
 				BDDA1B971E0B1D0E00CBE6E8 /* WelcomeView.swift */,
+				BDDA1BED1E11B7D600CBE6E8 /* ShopView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -466,7 +457,6 @@
 				BD568F601E2447B9001DAF21 /* PaymentView.xib in Resources */,
 				BDDA1BF81E12FE7600CBE6E8 /* CartView.xib in Resources */,
 				3B0F02E11DEE2BC7005BD9A1 /* Assets.xcassets in Resources */,
-				BD1ABD5C1E15CA3100EC997F /* ProfileView.xib in Resources */,
 				3B2877831E256CAF006E2A22 /* ChartView.xib in Resources */,
 				3B0F02DF1DEE2BC7005BD9A1 /* Main.storyboard in Resources */,
 				BDDA1C0A1E1309DF00CBE6E8 /* ItemView.xib in Resources */,
@@ -516,7 +506,6 @@
 				BDABD2011E25A16D0010B99E /* MyTabBarViewController.swift in Sources */,
 				BD1ABD1C1E15ABD500EC997F /* RegistrationView.swift in Sources */,
 				BDDA1C0C1E1309F200CBE6E8 /* ItemViewController.swift in Sources */,
-				BD1ABD5A1E15CA2600EC997F /* ProfileView.swift in Sources */,
 				BDDA1BF01E12F00100CBE6E8 /* AboutView.swift in Sources */,
 				3B28777A1E255F3B006E2A22 /* GeneralInfo.swift in Sources */,
 				3B0F02EE1DEE2E81005BD9A1 /* AboutViewController.swift in Sources */,
@@ -528,7 +517,6 @@
 				BD1ABD2D1E15AE4E00EC997F /* User.swift in Sources */,
 				BDDA1BDD1E0F916E00CBE6E8 /* LoginView.swift in Sources */,
 				BD1ABD621E1B05CF00EC997F /* Category.swift in Sources */,
-				BD1ABD581E15C9E600EC997F /* ProfileViewController.swift in Sources */,
 				3B0F02EC1DEE2DDD005BD9A1 /* HomeViewController.swift in Sources */,
 				BDDA1BF21E12FA2F00CBE6E8 /* ViewControllerUtils.swift in Sources */,
 			);

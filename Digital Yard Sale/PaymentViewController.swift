@@ -23,5 +23,6 @@ class PaymentViewController: UIViewController {
     //show the navigation bar on this page
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+        self.paymentView.viewAppearing()
     }
 }

@@ -24,7 +24,7 @@ class HomeView: UIView {
     
     weak var homeDelegate: MainViewDelegate!
     
-    var money: Int?
+    var money: Double?
     
     override init(frame aFrame:CGRect) {
         super.init(frame: aFrame)
@@ -46,12 +46,14 @@ class HomeView: UIView {
         addSubview(view)
         
         profileButton.addTarget(self, action: #selector(profileButtonPressed), for: .touchUpInside)
-        
+    }
+    
+    func viewAppearing() {
         money = AppDelegate.getInstance().money
         //Set text values
         moneyRaised.text = money?.description
         precentRaised.text = ((money)!/100).description + "%"
-        
+
     }
     
     //the profile button

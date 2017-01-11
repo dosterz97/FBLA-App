@@ -12,6 +12,8 @@ class AboutView: UIView {
     
     weak var aboutDelegate: MainViewDelegate!
     
+    @IBOutlet var numberOfDaysLeft:UILabel!
+    
     //required initializers
     override init(frame aFrame: CGRect) {
         super.init(frame: aFrame)
@@ -29,5 +31,15 @@ class AboutView: UIView {
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         view.frame = bounds
         addSubview(view)
+        
+        //set up  days until the conference
+        let date = Date()
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        let NLCdate = formatter.date(from: "2017/06/24 00:00")
+        
+        let time = Int(((NLCdate?.timeIntervalSinceReferenceDate)! - date.timeIntervalSinceReferenceDate)/86400)
+        numberOfDaysLeft.text = time.description + " days left!"
     }
 }

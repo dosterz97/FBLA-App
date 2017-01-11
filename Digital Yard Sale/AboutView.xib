@@ -1,25 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutView" customModule="Digital_Yard_Sale" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutView" customModule="Digital_Yard_Sale" customModuleProvider="target">
+            <connections>
+                <outlet property="numberOfDaysLeft" destination="03y-br-UMD" id="zb0-aA-1xP"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JsJ-qd-ua4">
+                    <rect key="frame" x="0.0" y="40" width="375" height="128"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NLC Yardsale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtX-OQ-fvc">
+                            <rect key="frame" x="27" y="35" width="189" height="39"/>
                             <fontDescription key="fontDescription" type="system" pointSize="32"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X Days Left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03y-br-UMD">
+                            <rect key="frame" x="27" y="88" width="88" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -34,53 +45,70 @@
                         <constraint firstItem="03y-br-UMD" firstAttribute="leading" secondItem="JsJ-qd-ua4" secondAttribute="leading" constant="27" id="qcl-l1-uT3"/>
                     </constraints>
                 </view>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VGQ-Ne-DRO">
-                    <frame key="frameInset" minX="16" minY="213" width="343" height="112"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BoO-1F-j2K">
+                    <rect key="frame" x="22" y="369" width="300" height="101"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <string key="text">Please help me fundraise for nlc by participating in my digital yard sale. The NLC gives young people like me a chance to participate and be active in a competitive environment that pushes us to become better in our respective fields by putting us to the test in Las Angeles.</string>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="101" id="hJH-Dy-THU"/>
+                    </constraints>
+                    <string key="text">I need the funds to pay for my 3-day, 2-night stay in Anaheim, my food, and my hotel for the duration while im competeing. I have already fun-raised for the fees and trip to state and districts.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BoO-1F-j2K">
-                    <frame key="frameInset" minX="16" minY="325" width="343" height="83"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I hope I am able to gain your hlep in y chance to win a national title in the App Development and Design categories." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HIQ-vE-Ezj">
+                    <rect key="frame" x="22" y="478" width="300" height="67"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <string key="text">I need the funds to pay for my 3-day, 2-night stay in Las Angeles, my food, and my hotel for the duration while im competeing. I have already fun-raised for the fees and trip to state and districts.</string>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="67" id="iGQ-db-LdX"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="I hope I am able to gain your hlep in y chance to win a nationa-title in the App Development and Design categories." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HIQ-vE-Ezj">
-                    <frame key="frameInset" minX="18" minY="416" width="340" height="67"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fundrasing for NLC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6m-Er-tVk">
-                    <frame key="frameInset" minX="29" minY="176" width="149" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fundrasing for NLC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6m-Er-tVk">
+                    <rect key="frame" x="27" y="188" width="174" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b9u-qa-XTq">
+                    <rect key="frame" x="0.0" y="156" width="375" height="12"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="12" id="iwK-pj-FlM"/>
                     </constraints>
                 </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VGQ-Ne-DRO">
+                    <rect key="frame" x="22" y="225" width="300" height="136"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="136" id="Ud2-8p-1CW"/>
+                    </constraints>
+                    <string key="text">Please help me fundraise for nlc by participating in my digital yard sale. The NLC gives young people like me a chance to participate and be active in a competitive environment that pushes us to become better in our respective fields by putting us to the test in Anaheim, California</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="VGQ-Ne-DRO" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="1Mz-Jq-88f"/>
+                <constraint firstItem="VGQ-Ne-DRO" firstAttribute="leading" secondItem="b6m-Er-tVk" secondAttribute="leading" constant="-5" id="65h-vG-n4p"/>
+                <constraint firstItem="BoO-1F-j2K" firstAttribute="width" secondItem="VGQ-Ne-DRO" secondAttribute="width" id="BHh-QI-iSC"/>
                 <constraint firstItem="JsJ-qd-ua4" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="FiK-P0-T3H"/>
+                <constraint firstItem="HIQ-vE-Ezj" firstAttribute="leading" secondItem="BoO-1F-j2K" secondAttribute="leading" id="IkV-rn-6OH"/>
+                <constraint firstItem="BoO-1F-j2K" firstAttribute="top" secondItem="VGQ-Ne-DRO" secondAttribute="bottom" constant="8" id="MbM-RV-yoo"/>
+                <constraint firstItem="HIQ-vE-Ezj" firstAttribute="width" secondItem="BoO-1F-j2K" secondAttribute="width" id="N6Y-W1-LgK"/>
                 <constraint firstItem="b9u-qa-XTq" firstAttribute="top" secondItem="JsJ-qd-ua4" secondAttribute="bottom" constant="-12" id="Not-Da-CJN"/>
+                <constraint firstItem="b6m-Er-tVk" firstAttribute="leading" secondItem="03y-br-UMD" secondAttribute="leading" id="SAL-Wu-GXD"/>
+                <constraint firstItem="VGQ-Ne-DRO" firstAttribute="top" secondItem="b6m-Er-tVk" secondAttribute="bottom" constant="13" id="Wlu-I3-yzx"/>
                 <constraint firstItem="JsJ-qd-ua4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XcL-qa-xbb"/>
+                <constraint firstItem="BoO-1F-j2K" firstAttribute="leading" secondItem="VGQ-Ne-DRO" secondAttribute="leading" id="gOo-Ni-dr0"/>
                 <constraint firstItem="b9u-qa-XTq" firstAttribute="centerX" secondItem="JsJ-qd-ua4" secondAttribute="centerX" id="kdK-c2-I1O"/>
                 <constraint firstItem="b9u-qa-XTq" firstAttribute="width" secondItem="JsJ-qd-ua4" secondAttribute="width" id="mCQ-BY-q0L"/>
+                <constraint firstItem="HIQ-vE-Ezj" firstAttribute="top" secondItem="BoO-1F-j2K" secondAttribute="bottom" constant="8" id="nNl-eV-KRh"/>
                 <constraint firstItem="JsJ-qd-ua4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="tSY-hw-M7w"/>
+                <constraint firstItem="b6m-Er-tVk" firstAttribute="top" secondItem="b9u-qa-XTq" secondAttribute="bottom" constant="20" id="xZ1-fV-mku"/>
             </constraints>
-            <point key="canvasLocation" x="34.5" y="79.5"/>
+            <point key="canvasLocation" x="32" y="81"/>
         </view>
         <view contentMode="scaleToFill" id="haa-pr-8Df">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
