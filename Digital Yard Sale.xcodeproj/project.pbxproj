@@ -31,6 +31,29 @@
 		3B3731AF1E2822910078331E /* sketchers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731A61E2822910078331E /* sketchers.jpg */; };
 		3B3731B01E2822910078331E /* sweatpants.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731A71E2822910078331E /* sweatpants.jpg */; };
 		3B3731B11E2822910078331E /* tutu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731A81E2822910078331E /* tutu.jpg */; };
+		3B3731C91E2825E80078331E /* actionfigures.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731B21E2825E80078331E /* actionfigures.jpg */; };
+		3B3731CA1E2825E80078331E /* batmanboomerang.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731B31E2825E80078331E /* batmanboomerang.jpg */; };
+		3B3731CB1E2825E80078331E /* coupons.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731B41E2825E80078331E /* coupons.jpeg */; };
+		3B3731CC1E2825E80078331E /* deskchair.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731B51E2825E80078331E /* deskchair.jpg */; };
+		3B3731CD1E2825E80078331E /* dirtbike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731B61E2825E80078331E /* dirtbike.jpg */; };
+		3B3731CE1E2825E80078331E /* forza.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731B71E2825E80078331E /* forza.jpeg */; };
+		3B3731CF1E2825E80078331E /* gamecube.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731B81E2825E80078331E /* gamecube.jpeg */; };
+		3B3731D01E2825E80078331E /* itunes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731B91E2825E80078331E /* itunes.jpg */; };
+		3B3731D11E2825E80078331E /* jenga.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731BA1E2825E80078331E /* jenga.jpg */; };
+		3B3731D21E2825E80078331E /* lacrosse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731BB1E2825E80078331E /* lacrosse.jpg */; };
+		3B3731D31E2825E80078331E /* legos.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731BC1E2825E80078331E /* legos.jpeg */; };
+		3B3731D41E2825E80078331E /* legostarwars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731BD1E2825E80078331E /* legostarwars.jpg */; };
+		3B3731D51E2825E80078331E /* mariokart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731BE1E2825E80078331E /* mariokart.jpg */; };
+		3B3731D61E2825E80078331E /* mountainbike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731BF1E2825E80078331E /* mountainbike.jpg */; };
+		3B3731D71E2825E80078331E /* nerfgun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731C01E2825E80078331E /* nerfgun.jpg */; };
+		3B3731D81E2825E80078331E /* pacman.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731C11E2825E80078331E /* pacman.jpeg */; };
+		3B3731D91E2825E80078331E /* pokemonxd.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731C21E2825E80078331E /* pokemonxd.jpeg */; };
+		3B3731DA1E2825E80078331E /* portable charger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731C31E2825E80078331E /* portable charger.jpg */; };
+		3B3731DB1E2825E80078331E /* rubikcube.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731C41E2825E80078331E /* rubikcube.jpg */; };
+		3B3731DC1E2825E80078331E /* soccerball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731C51E2825E80078331E /* soccerball.jpg */; };
+		3B3731DD1E2825E80078331E /* sorry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731C61E2825E80078331E /* sorry.jpg */; };
+		3B3731DE1E2825E80078331E /* xbox360.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731C71E2825E80078331E /* xbox360.png */; };
+		3B3731DF1E2825E80078331E /* zelda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731C81E2825E80078331E /* zelda.jpg */; };
 		BD0E2D091E1FF9960079C6D9 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E2D081E1FF9960079C6D9 /* ReviewView.swift */; };
 		BD1ABD1C1E15ABD500EC997F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD191E15ABD500EC997F /* RegistrationView.swift */; };
 		BD1ABD1D1E15ABD500EC997F /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */; };
@@ -173,6 +196,29 @@
 		3B3731A61E2822910078331E /* sketchers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sketchers.jpg; path = Images/sketchers.jpg; sourceTree = "<group>"; };
 		3B3731A71E2822910078331E /* sweatpants.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sweatpants.jpg; path = Images/sweatpants.jpg; sourceTree = "<group>"; };
 		3B3731A81E2822910078331E /* tutu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tutu.jpg; path = Images/tutu.jpg; sourceTree = "<group>"; };
+		3B3731B21E2825E80078331E /* actionfigures.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = actionfigures.jpg; path = Images/actionfigures.jpg; sourceTree = "<group>"; };
+		3B3731B31E2825E80078331E /* batmanboomerang.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = batmanboomerang.jpg; path = Images/batmanboomerang.jpg; sourceTree = "<group>"; };
+		3B3731B41E2825E80078331E /* coupons.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = coupons.jpeg; path = Images/coupons.jpeg; sourceTree = "<group>"; };
+		3B3731B51E2825E80078331E /* deskchair.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = deskchair.jpg; path = Images/deskchair.jpg; sourceTree = "<group>"; };
+		3B3731B61E2825E80078331E /* dirtbike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = dirtbike.jpg; path = Images/dirtbike.jpg; sourceTree = "<group>"; };
+		3B3731B71E2825E80078331E /* forza.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = forza.jpeg; path = Images/forza.jpeg; sourceTree = "<group>"; };
+		3B3731B81E2825E80078331E /* gamecube.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = gamecube.jpeg; path = Images/gamecube.jpeg; sourceTree = "<group>"; };
+		3B3731B91E2825E80078331E /* itunes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = itunes.jpg; path = Images/itunes.jpg; sourceTree = "<group>"; };
+		3B3731BA1E2825E80078331E /* jenga.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jenga.jpg; path = Images/jenga.jpg; sourceTree = "<group>"; };
+		3B3731BB1E2825E80078331E /* lacrosse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lacrosse.jpg; path = Images/lacrosse.jpg; sourceTree = "<group>"; };
+		3B3731BC1E2825E80078331E /* legos.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = legos.jpeg; path = Images/legos.jpeg; sourceTree = "<group>"; };
+		3B3731BD1E2825E80078331E /* legostarwars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = legostarwars.jpg; path = Images/legostarwars.jpg; sourceTree = "<group>"; };
+		3B3731BE1E2825E80078331E /* mariokart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mariokart.jpg; path = Images/mariokart.jpg; sourceTree = "<group>"; };
+		3B3731BF1E2825E80078331E /* mountainbike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mountainbike.jpg; path = Images/mountainbike.jpg; sourceTree = "<group>"; };
+		3B3731C01E2825E80078331E /* nerfgun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nerfgun.jpg; path = Images/nerfgun.jpg; sourceTree = "<group>"; };
+		3B3731C11E2825E80078331E /* pacman.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pacman.jpeg; path = Images/pacman.jpeg; sourceTree = "<group>"; };
+		3B3731C21E2825E80078331E /* pokemonxd.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pokemonxd.jpeg; path = Images/pokemonxd.jpeg; sourceTree = "<group>"; };
+		3B3731C31E2825E80078331E /* portable charger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "portable charger.jpg"; path = "Images/portable charger.jpg"; sourceTree = "<group>"; };
+		3B3731C41E2825E80078331E /* rubikcube.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rubikcube.jpg; path = Images/rubikcube.jpg; sourceTree = "<group>"; };
+		3B3731C51E2825E80078331E /* soccerball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = soccerball.jpg; path = Images/soccerball.jpg; sourceTree = "<group>"; };
+		3B3731C61E2825E80078331E /* sorry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sorry.jpg; path = Images/sorry.jpg; sourceTree = "<group>"; };
+		3B3731C71E2825E80078331E /* xbox360.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xbox360.png; path = Images/xbox360.png; sourceTree = "<group>"; };
+		3B3731C81E2825E80078331E /* zelda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = zelda.jpg; path = Images/zelda.jpg; sourceTree = "<group>"; };
 		BD0E2D081E1FF9960079C6D9 /* ReviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		BD1ABD191E15ABD500EC997F /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
@@ -273,6 +319,29 @@
 				3B3731A61E2822910078331E /* sketchers.jpg */,
 				3B3731A71E2822910078331E /* sweatpants.jpg */,
 				3B3731A81E2822910078331E /* tutu.jpg */,
+				3B3731B21E2825E80078331E /* actionfigures.jpg */,
+				3B3731B31E2825E80078331E /* batmanboomerang.jpg */,
+				3B3731B41E2825E80078331E /* coupons.jpeg */,
+				3B3731B51E2825E80078331E /* deskchair.jpg */,
+				3B3731B61E2825E80078331E /* dirtbike.jpg */,
+				3B3731B71E2825E80078331E /* forza.jpeg */,
+				3B3731B81E2825E80078331E /* gamecube.jpeg */,
+				3B3731B91E2825E80078331E /* itunes.jpg */,
+				3B3731BA1E2825E80078331E /* jenga.jpg */,
+				3B3731BB1E2825E80078331E /* lacrosse.jpg */,
+				3B3731BC1E2825E80078331E /* legos.jpeg */,
+				3B3731BD1E2825E80078331E /* legostarwars.jpg */,
+				3B3731BE1E2825E80078331E /* mariokart.jpg */,
+				3B3731BF1E2825E80078331E /* mountainbike.jpg */,
+				3B3731C01E2825E80078331E /* nerfgun.jpg */,
+				3B3731C11E2825E80078331E /* pacman.jpeg */,
+				3B3731C21E2825E80078331E /* pokemonxd.jpeg */,
+				3B3731C31E2825E80078331E /* portable charger.jpg */,
+				3B3731C41E2825E80078331E /* rubikcube.jpg */,
+				3B3731C51E2825E80078331E /* soccerball.jpg */,
+				3B3731C61E2825E80078331E /* sorry.jpg */,
+				3B3731C71E2825E80078331E /* xbox360.png */,
+				3B3731C81E2825E80078331E /* zelda.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -486,25 +555,48 @@
 				3B0F02F81DEE30A1005BD9A1 /* AboutView.xib in Resources */,
 				3B3731A91E2822910078331E /* basketball.jpg in Resources */,
 				BD1ABD1E1E15ABD500EC997F /* WelcomeView.xib in Resources */,
+				3B3731D41E2825E80078331E /* legostarwars.jpg in Resources */,
 				3B3731AF1E2822910078331E /* sketchers.jpg in Resources */,
+				3B3731CC1E2825E80078331E /* deskchair.jpg in Resources */,
+				3B3731D21E2825E80078331E /* lacrosse.jpg in Resources */,
+				3B3731D51E2825E80078331E /* mariokart.jpg in Resources */,
+				3B3731CF1E2825E80078331E /* gamecube.jpeg in Resources */,
+				3B3731DC1E2825E80078331E /* soccerball.jpg in Resources */,
 				BDDA1BFA1E1300BF00CBE6E8 /* RegistrationView.xib in Resources */,
+				3B3731CE1E2825E80078331E /* forza.jpeg in Resources */,
 				BDDA1BE61E0F932F00CBE6E8 /* LoginView.xib in Resources */,
+				3B3731D91E2825E80078331E /* pokemonxd.jpeg in Resources */,
 				3B0F02E41DEE2BC7005BD9A1 /* LaunchScreen.storyboard in Resources */,
+				3B3731DB1E2825E80078331E /* rubikcube.jpg in Resources */,
+				3B3731D81E2825E80078331E /* pacman.jpeg in Resources */,
+				3B3731CA1E2825E80078331E /* batmanboomerang.jpg in Resources */,
 				3B3731B01E2822910078331E /* sweatpants.jpg in Resources */,
+				3B3731CD1E2825E80078331E /* dirtbike.jpg in Resources */,
+				3B3731D11E2825E80078331E /* jenga.jpg in Resources */,
+				3B3731D71E2825E80078331E /* nerfgun.jpg in Resources */,
 				3B3731AE1E2822910078331E /* jordans.jpg in Resources */,
 				3B3731AC1E2822910078331E /* crazysocks.jpg in Resources */,
+				3B3731D01E2825E80078331E /* itunes.jpg in Resources */,
 				3B3731AD1E2822910078331E /* greysweater.jpg in Resources */,
+				3B3731D61E2825E80078331E /* mountainbike.jpg in Resources */,
+				3B3731D31E2825E80078331E /* legos.jpeg in Resources */,
 				3B0F02F61DEE308E005BD9A1 /* HomeView.xib in Resources */,
+				3B3731DF1E2825E80078331E /* zelda.jpg in Resources */,
 				3B3731AB1E2822910078331E /* blueshirt.jpg in Resources */,
 				3B0F02FC1DEE30B4005BD9A1 /* ReviewView.xib in Resources */,
 				3B3731AA1E2822910078331E /* blackjeresey.jpg in Resources */,
+				3B3731DE1E2825E80078331E /* xbox360.png in Resources */,
+				3B3731DA1E2825E80078331E /* portable charger.jpg in Resources */,
 				BD568F601E2447B9001DAF21 /* PaymentView.xib in Resources */,
 				BDDA1BF81E12FE7600CBE6E8 /* CartView.xib in Resources */,
+				3B3731DD1E2825E80078331E /* sorry.jpg in Resources */,
 				3B0F02E11DEE2BC7005BD9A1 /* Assets.xcassets in Resources */,
 				3B2877831E256CAF006E2A22 /* ChartView.xib in Resources */,
 				3B0F02DF1DEE2BC7005BD9A1 /* Main.storyboard in Resources */,
 				BDDA1C0A1E1309DF00CBE6E8 /* ItemView.xib in Resources */,
 				BDDA1C081E1309B300CBE6E8 /* CategoryView.xib in Resources */,
+				3B3731CB1E2825E80078331E /* coupons.jpeg in Resources */,
+				3B3731C91E2825E80078331E /* actionfigures.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

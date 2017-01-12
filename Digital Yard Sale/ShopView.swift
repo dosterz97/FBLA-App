@@ -111,7 +111,7 @@ class ShopView: UIView {
             games.items.append(item)
             item = Item(itemNameT: "LEGO Star Wars", itemDescriptionT: "All 3 games for XBOX 360.", priceT: 50, conditionRatingT: 5, categoryT: games, picURL: "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png")
             games.items.append(item)
-            item = Item(itemNameT: "Mario Cart", itemDescriptionT: "GameCube.", priceT: 20, conditionRatingT: 4, categoryT: games, picURL: "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png")
+            item = Item(itemNameT: "Mario Kart", itemDescriptionT: "GameCube.", priceT: 20, conditionRatingT: 4, categoryT: games, picURL: "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png")
             games.items.append(item)
             item = Item(itemNameT: "Legend Of Zelda", itemDescriptionT: "GameCube.", priceT: 20, conditionRatingT: 4, categoryT: games, picURL: "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png")
             games.items.append(item)
@@ -131,9 +131,9 @@ class ShopView: UIView {
             other.items.append(item)
             item = Item(itemNameT: "Mountain Bike", itemDescriptionT: "Big Blue!", priceT: 120, conditionRatingT: 5, categoryT: other, picURL: "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png")
             other.items.append(item)
-            item = Item(itemNameT: "GameCube", itemDescriptionT: "Comes with 1 controller(black).", priceT: 90, conditionRatingT: 4, categoryT: other, picURL: "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png")
+            item = Item(itemNameT: "GameCube", itemDescriptionT: "Comes with 1 controller(blue).", priceT: 90, conditionRatingT: 4, categoryT: other, picURL: "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png")
             other.items.append(item)
-            item = Item(itemNameT: "XBOX 360", itemDescriptionT: "Comes with 1 controller(grey).", priceT: 135, conditionRatingT: 5, categoryT: other, picURL: "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png")
+            item = Item(itemNameT: "XBOX 360", itemDescriptionT: "Comes with 1 controller(black).", priceT: 135, conditionRatingT: 5, categoryT: other, picURL: "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png")
             other.items.append(item)
             
             try! realm.write {
