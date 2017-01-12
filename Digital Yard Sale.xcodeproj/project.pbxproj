@@ -54,6 +54,11 @@
 		3B3731DD1E2825E80078331E /* sorry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731C61E2825E80078331E /* sorry.jpg */; };
 		3B3731DE1E2825E80078331E /* xbox360.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731C71E2825E80078331E /* xbox360.png */; };
 		3B3731DF1E2825E80078331E /* zelda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731C81E2825E80078331E /* zelda.jpg */; };
+		3B3731E41E2827630078331E /* clothes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731E01E2827630078331E /* clothes.jpg */; };
+		3B3731E51E2827630078331E /* games.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731E11E2827630078331E /* games.jpeg */; };
+		3B3731E61E2827630078331E /* other.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731E21E2827630078331E /* other.jpeg */; };
+		3B3731E71E2827630078331E /* toys.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731E31E2827630078331E /* toys.jpeg */; };
+		3B3731EF1E282AA10078331E /* welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731EE1E282AA10078331E /* welcome.jpg */; };
 		BD0E2D091E1FF9960079C6D9 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E2D081E1FF9960079C6D9 /* ReviewView.swift */; };
 		BD1ABD1C1E15ABD500EC997F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD191E15ABD500EC997F /* RegistrationView.swift */; };
 		BD1ABD1D1E15ABD500EC997F /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */; };
@@ -219,6 +224,11 @@
 		3B3731C61E2825E80078331E /* sorry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sorry.jpg; path = Images/sorry.jpg; sourceTree = "<group>"; };
 		3B3731C71E2825E80078331E /* xbox360.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xbox360.png; path = Images/xbox360.png; sourceTree = "<group>"; };
 		3B3731C81E2825E80078331E /* zelda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = zelda.jpg; path = Images/zelda.jpg; sourceTree = "<group>"; };
+		3B3731E01E2827630078331E /* clothes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = clothes.jpg; path = Images/clothes.jpg; sourceTree = "<group>"; };
+		3B3731E11E2827630078331E /* games.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = games.jpeg; path = Images/games.jpeg; sourceTree = "<group>"; };
+		3B3731E21E2827630078331E /* other.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = other.jpeg; path = Images/other.jpeg; sourceTree = "<group>"; };
+		3B3731E31E2827630078331E /* toys.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = toys.jpeg; path = Images/toys.jpeg; sourceTree = "<group>"; };
+		3B3731EE1E282AA10078331E /* welcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = welcome.jpg; path = Images/welcome.jpg; sourceTree = "<group>"; };
 		BD0E2D081E1FF9960079C6D9 /* ReviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		BD1ABD191E15ABD500EC997F /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
@@ -342,6 +352,11 @@
 				3B3731C61E2825E80078331E /* sorry.jpg */,
 				3B3731C71E2825E80078331E /* xbox360.png */,
 				3B3731C81E2825E80078331E /* zelda.jpg */,
+				3B3731E01E2827630078331E /* clothes.jpg */,
+				3B3731E11E2827630078331E /* games.jpeg */,
+				3B3731E21E2827630078331E /* other.jpeg */,
+				3B3731E31E2827630078331E /* toys.jpeg */,
+				3B3731EE1E282AA10078331E /* welcome.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -572,6 +587,9 @@
 				3B3731CA1E2825E80078331E /* batmanboomerang.jpg in Resources */,
 				3B3731B01E2822910078331E /* sweatpants.jpg in Resources */,
 				3B3731CD1E2825E80078331E /* dirtbike.jpg in Resources */,
+				3B3731EF1E282AA10078331E /* welcome.jpg in Resources */,
+				3B3731E51E2827630078331E /* games.jpeg in Resources */,
+				3B3731E71E2827630078331E /* toys.jpeg in Resources */,
 				3B3731D11E2825E80078331E /* jenga.jpg in Resources */,
 				3B3731D71E2825E80078331E /* nerfgun.jpg in Resources */,
 				3B3731AE1E2822910078331E /* jordans.jpg in Resources */,
@@ -579,6 +597,7 @@
 				3B3731D01E2825E80078331E /* itunes.jpg in Resources */,
 				3B3731AD1E2822910078331E /* greysweater.jpg in Resources */,
 				3B3731D61E2825E80078331E /* mountainbike.jpg in Resources */,
+				3B3731E61E2827630078331E /* other.jpeg in Resources */,
 				3B3731D31E2825E80078331E /* legos.jpeg in Resources */,
 				3B0F02F61DEE308E005BD9A1 /* HomeView.xib in Resources */,
 				3B3731DF1E2825E80078331E /* zelda.jpg in Resources */,
@@ -594,6 +613,7 @@
 				3B2877831E256CAF006E2A22 /* ChartView.xib in Resources */,
 				3B0F02DF1DEE2BC7005BD9A1 /* Main.storyboard in Resources */,
 				BDDA1C0A1E1309DF00CBE6E8 /* ItemView.xib in Resources */,
+				3B3731E41E2827630078331E /* clothes.jpg in Resources */,
 				BDDA1C081E1309B300CBE6E8 /* CategoryView.xib in Resources */,
 				3B3731CB1E2825E80078331E /* coupons.jpeg in Resources */,
 				3B3731C91E2825E80078331E /* actionfigures.jpg in Resources */,

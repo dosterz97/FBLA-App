@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import RealmSwift
 
 class Item: Object {
@@ -25,18 +26,18 @@ class Item: Object {
     
     dynamic var itemID = -1
     
-    dynamic var picURL = ""
+    var image = UIImage()
     
     var reviews = List<Review>()
     
-    convenience init(itemNameT: String, itemDescriptionT: String, priceT: Double, conditionRatingT: Int, categoryT: Category,picURL: String) {
+    convenience init(itemNameT: String, itemDescriptionT: String, priceT: Double, conditionRatingT: Int, categoryT: Category,image: UIImage) {
         self.init()
         self.itemName = itemNameT
         self.itemDescription = itemDescriptionT
         self.price = priceT
         self.conditionRating = conditionRatingT
         self.category = categoryT
-        self.picURL = picURL
+        self.image = image
         
         //set the string of price to two places
         let numberFormatter = NumberFormatter()

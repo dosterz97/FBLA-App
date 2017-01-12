@@ -47,13 +47,9 @@ class WelcomeView: UIView {
         addSubview(view)
         
         //load background image
-        Alamofire.request("https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg").responseData { response in
-            guard let data = response.result.value else {
-                debugPrint(response)
-                return
-            }
-            self.welcomeBackground.image = UIImage(data: data)
-        }
+        let imageBefore = UIImage(named: "welcome.jpg")
+        self.welcomeBackground.image = imageBefore
+        self.welcomeBackground.contentMode = .scaleAspectFill
         
         //give the buttons call to action
         loginButton.addTarget(self, action: #selector(buttonPressed), for: .touchDown)
