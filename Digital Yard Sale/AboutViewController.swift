@@ -21,7 +21,7 @@ class AboutViewController: UIViewController,MainViewDelegate {
     }
     //show the navigation bar on this page
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     func navbarButtonPressed(sender: String) {

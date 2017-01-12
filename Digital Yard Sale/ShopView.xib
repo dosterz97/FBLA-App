@@ -16,13 +16,44 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dEu-RK-VeD">
-                    <frame key="frameInset" minY="20" width="375" height="516"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JO8-t5-0Ru">
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OnM-nz-toW">
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="12" id="ISC-DZ-KMz"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mv0-cb-SNz">
+                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1058823529" green="0.4823529412" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="OnM-nz-toW" secondAttribute="bottom" id="0B6-RR-Qsj"/>
+                        <constraint firstItem="OnM-nz-toW" firstAttribute="width" secondItem="JO8-t5-0Ru" secondAttribute="width" id="0ZJ-di-0AY"/>
+                        <constraint firstAttribute="height" constant="125" id="0xT-A9-caq"/>
+                        <constraint firstItem="mv0-cb-SNz" firstAttribute="centerX" secondItem="JO8-t5-0Ru" secondAttribute="centerX" id="o5O-cQ-XxJ"/>
+                        <constraint firstItem="mv0-cb-SNz" firstAttribute="centerY" secondItem="JO8-t5-0Ru" secondAttribute="centerY" id="oNg-Yg-38H"/>
+                        <constraint firstItem="OnM-nz-toW" firstAttribute="leading" secondItem="JO8-t5-0Ru" secondAttribute="leading" id="skh-f3-YCd"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dEu-RK-VeD">
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dEu-RK-VeD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FIj-iz-fJT"/>
+                <constraint firstItem="JO8-t5-0Ru" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LPe-96-kPF"/>
+                <constraint firstItem="JO8-t5-0Ru" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="TwI-9X-4ZN"/>
+                <constraint firstItem="dEu-RK-VeD" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" constant="-137" id="Z0n-JM-IWv"/>
+                <constraint firstItem="JO8-t5-0Ru" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="o5s-qr-vPC"/>
+                <constraint firstItem="dEu-RK-VeD" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="pbg-Q4-aEF"/>
+                <constraint firstItem="dEu-RK-VeD" firstAttribute="top" secondItem="JO8-t5-0Ru" secondAttribute="bottom" id="rH2-P5-AgL"/>
+            </constraints>
             <point key="canvasLocation" x="26.5" y="60.5"/>
         </view>
     </objects>

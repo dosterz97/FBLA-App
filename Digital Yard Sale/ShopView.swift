@@ -50,7 +50,7 @@ class ShopView: UIView {
         let categoryList = realm.objects(Category.self)
         
         //setup the categories data
-        if (categoryList.count < 1) {
+        if (categoryList.count < 2) {
             
             let t = Category(nameT: "Clothes", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg")
             let u = Category(nameT: "Toys", picURLT: "https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg")
@@ -59,7 +59,11 @@ class ShopView: UIView {
             
             let a = Item(itemNameT: "Jordans", itemDescriptionT: "Cool Shoes", priceT: 20, conditionRatingT: 3, categoryT: t, picURL: "http://images.footlocker.com/pi/23581001/zoom/jordan-horizon-mens")
             t.items.append(a)
-            let b = Item(itemNameT: "two", itemDescriptionT: "", priceT: 0, conditionRatingT: 5, categoryT: t, picURL: "http://images.footlocker.com/pi/23581001/zoom/jordan-horizon-mens")
+            let d = Item(itemNameT: "Shoes", itemDescriptionT: "Cool Shoes", priceT: 20, conditionRatingT: 3, categoryT: t, picURL: "http://images.footlocker.com/pi/23581001/zoom/jordan-horizon-mens")
+            t.items.append(d)
+            let c = Item(itemNameT: "Shirt", itemDescriptionT: "Cool Shoes", priceT: 20, conditionRatingT: 3, categoryT: t, picURL: "http://images.footlocker.com/pi/23581001/zoom/jordan-horizon-mens")
+            t.items.append(c)
+            let b = Item(itemNameT: "two", itemDescriptionT: "", priceT: 15, conditionRatingT: 5, categoryT: t, picURL: "http://images.footlocker.com/pi/23581001/zoom/jordan-horizon-mens")
             t.items.append(b)
             
             try! realm.write {

@@ -1,17 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeView" customModule="Digital_Yard_Sale" customModuleProvider="target">
             <connections>
                 <outlet property="moneyRaised" destination="GmI-hL-cIG" id="RNf-3M-6yU"/>
+                <outlet property="numberOfDaysLeft" destination="bNw-K2-7el" id="TN0-nc-gAi"/>
                 <outlet property="precentRaised" destination="Zyj-h1-SRB" id="34q-ZY-CW3"/>
                 <outlet property="profileButton" destination="ppF-eX-Bph" id="beI-dH-82Y"/>
             </connections>
@@ -21,34 +19,72 @@
             <rect key="frame" x="0.0" y="0.0" width="443" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppF-eX-Bph">
-                    <rect key="frame" x="357" y="50" width="55" height="30"/>
-                    <state key="normal" title="Log Out"/>
-                </button>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u5w-I1-SAj" customClass="ChartView" customModule="Digital_Yard_Sale" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="100" width="443" height="467"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fuo-EM-BQh">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppF-eX-Bph">
+                            <state key="normal" title="Log Out">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZG-VD-HLC">
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="12" id="b5w-iv-U3d"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NLC Yardsale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLx-ED-X1A">
+                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X Days Left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNw-K2-7el">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Money Raised" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmI-hL-cIG">
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precent Raised" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyj-h1-SRB">
+                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal: $10,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKK-Hc-QZF">
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1058823529" green="0.4823529412" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="GmI-hL-cIG" firstAttribute="top" secondItem="Fuo-EM-BQh" secondAttribute="top" constant="158" id="BaO-UZ-IlQ"/>
+                        <constraint firstAttribute="height" constant="125" id="CQM-Sn-2iH"/>
+                        <constraint firstItem="AZG-VD-HLC" firstAttribute="leading" secondItem="Fuo-EM-BQh" secondAttribute="leading" id="IbG-rc-Ly5"/>
+                        <constraint firstItem="ppF-eX-Bph" firstAttribute="height" secondItem="Fuo-EM-BQh" secondAttribute="height" id="NLB-iU-ep6"/>
+                        <constraint firstAttribute="trailing" secondItem="ppF-eX-Bph" secondAttribute="trailing" constant="30" id="OSb-zz-v1M"/>
+                        <constraint firstAttribute="bottom" secondItem="AZG-VD-HLC" secondAttribute="bottom" id="Ora-FC-K4U"/>
+                        <constraint firstItem="RKK-Hc-QZF" firstAttribute="centerX" secondItem="Fuo-EM-BQh" secondAttribute="centerX" id="P5T-qg-JPt"/>
+                        <constraint firstItem="AZG-VD-HLC" firstAttribute="width" secondItem="Fuo-EM-BQh" secondAttribute="width" id="Sgu-Qe-3dz"/>
+                        <constraint firstItem="bNw-K2-7el" firstAttribute="leading" secondItem="RLx-ED-X1A" secondAttribute="leading" id="ZPJ-ov-d1a"/>
+                        <constraint firstItem="RLx-ED-X1A" firstAttribute="top" secondItem="Fuo-EM-BQh" secondAttribute="top" constant="20" id="ZsA-gl-QcA"/>
+                        <constraint firstItem="ppF-eX-Bph" firstAttribute="centerY" secondItem="Fuo-EM-BQh" secondAttribute="centerY" constant="-6" id="aTe-d6-9Ty"/>
+                        <constraint firstItem="bNw-K2-7el" firstAttribute="top" secondItem="RLx-ED-X1A" secondAttribute="bottom" constant="14" id="tAC-6B-dHm"/>
+                        <constraint firstItem="RLx-ED-X1A" firstAttribute="leading" secondItem="Fuo-EM-BQh" secondAttribute="leading" constant="27" id="wWo-VJ-xkW"/>
+                    </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precent Raised" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyj-h1-SRB">
-                    <rect key="frame" x="163" y="263" width="116" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Money Raised" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmI-hL-cIG">
-                    <rect key="frame" x="161" y="59" width="118" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="ppF-eX-Bph" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="FeV-ac-c5U"/>
-                <constraint firstAttribute="trailing" secondItem="ppF-eX-Bph" secondAttribute="trailing" constant="31" id="X11-MN-ydc"/>
+                <constraint firstItem="Fuo-EM-BQh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0ad-iq-gMb"/>
+                <constraint firstItem="Zyj-h1-SRB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9F5-B5-AQk"/>
+                <constraint firstItem="GmI-hL-cIG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="JEr-bi-x3u"/>
+                <constraint firstItem="Zyj-h1-SRB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="RrW-zJ-nSN"/>
+                <constraint firstItem="Fuo-EM-BQh" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="aLv-11-8r5"/>
+                <constraint firstItem="Fuo-EM-BQh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="v5m-eg-0US"/>
+                <constraint firstAttribute="bottom" secondItem="RKK-Hc-QZF" secondAttribute="bottom" constant="110" id="xcU-MS-Hgk"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-413.5" y="-129.5"/>

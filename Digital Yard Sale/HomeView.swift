@@ -22,6 +22,8 @@ class HomeView: UIView {
     
     @IBOutlet var precentRaised: UILabel!
     
+    @IBOutlet var numberOfDaysLeft: UILabel!
+    
     weak var homeDelegate: MainViewDelegate!
     
     var money: Double?
@@ -46,14 +48,46 @@ class HomeView: UIView {
         addSubview(view)
         
         profileButton.addTarget(self, action: #selector(profileButtonPressed), for: .touchUpInside)
+        
+        //set up  days until the conference
+        let date = Date()
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        let NLCdate = formatter.date(from: "2017/06/24 00:00")
+        
+        let time = Int(((NLCdate?.timeIntervalSinceReferenceDate)! - date.timeIntervalSinceReferenceDate)/86400)
+        numberOfDaysLeft.text = time.description + " days left!"
+
     }
     
     func viewAppearing() {
-        money = AppDelegate.getInstance().money
-        //Set text values
-        moneyRaised.text = money?.description
-        precentRaised.text = ((money)!/100).description + "%"
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
+        money = appDelegate.money
+        //Set text values
+        moneyRaised.text = "$0.00"
+        if (money != 0) {
+            //set the string of price to two places
+            let numberFormatter = NumberFormatter()
+            numberFormatter.minimumFractionDigits = 2
+            numberFormatter.maximumFractionDigits = 2
+            
+            let tempNum = NSNumber(value: money!)
+            let temp = numberFormatter.string(from: tempNum)
+            moneyRaised.text = "$" + temp!
+        }
+        precentRaised.text = ((money)!/100).description + "%"
+        
+        animation()
+    }
+    
+    func animation() {
+        self.moneyRaised.center.x -= self.bounds.width
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            self.moneyRaised.center.x += self.bounds.width
+        })
     }
     
     //the profile button

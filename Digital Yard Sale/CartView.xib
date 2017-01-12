@@ -19,12 +19,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fdh-a3-mjM">
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="371" id="R8K-t8-GBH"/>
-                    </constraints>
-                </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SiZ-v2-Djh">
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfj-5A-VDP">
@@ -43,24 +37,50 @@
                         <constraint firstItem="hfj-5A-VDP" firstAttribute="height" secondItem="SiZ-v2-Djh" secondAttribute="height" id="uCw-20-vsp"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAn-eF-5OG">
-                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vgt-d2-VmG">
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ap9-Ne-hAp">
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="12" id="ZLn-xI-Bo9"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAn-eF-5OG">
+                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1058823529" green="0.4823529412" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="125" id="1pC-6a-cip"/>
+                        <constraint firstItem="iAn-eF-5OG" firstAttribute="centerY" secondItem="Vgt-d2-VmG" secondAttribute="centerY" id="GpV-O6-cKw"/>
+                        <constraint firstItem="ap9-Ne-hAp" firstAttribute="width" secondItem="Vgt-d2-VmG" secondAttribute="width" id="H1y-np-y4W"/>
+                        <constraint firstItem="ap9-Ne-hAp" firstAttribute="leading" secondItem="Vgt-d2-VmG" secondAttribute="leading" id="qc8-f7-lMt"/>
+                        <constraint firstItem="iAn-eF-5OG" firstAttribute="centerX" secondItem="Vgt-d2-VmG" secondAttribute="centerX" id="uwI-ak-Ji4"/>
+                        <constraint firstAttribute="bottom" secondItem="ap9-Ne-hAp" secondAttribute="bottom" id="wyl-GS-wdI"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fdh-a3-mjM">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="320" id="R8K-t8-GBH"/>
+                    </constraints>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fdh-a3-mjM" firstAttribute="top" secondItem="iAn-eF-5OG" secondAttribute="bottom" constant="11.5" id="C4A-q4-FtX"/>
-                <constraint firstItem="iAn-eF-5OG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="34" id="NG2-4k-8PL"/>
+                <constraint firstItem="Vgt-d2-VmG" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="1j4-3u-nKL"/>
                 <constraint firstItem="SiZ-v2-Djh" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.6" id="Omw-a3-hs0"/>
                 <constraint firstItem="SiZ-v2-Djh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Pp1-hC-7uP"/>
-                <constraint firstItem="iAn-eF-5OG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="egs-yE-Gd1"/>
-                <constraint firstItem="SiZ-v2-Djh" firstAttribute="top" secondItem="fdh-a3-mjM" secondAttribute="bottom" constant="25" id="nNn-qs-PX9"/>
-                <constraint firstItem="fdh-a3-mjM" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="oh8-Ob-9ty"/>
+                <constraint firstItem="Vgt-d2-VmG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZpE-Xl-50n"/>
+                <constraint firstItem="Vgt-d2-VmG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="a4i-Ag-cz9"/>
+                <constraint firstItem="SiZ-v2-Djh" firstAttribute="top" secondItem="fdh-a3-mjM" secondAttribute="bottom" constant="15" id="nNn-qs-PX9"/>
+                <constraint firstItem="fdh-a3-mjM" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="oh8-Ob-9ty"/>
+                <constraint firstItem="fdh-a3-mjM" firstAttribute="top" secondItem="ap9-Ne-hAp" secondAttribute="bottom" id="rcE-aU-Vwh"/>
                 <constraint firstItem="fdh-a3-mjM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="sc9-Iz-615"/>
             </constraints>
-            <point key="canvasLocation" x="124.5" y="54.5"/>
+            <point key="canvasLocation" x="61.5" y="83.5"/>
         </view>
     </objects>
 </document>

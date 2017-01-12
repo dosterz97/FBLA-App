@@ -43,7 +43,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Realm.Configuration.defaultConfiguration = realmConfig
         realm = try! Realm()
         initGeneralInfo()
-        print(money ?? "Money not initialized")
         return true
     }
     

@@ -48,7 +48,7 @@ class CartView: UIView {
         let realm = AppDelegate.getInstance().realm!
         var user = User()
         try! realm.write {
-            let users = realm.objects(User.self);
+            let users = realm.objects(User.self)
             user = users[userNum!]
         }
         
@@ -118,7 +118,7 @@ extension CartView: UITableViewDataSource {
         var numberOfItems: Int
         numberOfItems = 0
         try! realm.write {
-            let users = realm.objects(User.self);
+            let users = realm.objects(User.self)
             let user = users[userNum!]
             numberOfItems = user.userCart.count
         }
@@ -137,7 +137,7 @@ extension CartView: UITableViewDataSource {
         var user = User()
         
         try! realm.write {
-            let users = realm.objects(User.self);
+            let users = realm.objects(User.self)
             user = users[userNum!]
         }
 
@@ -160,7 +160,7 @@ extension CartView: UITableViewDelegate {
         let realm = AppDelegate.getInstance().realm!
         var item: Item!
         try! realm.write {
-            let users = realm.objects(User.self);
+            let users = realm.objects(User.self)
             let user = users[userNum!]
             item = user.userCart[indexPath.row]
         }

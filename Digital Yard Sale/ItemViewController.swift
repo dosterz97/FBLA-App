@@ -36,6 +36,7 @@ class ItemViewController : UIViewController, ItemDelegate {
     //show the navigation bar on this page
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+        itemView.viewAppearing()
     }
     
     //go back to the page previously on where item was

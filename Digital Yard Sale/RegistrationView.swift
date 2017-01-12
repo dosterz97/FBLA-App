@@ -17,17 +17,13 @@ class RegistrationView: UIView {
     
     @IBOutlet var joinButton: UIButton!
     
-    @IBOutlet var usernameLabel: UILabel!
-    
     @IBOutlet var usernameField: UITextField!
-    
-    @IBOutlet var passwordLabel:UILabel!
     
     @IBOutlet var passwordField: UITextField!
     
-    @IBOutlet var emailLabel: UILabel!
-    
     @IBOutlet var emailField: UITextField!
+    
+    @IBOutlet var errorLabel: UILabel!
     
     weak var registerDelegate: RegistrationDelegate!
     
@@ -53,18 +49,43 @@ class RegistrationView: UIView {
     }
     
     func joinButtonPressed() {
-        let realm = AppDelegate.getInstance().realm!
+        var error = false
         
-        var users : Results<User>!
-        
-        
-        try! realm.write {
-            users = realm.objects(User.self);
-            let user = User(usernameT: (usernameField?.text)!, passwordT: (passwordField?.text)!, emailT: (emailField?.text)!, userIDT: users.count)
-            realm.add(user)
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.userID = users.count - 1
+        //see if feilds are empty
+        if (!usernameField.hasText) {
+            error = true
+            self.errorLabel.text = "Please Fill in the Username Field"
         }
-        registerDelegate.registerFieldsValid(sender: self)
+        if (!passwordField.hasText) {
+            error = true
+            self.errorLabel.text = "Please Fill in the Password Field"
+        }
+        if (!emailField.hasText) {
+            error = true
+            self.errorLabel.text = "Please Fill in the Email Field"
+        }
+        
+        //Push out the error
+        if(error) {
+            errorLabel.textColor = .red
+            errorLabel.numberOfLines = 0
+            joinButton.backgroundColor = .gray
+        }
+        
+        if (!error) {
+            let realm = AppDelegate.getInstance().realm!
+            
+            var users : Results<User>!
+            
+            try! realm.write {
+                users = realm.objects(User.self)
+                let user = User(usernameT: (usernameField?.text)!, passwordT: (passwordField?.text)!, emailT: (emailField?.text)!, userIDT: users.count)
+                realm.add(user)
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.userID = users.count - 1
+            }
+            registerDelegate.registerFieldsValid(sender: self)
+        }
+        
     }
 }

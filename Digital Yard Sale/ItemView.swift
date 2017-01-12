@@ -35,6 +35,8 @@ class ItemView: UIView {
     
     weak var itemDelegate: ItemDelegate!
     
+    var itemAdded: Bool?
+    
     //required intializers
     override init(frame aFrame: CGRect) {
         super.init(frame: aFrame)
@@ -52,6 +54,12 @@ class ItemView: UIView {
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         view.frame = bounds
         addSubview(view)
+        itemAdded = false//for button styles
+    }
+    
+    
+    func viewAppearing() {
+        
     }
     
     func setupLabels() {
@@ -93,20 +101,24 @@ class ItemView: UIView {
     }
     
     func cartButtonPressed() {
-        //get the users ID
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let userNum = appDelegate.userID
-        
-        let realm = AppDelegate.getInstance().realm!
-        
-        //Add the item to the cart
-        try! realm.write {
-            let users = realm.objects(User.self);
-            let user = users[userNum!]
-            user.userCart.append(activeItem)
+        if(!itemAdded!) {
+            //get the users ID
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let userNum = appDelegate.userID
+            
+            let realm = AppDelegate.getInstance().realm!
+            
+            //Add the item to the cart
+            try! realm.write {
+                let users = realm.objects(User.self)
+                let user = users[userNum!]
+                user.userCart.append(activeItem)
+            }
+            itemDelegate.addItemToCart(sender: self.activeItem)
+            
+            addToCartButton.backgroundColor = .gray
+            self.itemAdded! = true
         }
-        
-        itemDelegate.addItemToCart(sender: self.activeItem)
     }
     
     func commentButtonPressed() {

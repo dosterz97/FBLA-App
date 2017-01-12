@@ -24,7 +24,7 @@ class LoginView:UIView {
     
     @IBOutlet var passwordLabel: UILabel!
     
-    @IBOutlet var headerLabel: UILabel!
+    @IBOutlet var errorLabel: UILabel!
     
     @IBOutlet var loginSubmit:UIButton!
     
@@ -39,6 +39,7 @@ class LoginView:UIView {
         viewSetup()
     }
     
+    
     func viewSetup() {
         //setup the nib
         let bundle = Bundle(for:type(of:self))
@@ -52,25 +53,52 @@ class LoginView:UIView {
         loginSubmit.addTarget(self, action: #selector(submitPushed), for: .touchDown)
     }
     func submitPushed(sender:AnyObject) {
-        //verify user name and password
-        let realm = AppDelegate.getInstance().realm!
+        
+        var error = false
+        
+        //see if feilds are empty
+        if (!usernameField.hasText) {
+            error = true
+            self.errorLabel.text = "Please Fill in the Username Field"
+        }
+        if (!passwordField.hasText) {
+            error = true
+            self.errorLabel.text = "Please Fill in the Password Field"
+        }
+        
+        
+        if (!error) {
+            //verify user name and password
+            let realm = AppDelegate.getInstance().realm!
 
-        var users: Results<User>!
-        
-        users = realm.objects(User.self)
-        
-        for i in 0..<users.count {
-            let userT = users[i]
-            if(usernameField?.text == userT.username) {
-                if(passwordField?.text == userT.password) {
-                    //call segue to home screen
-                    loginDelegate?.loginInformationVerified()
-                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    appDelegate.userID = i
-                }
-                else {
+            var users: Results<User>!
+            
+            users = realm.objects(User.self)
+            
+            error = true
+            
+            self.errorLabel.text = "Username or Password does not exist!"
+            
+            for i in 0..<users.count {
+                let userT = users[i]
+                if(usernameField?.text == userT.username) {
+                    if(passwordField?.text == userT.password) {
+                        //call segue to home screen
+                        loginDelegate?.loginInformationVerified()
+                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                        appDelegate.userID = i
+                        error = false
+                    }
+                    else {
+                    }
                 }
             }
+        }
+        
+        if(error) {
+            errorLabel.textColor = .red
+            errorLabel.numberOfLines = 0
+            loginSubmit.backgroundColor = .gray
         }
     }
 }

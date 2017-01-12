@@ -26,6 +26,8 @@ class PaymentView: UIView, UITextFieldDelegate {
     
     @IBOutlet var totalCost: UILabel!
     
+    @IBOutlet var errorLabel: UILabel!
+    
     var total: Double!
     
     //required intializers
@@ -59,14 +61,25 @@ class PaymentView: UIView, UITextFieldDelegate {
         let realm = AppDelegate.getInstance().realm!
         var user = User()
         try! realm.write {
-            let users = realm.objects(User.self);
+            let users = realm.objects(User.self)
             user = users[userNum!]
         }
         
         for item in user.userCart {
             total = item.price
         }
-        print(total)
+        
+        totalCost.text = "$0.00"
+        if (total > 0) {
+            //set the string of price to two places
+            let numberFormatter = NumberFormatter()
+            numberFormatter.minimumFractionDigits = 2
+            numberFormatter.maximumFractionDigits = 2
+            
+            let tempNum = NSNumber(value: total!)
+            let temp = numberFormatter.string(from: tempNum)
+            totalCost.text = "$" + temp!
+        }
         
         
     }
@@ -78,38 +91,69 @@ class PaymentView: UIView, UITextFieldDelegate {
         expirationDateField.hasText,
         firstNameField.hasText,
         lastNameField.hasText,
-        addressField.hasText
-        else { return }
+        addressField.hasText,
+        securityCodeField.text?.characters.count == 3,
+        expirationDateField.text?.characters.count == 5,
+        cardNumberField.text?.characters.count == 19
+        else {
+            errorLabel.textColor = .red
+            errorLabel.numberOfLines = 0
+            errorLabel.text = "Please fill in all of the fields"
+            
+            let securityField = securityCodeField.text?.characters.count
+            if (securityField != 3 && securityField != 0) {
+                errorLabel.text = "Invalid Security Code"
+            }
+            let cardField = cardNumberField.text?.characters.count
+            if (cardField != 19 && cardField != 0) {
+                errorLabel.text = "Invalid Card Number"
+            }
+            let dateField = expirationDateField.text?.characters.count
+            if (dateField != 5 && cardField != 0) {
+                errorLabel.text = "Invalid Expiration Date"
+            }
+            return
+        }
 
         //Update the money raised
-        AppDelegate.getInstance().money? += total
-        
-        
-        //get the current user ID
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.money! += total
+        //get the current user ID
         let userNum = appDelegate.userID
         
         //open the realm to find the user
         let realm = AppDelegate.getInstance().realm!
         var user = User()
         try! realm.write {
-            //Remove items from the users cart
-            let users = realm.objects(User.self);
+            //Get user
+            let users = realm.objects(User.self)
             user = users[userNum!]
-            user.userCart.removeAll()
             
             //Remove items from the realm
+            let items = realm.objects(Item.self)
+            for userItem in user.userCart {
+                if items.contains(userItem) {
+                    realm.delete(userItem)
+                }
+            }
+            //Set general info so money lives beyond memory 
+            let generalInfo = realm.objects(GeneralInfo.self)
+            generalInfo[0].moneyRaised = appDelegate.money!
+            //Remove items from the users cart
+            user.userCart.removeAll()
         }
         
-        //end editing
-        // UITextFieldDelegate
-        func textFieldShouldReturn(textField: UITextField) -> Bool {
-            // User finished typing (hit return): hide the keyboard.
-            textField.resignFirstResponder()
-            return true
-        }
-
-        
+        //Button styles
+        self.finishedButton.backgroundColor = .gray
+        self.finishedButton.setTitle("Thank You!", for: UIControlState.normal)
+    }
+    
+    //end editing
+    // UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // User finished typing (hit return): hide the keyboard.
+        textField.resignFirstResponder()
+        return true
     }
 }
 
