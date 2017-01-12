@@ -22,6 +22,15 @@
 		3B28777A1E255F3B006E2A22 /* GeneralInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2877791E255F3B006E2A22 /* GeneralInfo.swift */; };
 		3B2877831E256CAF006E2A22 /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2877821E256CAF006E2A22 /* ChartView.xib */; };
 		3B2877851E256CBC006E2A22 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2877841E256CBC006E2A22 /* ChartView.swift */; };
+		3B3731A91E2822910078331E /* basketball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731A01E2822910078331E /* basketball.jpg */; };
+		3B3731AA1E2822910078331E /* blackjeresey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731A11E2822910078331E /* blackjeresey.jpg */; };
+		3B3731AB1E2822910078331E /* blueshirt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731A21E2822910078331E /* blueshirt.jpg */; };
+		3B3731AC1E2822910078331E /* crazysocks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731A31E2822910078331E /* crazysocks.jpg */; };
+		3B3731AD1E2822910078331E /* greysweater.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731A41E2822910078331E /* greysweater.jpg */; };
+		3B3731AE1E2822910078331E /* jordans.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731A51E2822910078331E /* jordans.jpg */; };
+		3B3731AF1E2822910078331E /* sketchers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731A61E2822910078331E /* sketchers.jpg */; };
+		3B3731B01E2822910078331E /* sweatpants.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731A71E2822910078331E /* sweatpants.jpg */; };
+		3B3731B11E2822910078331E /* tutu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731A81E2822910078331E /* tutu.jpg */; };
 		BD0E2D091E1FF9960079C6D9 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E2D081E1FF9960079C6D9 /* ReviewView.swift */; };
 		BD1ABD1C1E15ABD500EC997F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD191E15ABD500EC997F /* RegistrationView.swift */; };
 		BD1ABD1D1E15ABD500EC997F /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */; };
@@ -155,6 +164,15 @@
 		3B2877791E255F3B006E2A22 /* GeneralInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInfo.swift; sourceTree = "<group>"; };
 		3B2877821E256CAF006E2A22 /* ChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartView.xib; sourceTree = "<group>"; };
 		3B2877841E256CBC006E2A22 /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartView.swift; path = ../ChartView.swift; sourceTree = "<group>"; };
+		3B3731A01E2822910078331E /* basketball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = basketball.jpg; path = Images/basketball.jpg; sourceTree = "<group>"; };
+		3B3731A11E2822910078331E /* blackjeresey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = blackjeresey.jpg; path = Images/blackjeresey.jpg; sourceTree = "<group>"; };
+		3B3731A21E2822910078331E /* blueshirt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = blueshirt.jpg; path = Images/blueshirt.jpg; sourceTree = "<group>"; };
+		3B3731A31E2822910078331E /* crazysocks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = crazysocks.jpg; path = Images/crazysocks.jpg; sourceTree = "<group>"; };
+		3B3731A41E2822910078331E /* greysweater.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = greysweater.jpg; path = Images/greysweater.jpg; sourceTree = "<group>"; };
+		3B3731A51E2822910078331E /* jordans.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jordans.jpg; path = Images/jordans.jpg; sourceTree = "<group>"; };
+		3B3731A61E2822910078331E /* sketchers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sketchers.jpg; path = Images/sketchers.jpg; sourceTree = "<group>"; };
+		3B3731A71E2822910078331E /* sweatpants.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sweatpants.jpg; path = Images/sweatpants.jpg; sourceTree = "<group>"; };
+		3B3731A81E2822910078331E /* tutu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tutu.jpg; path = Images/tutu.jpg; sourceTree = "<group>"; };
 		BD0E2D081E1FF9960079C6D9 /* ReviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		BD1ABD191E15ABD500EC997F /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +249,7 @@
 				3B0F02D91DEE2BC7005BD9A1 /* AppDelegate.swift */,
 				3B0F02E01DEE2BC7005BD9A1 /* Assets.xcassets */,
 				3B0F02DD1DEE2BC7005BD9A1 /* Main.storyboard */,
+				3B3731971E28202B0078331E /* Images */,
 				BD568F621E245855001DAF21 /* NIBS */,
 				BD568F651E245895001DAF21 /* Realm Objects */,
 				BD568F641E24587A001DAF21 /* Views */,
@@ -240,6 +259,22 @@
 				BDDA1BF11E12FA2F00CBE6E8 /* ViewControllerUtils.swift */,
 			);
 			path = "Digital Yard Sale";
+			sourceTree = "<group>";
+		};
+		3B3731971E28202B0078331E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3B3731A01E2822910078331E /* basketball.jpg */,
+				3B3731A11E2822910078331E /* blackjeresey.jpg */,
+				3B3731A21E2822910078331E /* blueshirt.jpg */,
+				3B3731A31E2822910078331E /* crazysocks.jpg */,
+				3B3731A41E2822910078331E /* greysweater.jpg */,
+				3B3731A51E2822910078331E /* jordans.jpg */,
+				3B3731A61E2822910078331E /* sketchers.jpg */,
+				3B3731A71E2822910078331E /* sweatpants.jpg */,
+				3B3731A81E2822910078331E /* tutu.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		BD568F621E245855001DAF21 /* NIBS */ = {
@@ -447,13 +482,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B0F02FA1DEE30A8005BD9A1 /* ShopView.xib in Resources */,
+				3B3731B11E2822910078331E /* tutu.jpg in Resources */,
 				3B0F02F81DEE30A1005BD9A1 /* AboutView.xib in Resources */,
+				3B3731A91E2822910078331E /* basketball.jpg in Resources */,
 				BD1ABD1E1E15ABD500EC997F /* WelcomeView.xib in Resources */,
+				3B3731AF1E2822910078331E /* sketchers.jpg in Resources */,
 				BDDA1BFA1E1300BF00CBE6E8 /* RegistrationView.xib in Resources */,
 				BDDA1BE61E0F932F00CBE6E8 /* LoginView.xib in Resources */,
 				3B0F02E41DEE2BC7005BD9A1 /* LaunchScreen.storyboard in Resources */,
+				3B3731B01E2822910078331E /* sweatpants.jpg in Resources */,
+				3B3731AE1E2822910078331E /* jordans.jpg in Resources */,
+				3B3731AC1E2822910078331E /* crazysocks.jpg in Resources */,
+				3B3731AD1E2822910078331E /* greysweater.jpg in Resources */,
 				3B0F02F61DEE308E005BD9A1 /* HomeView.xib in Resources */,
+				3B3731AB1E2822910078331E /* blueshirt.jpg in Resources */,
 				3B0F02FC1DEE30B4005BD9A1 /* ReviewView.xib in Resources */,
+				3B3731AA1E2822910078331E /* blackjeresey.jpg in Resources */,
 				BD568F601E2447B9001DAF21 /* PaymentView.xib in Resources */,
 				BDDA1BF81E12FE7600CBE6E8 /* CartView.xib in Resources */,
 				3B0F02E11DEE2BC7005BD9A1 /* Assets.xcassets in Resources */,

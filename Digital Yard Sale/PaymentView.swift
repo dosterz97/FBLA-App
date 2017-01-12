@@ -65,10 +65,13 @@ class PaymentView: UIView, UITextFieldDelegate {
             user = users[userNum!]
         }
         
+        //Add up the value of the cart
+        total = 0
         for item in user.userCart {
-            total = item.price
+            total = total + item.price
         }
         
+        //Set the price label 
         totalCost.text = "$0.00"
         if (total > 0) {
             //set the string of price to two places
