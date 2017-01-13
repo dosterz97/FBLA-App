@@ -40,9 +40,11 @@ class ShopView: UIView {
         addSubview(view)
         
         //table setup
-        self.categoryTable.register(UITableViewCell.self, forCellReuseIdentifier: "CHANGEME")
+        self.categoryTable.register(CustomCell.self, forCellReuseIdentifier: "CustomCell")
         self.categoryTable.dataSource = self
         self.categoryTable.delegate = self
+        
+        categoryTable.rowHeight = 150
         
         //set up the list content
         giveListsContent()
@@ -57,10 +59,10 @@ class ShopView: UIView {
         //setup the categories data
         if (categoryList.count < 2) {
             
-            let clothes = Category(nameT: "Clothes", picURLT: "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png")
-            let toys = Category(nameT: "Toys", picURLT: "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png")
-            let games = Category(nameT: "Games", picURLT: "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png")
-            let other = Category(nameT: "Other", picURLT: "https://3.bp.blogspot.com/-W__wiaHUjwI/Vt3Grd8df0I/AAAAAAAAA78/7xqUNj8ujtY/s1600/image02.png")
+            let clothes = Category(nameT: "Clothes", picURLT: "clothes.jpg")
+            let toys = Category(nameT: "Toys", picURLT: "toys.jpeg")
+            let games = Category(nameT: "Games", picURLT: "games.jpeg")
+            let other = Category(nameT: "Other", picURLT: "other.jpeg")
             
             var item = Item()
             
@@ -157,11 +159,34 @@ extension ShopView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CHANGEME", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCell
+        
+
         let realm = AppDelegate.getInstance().realm!
         let categoryList = realm.objects(Category.self)
 
-        cell.textLabel?.text = categoryList[indexPath.row].name//Set the text for each cell
+        cell.customLabel?.text = categoryList[indexPath.row].name//Set the text for each cell
+        cell.customLabel?.textColor = .white
+        cell.customLabel?.textAlignment = .center
+        
+        
+        let imageView = cell.contentView.subviews.first {$0.tag == -1234} as? UIImageView  ?? {
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: cell.frame.width, height: cell.frame.height))
+            imageView.contentMode = .scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.tag = -1234
+            cell.contentView.addSubview(imageView)
+            
+            return imageView
+        }()
+        
+        print("why")
+        cell.contentView.sendSubview(toBack: imageView)
+        
+        let image = UIImage(named: categoryList[indexPath.row].picURL)
+        cell.backgroundColor = .clear
+        imageView.image = image
+        
         return cell
     }
 }

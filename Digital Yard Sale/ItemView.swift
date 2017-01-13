@@ -81,7 +81,7 @@ class ItemView: UIView {
         case 5:
             conditionText = "Great"
         default:
-            conditionText = "Unkown"
+            conditionText = "Unknown"
         }
         itemCondition.text = "Condition: " + conditionText!
         
@@ -89,15 +89,9 @@ class ItemView: UIView {
         addToCartButton.addTarget(self, action: #selector(cartButtonPressed), for: .touchUpInside)
         commentButton.addTarget(self, action: #selector(commentButtonPressed), for: .touchUpInside)
         
-        //load item image
-        Alamofire.request("https://s-media-cache-ak0.pinimg.com/564x/01/ac/f3/01acf35b1708f85f937c57a195fe31b7.jpg").responseData { response in
-            guard let data = response.result.value else {
-                debugPrint(response)
-                return
-            }
-            self.itemPicture.contentMode = .scaleAspectFit
-            self.itemPicture.image = UIImage(data: data)
-        }
+        //set item image
+        self.itemPicture.image = UIImage(named: activeItem.image)
+        self.itemPicture.contentMode = .scaleAspectFill
     }
     
     func cartButtonPressed() {

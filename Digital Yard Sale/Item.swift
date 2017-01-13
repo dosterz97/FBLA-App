@@ -26,11 +26,11 @@ class Item: Object {
     
     dynamic var itemID = -1
     
-    var image = UIImage()
+    dynamic var image = ""
     
     var reviews = List<Review>()
     
-    convenience init(itemNameT: String, itemDescriptionT: String, priceT: Double, conditionRatingT: Int, categoryT: Category,image: UIImage) {
+    convenience init(itemNameT: String, itemDescriptionT: String, priceT: Double, conditionRatingT: Int, categoryT: Category,image: String) {
         self.init()
         self.itemName = itemNameT
         self.itemDescription = itemDescriptionT

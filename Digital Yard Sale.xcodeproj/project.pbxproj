@@ -60,6 +60,8 @@
 		3B3731E71E2827630078331E /* toys.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731E31E2827630078331E /* toys.jpeg */; };
 		3B3731EF1E282AA10078331E /* welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B3731EE1E282AA10078331E /* welcome.jpg */; };
 		BD0E2D091E1FF9960079C6D9 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0E2D081E1FF9960079C6D9 /* ReviewView.swift */; };
+		BD14E6D41E284E020007C0FF /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD14E6D31E284E020007C0FF /* CustomCell.xib */; };
+		BD14E6D61E284E1D0007C0FF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD14E6D51E284E1D0007C0FF /* CustomCell.swift */; };
 		BD1ABD1C1E15ABD500EC997F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD191E15ABD500EC997F /* RegistrationView.swift */; };
 		BD1ABD1D1E15ABD500EC997F /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */; };
 		BD1ABD1E1E15ABD500EC997F /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD1ABD1B1E15ABD500EC997F /* WelcomeView.xib */; };
@@ -230,6 +232,8 @@
 		3B3731E31E2827630078331E /* toys.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = toys.jpeg; path = Images/toys.jpeg; sourceTree = "<group>"; };
 		3B3731EE1E282AA10078331E /* welcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = welcome.jpg; path = Images/welcome.jpg; sourceTree = "<group>"; };
 		BD0E2D081E1FF9960079C6D9 /* ReviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		BD14E6D31E284E020007C0FF /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		BD14E6D51E284E1D0007C0FF /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		BD1ABD191E15ABD500EC997F /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		BD1ABD1A1E15ABD500EC997F /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		BD1ABD1B1E15ABD500EC997F /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
@@ -367,6 +371,7 @@
 				3B0F02F71DEE30A1005BD9A1 /* AboutView.xib */,
 				BDDA1BF71E12FE7600CBE6E8 /* CartView.xib */,
 				BDDA1C071E1309B300CBE6E8 /* CategoryView.xib */,
+				BD14E6D31E284E020007C0FF /* CustomCell.xib */,
 				3B2877821E256CAF006E2A22 /* ChartView.xib */,
 				3B0F02F51DEE308E005BD9A1 /* HomeView.xib */,
 				BDDA1C091E1309DF00CBE6E8 /* ItemView.xib */,
@@ -405,9 +410,10 @@
 			children = (
 				BDDA1BEF1E12F00100CBE6E8 /* AboutView.swift */,
 				BDDA1BF51E12FE6C00CBE6E8 /* CartView.swift */,
-				BDDA1C051E13098000CBE6E8 /* CategoryView.swift */,
 				3B2877841E256CBC006E2A22 /* ChartView.swift */,
+				BD14E6D51E284E1D0007C0FF /* CustomCell.swift */,
 				BDDA1BE71E108BCF00CBE6E8 /* HomeView.swift */,
+				BDDA1C051E13098000CBE6E8 /* CategoryView.swift */,
 				BDDA1C0D1E1309FB00CBE6E8 /* ItemView.swift */,
 				BDDA1BDC1E0F916E00CBE6E8 /* LoginView.swift */,
 				BD568F5D1E2447AA001DAF21 /* PaymentView.swift */,
@@ -603,6 +609,7 @@
 				3B3731DF1E2825E80078331E /* zelda.jpg in Resources */,
 				3B3731AB1E2822910078331E /* blueshirt.jpg in Resources */,
 				3B0F02FC1DEE30B4005BD9A1 /* ReviewView.xib in Resources */,
+				BD14E6D41E284E020007C0FF /* CustomCell.xib in Resources */,
 				3B3731AA1E2822910078331E /* blackjeresey.jpg in Resources */,
 				3B3731DE1E2825E80078331E /* xbox360.png in Resources */,
 				3B3731DA1E2825E80078331E /* portable charger.jpg in Resources */,
@@ -656,6 +663,7 @@
 				BD1ABD601E15D27200EC997F /* Review.swift in Sources */,
 				BD0E2D091E1FF9960079C6D9 /* ReviewView.swift in Sources */,
 				BDDA1C0E1E1309FB00CBE6E8 /* ItemView.swift in Sources */,
+				BD14E6D61E284E1D0007C0FF /* CustomCell.swift in Sources */,
 				BD1ABD5E1E15D02A00EC997F /* Item.swift in Sources */,
 				BDDA1C061E13098000CBE6E8 /* CategoryView.swift in Sources */,
 				3B0F02F01DEE2EE5005BD9A1 /* ShopViewController.swift in Sources */,
