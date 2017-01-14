@@ -27,6 +27,7 @@ class HomeViewController: UIViewController, MainViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
         homeView.viewAppearing()
+        addCircleView()
     }
     
     //the home view will give the segue ID upon type of button pressed

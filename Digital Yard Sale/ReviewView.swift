@@ -47,8 +47,6 @@ class ReviewView: UIView {
     
     //adds a comment to the lis
     func addComment() {
-        print(activeItem)
-
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let userNum = appDelegate.userID
         

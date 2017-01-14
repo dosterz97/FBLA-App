@@ -68,6 +68,25 @@ class RegistrationView: UIView {
             error = true
             self.errorLabel.text = "Please Fill in the Email Field"
         }
+        //Check if the fields are too small
+        if((usernameField.text?.characters.count)! <= 4) {
+            error = true
+            self.errorLabel.text = "Usernames must be at least 5 characters long."
+        }
+        if((passwordField.text?.characters.count)! <= 4) {
+            error = true
+            self.errorLabel.text = "Passwords must be at least 5 characters long."
+        }
+        //check if the username already exists
+        let realm = AppDelegate.getInstance().realm!
+        let users = realm.objects(User.self)
+        
+        for user in users {
+            if (usernameField.text == user.username) {
+                error = true
+                self.errorLabel.text = "Username already exists!"
+            }
+        }
         
         //Push out the error
         if(error) {
@@ -75,8 +94,7 @@ class RegistrationView: UIView {
             errorLabel.numberOfLines = 0
             joinButton.backgroundColor = .gray
         }
-        
-        if (!error) {
+        else {
             let realm = AppDelegate.getInstance().realm!
             
             var users : Results<User>!

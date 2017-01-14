@@ -67,7 +67,7 @@ class HomeView: UIView {
     
     func viewAppearing() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-
+        
         money = appDelegate.money
         //Set text values
         moneyRaised.text = "$0.00"
@@ -84,6 +84,7 @@ class HomeView: UIView {
         precentRaised.text = ((money)!/100).description + "%"
         
         animation()
+
     }
     
     func animation() {

@@ -69,7 +69,6 @@ class LoginView:UIView {
             self.errorLabel.text = "Please Fill in the Password Field"
         }
         
-        
         if (!error) {
             //verify user name and password
             let realm = AppDelegate.getInstance().realm!
