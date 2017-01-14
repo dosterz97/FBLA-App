@@ -164,11 +164,6 @@ extension ShopView: UITableViewDataSource {
 
         let realm = AppDelegate.getInstance().realm!
         let categoryList = realm.objects(Category.self)
-
-        cell.customLabel?.text = categoryList[indexPath.row].name//Set the text for each cell
-        cell.customLabel?.textColor = .white
-        cell.customLabel?.textAlignment = .center
-        
         
         let imageView = cell.contentView.subviews.first {$0.tag == -1234} as? UIImageView  ?? {
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: cell.frame.width, height: cell.frame.height))
@@ -176,17 +171,17 @@ extension ShopView: UITableViewDataSource {
             imageView.clipsToBounds = true
             imageView.tag = -1234
             cell.contentView.addSubview(imageView)
-            
             return imageView
         }()
-        
-        print("why")
         cell.contentView.sendSubview(toBack: imageView)
         
         let image = UIImage(named: categoryList[indexPath.row].picURL)
         cell.backgroundColor = .clear
         imageView.image = image
         
+        cell.customLabel?.text = categoryList[indexPath.row].name//Set the text for each cell
+        cell.customLabel?.textColor = .black
+        cell.customLabel?.textAlignment = .center
         return cell
     }
 }

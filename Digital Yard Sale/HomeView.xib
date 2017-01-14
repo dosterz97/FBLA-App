@@ -3,11 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeView" customModule="Digital_Yard_Sale" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundPicture" destination="VkQ-Xv-ChW" id="tBT-7Z-Rge"/>
                 <outlet property="moneyRaised" destination="GmI-hL-cIG" id="RNf-3M-6yU"/>
                 <outlet property="numberOfDaysLeft" destination="bNw-K2-7el" id="TN0-nc-gAi"/>
                 <outlet property="precentRaised" destination="Zyj-h1-SRB" id="34q-ZY-CW3"/>
@@ -19,6 +21,9 @@
             <rect key="frame" x="0.0" y="0.0" width="443" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfT-Ho-jGr">
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fuo-EM-BQh">
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppF-eX-Bph">
@@ -44,17 +49,17 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Money Raised" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmI-hL-cIG">
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precent Raised" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyj-h1-SRB">
                             <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal: $10,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKK-Hc-QZF">
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -75,16 +80,25 @@
                         <constraint firstItem="RLx-ED-X1A" firstAttribute="leading" secondItem="Fuo-EM-BQh" secondAttribute="leading" constant="27" id="wWo-VJ-xkW"/>
                     </constraints>
                 </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VkQ-Xv-ChW"/>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Fuo-EM-BQh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0ad-iq-gMb"/>
+                <constraint firstItem="VkQ-Xv-ChW" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="6T3-s0-puI"/>
                 <constraint firstItem="Zyj-h1-SRB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9F5-B5-AQk"/>
+                <constraint firstItem="pfT-Ho-jGr" firstAttribute="top" secondItem="AZG-VD-HLC" secondAttribute="bottom" id="GsG-XT-7hJ"/>
                 <constraint firstItem="GmI-hL-cIG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="JEr-bi-x3u"/>
+                <constraint firstItem="pfT-Ho-jGr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Nzn-u8-KZs"/>
+                <constraint firstItem="VkQ-Xv-ChW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="OiW-hc-BLK"/>
+                <constraint firstItem="pfT-Ho-jGr" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.6" id="P2E-Hb-M1T"/>
                 <constraint firstItem="Zyj-h1-SRB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="RrW-zJ-nSN"/>
                 <constraint firstItem="Fuo-EM-BQh" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="aLv-11-8r5"/>
+                <constraint firstItem="VkQ-Xv-ChW" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="nRJ-DS-44P"/>
                 <constraint firstItem="Fuo-EM-BQh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="v5m-eg-0US"/>
+                <constraint firstAttribute="bottom" secondItem="pfT-Ho-jGr" secondAttribute="bottom" id="x4Q-Wi-ZIp"/>
                 <constraint firstAttribute="bottom" secondItem="RKK-Hc-QZF" secondAttribute="bottom" constant="110" id="xcU-MS-Hgk"/>
+                <constraint firstItem="VkQ-Xv-ChW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="z47-9C-yMC"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-413.5" y="-129.5"/>

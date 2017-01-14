@@ -15,6 +15,7 @@ protocol MainViewDelegate: AnyObject {
 
 class HomeView: UIView {
     
+    @IBOutlet var backgroundPicture: UIImageView!
     
     @IBOutlet var profileButton: UIButton!
     
@@ -58,6 +59,9 @@ class HomeView: UIView {
         
         let time = Int(((NLCdate?.timeIntervalSinceReferenceDate)! - date.timeIntervalSinceReferenceDate)/86400)
         numberOfDaysLeft.text = time.description + " days left!"
+        
+        backgroundPicture.image = UIImage(named: "welcome.jpg")
+        backgroundPicture.sendSubview(toBack: backgroundPicture)
 
     }
     
