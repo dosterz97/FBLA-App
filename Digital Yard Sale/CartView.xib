@@ -19,6 +19,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zo-FR-Qnc">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SiZ-v2-Djh">
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfj-5A-VDP">
@@ -67,18 +70,31 @@
                         <constraint firstAttribute="height" constant="320" id="R8K-t8-GBH"/>
                     </constraints>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJ8-Xl-gBN">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Xax-MX-XIb"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Vgt-d2-VmG" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="1j4-3u-nKL"/>
+                <constraint firstItem="1zo-FR-Qnc" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="ADe-vZ-fDY"/>
+                <constraint firstItem="RJ8-Xl-gBN" firstAttribute="top" secondItem="1zo-FR-Qnc" secondAttribute="bottom" id="ElD-15-gYf"/>
+                <constraint firstItem="1zo-FR-Qnc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="GPo-UC-6tn"/>
                 <constraint firstItem="SiZ-v2-Djh" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.6" id="Omw-a3-hs0"/>
                 <constraint firstItem="SiZ-v2-Djh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Pp1-hC-7uP"/>
                 <constraint firstItem="Vgt-d2-VmG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZpE-Xl-50n"/>
                 <constraint firstItem="Vgt-d2-VmG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="a4i-Ag-cz9"/>
-                <constraint firstItem="SiZ-v2-Djh" firstAttribute="top" secondItem="fdh-a3-mjM" secondAttribute="bottom" constant="15" id="nNn-qs-PX9"/>
-                <constraint firstItem="fdh-a3-mjM" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="oh8-Ob-9ty"/>
+                <constraint firstItem="1zo-FR-Qnc" firstAttribute="top" secondItem="fdh-a3-mjM" secondAttribute="bottom" id="ad4-sI-wAn"/>
+                <constraint firstItem="RJ8-Xl-gBN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="chU-Ol-twg"/>
+                <constraint firstItem="RJ8-Xl-gBN" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="hMB-lk-2t6"/>
+                <constraint firstItem="SiZ-v2-Djh" firstAttribute="centerY" secondItem="1zo-FR-Qnc" secondAttribute="centerY" id="o0f-w7-9Ed"/>
+                <constraint firstItem="fdh-a3-mjM" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="oh8-Ob-9ty"/>
                 <constraint firstItem="fdh-a3-mjM" firstAttribute="top" secondItem="ap9-Ne-hAp" secondAttribute="bottom" id="rcE-aU-Vwh"/>
                 <constraint firstItem="fdh-a3-mjM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="sc9-Iz-615"/>
+                <constraint firstAttribute="bottom" secondItem="RJ8-Xl-gBN" secondAttribute="bottom" constant="-1" id="wGC-4y-7cd"/>
             </constraints>
             <point key="canvasLocation" x="61.5" y="83.5"/>
         </view>

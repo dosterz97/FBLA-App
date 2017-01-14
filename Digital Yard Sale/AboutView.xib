@@ -48,7 +48,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I hope I am able to gain your hlep in y chance to win a national title in the App Development and Design categories." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HIQ-vE-Ezj">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I hope I am able to gain your help in y chance to win a national title in the App Development and Design categories." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HIQ-vE-Ezj">
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="67" id="iGQ-db-LdX"/>

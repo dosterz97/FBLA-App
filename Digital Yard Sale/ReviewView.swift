@@ -17,7 +17,7 @@ class ReviewView: UIView {
     
     @IBOutlet var userComment: UITextField!
     
-    var activeItem: Int!
+    var activeItem: Item!
     
     //required intializers
     override init(frame aFrame: CGRect) {
@@ -62,8 +62,11 @@ class ReviewView: UIView {
         user = users[userNum!]
         let items = realm.objects(Item.self)
         
-        item = items[activeItem]
-
+        for tempItem in items {
+            if (tempItem.itemName == activeItem.itemName) {
+                item = tempItem
+            }
+        }
         //Add the comment to the list
         if (userComment.hasText) {
             let t = Review(reviewerT: user.username, reviewT: (userComment.attributedText?.string)!)
@@ -79,17 +82,29 @@ class ReviewView: UIView {
 extension ReviewView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let realm = AppDelegate.getInstance().realm!
-        let item = realm.objects(Item.self)[activeItem]
-        return item.reviews.count
+
+        let items = realm.objects(Item.self)
+        //find the item
+        for item in items {
+            if (item.itemName == activeItem.itemName) {
+                return item.reviews.count
+            }
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CHANGEME", for: indexPath)
         
         let realm = AppDelegate.getInstance().realm!
-        let item = realm.objects(Item.self)[activeItem]
-        
-        cell.textLabel?.text = item.reviews[indexPath.row].review.description
+        let items = realm.objects(Item.self)
+        //find the item
+        for item in items {
+            if (item.itemName == activeItem.itemName) {
+                cell.textLabel?.text = item.reviews[indexPath.row].review.description
+
+            }
+        }
         return cell
     }
 }

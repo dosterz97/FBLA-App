@@ -15,6 +15,8 @@ protocol RegistrationDelegate: AnyObject {
 
 class RegistrationView: UIView {
     
+    @IBOutlet var backgroundImage: UIImageView!
+    
     @IBOutlet var joinButton: UIButton!
     
     @IBOutlet var usernameField: UITextField!
@@ -46,6 +48,8 @@ class RegistrationView: UIView {
         
         //give button call to action
         joinButton.addTarget(self, action: #selector(joinButtonPressed), for: .touchUpInside)
+        
+        backgroundImage.image = UIImage(named: "welcome.jpg")
     }
     
     func joinButtonPressed() {

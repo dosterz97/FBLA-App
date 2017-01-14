@@ -16,13 +16,11 @@ protocol LoginDelegate: AnyObject {
 
 class LoginView:UIView {
     
+    @IBOutlet var backgroundImage: UIImageView!
+    
     @IBOutlet var usernameField: UITextField!
     
     @IBOutlet var passwordField: UITextField!
-    
-    @IBOutlet var usernameLabel: UILabel!
-    
-    @IBOutlet var passwordLabel: UILabel!
     
     @IBOutlet var errorLabel: UILabel!
     
@@ -51,7 +49,12 @@ class LoginView:UIView {
         
         //give the login button purpose
         loginSubmit.addTarget(self, action: #selector(submitPushed), for: .touchDown)
+        
+        //set background image
+        backgroundImage.image = UIImage(named: "welcome.jpg")
     }
+    
+    //Try to login
     func submitPushed(sender:AnyObject) {
         
         var error = false

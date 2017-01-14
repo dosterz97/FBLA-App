@@ -12,7 +12,7 @@ import Alamofire
 
 protocol ItemDelegate: AnyObject {
     func addItemToCart(sender: Item)
-    func goToItemComments(sender: Int)
+    func goToItemComments(sender: Item)
 }
 
 class ItemView: UIView {
@@ -59,7 +59,29 @@ class ItemView: UIView {
     
     
     func viewAppearing() {
+        //get the users ID
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let userNum = appDelegate.userID
         
+        let realm = AppDelegate.getInstance().realm!
+        
+        //if the item is already in the users cart to do not add to the cart
+        
+        let users = realm.objects(User.self)
+        
+        for user in users {
+            if (user.userID == userNum)
+            {
+                for item in user.userCart {
+                    if(item.itemName == activeItem.itemName)
+                    {
+                        itemAdded = true
+                        self.addToCartButton.backgroundColor = .gray
+                        self.addToCartButton.setTitle("Item In Cart!", for: UIControlState.normal)
+                    }
+                }
+            }
+        }
     }
     
     func setupLabels() {
@@ -108,14 +130,15 @@ class ItemView: UIView {
                 let user = users[userNum!]
                 user.userCart.append(activeItem)
             }
-            itemDelegate.addItemToCart(sender: self.activeItem)
+            self.itemDelegate.addItemToCart(sender: self.activeItem)
             
-            addToCartButton.backgroundColor = .gray
+            self.addToCartButton.backgroundColor = .gray
             self.itemAdded! = true
+            self.addToCartButton.setTitle("Item In Cart!", for: UIControlState.normal)
         }
     }
     
     func commentButtonPressed() {
-        itemDelegate.goToItemComments(sender: activeItem.itemID)
+        self.itemDelegate.goToItemComments(sender: activeItem)
     }
 }

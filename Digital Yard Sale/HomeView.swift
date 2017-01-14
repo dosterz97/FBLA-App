@@ -61,8 +61,8 @@ class HomeView: UIView {
         numberOfDaysLeft.text = time.description + " days left!"
         
         backgroundPicture.image = UIImage(named: "welcome.jpg")
-        backgroundPicture.sendSubview(toBack: backgroundPicture)
 
+        view.sendSubview(toBack: backgroundPicture)
     }
     
     func viewAppearing() {

@@ -10,6 +10,8 @@ import UIKit
 
 class PaymentView: UIView, UITextFieldDelegate {
     
+    @IBOutlet var backgroundImage: UIImageView!
+    
     @IBOutlet var cardNumberField: UITextField!
     
     @IBOutlet var securityCodeField: UITextField!
@@ -50,6 +52,8 @@ class PaymentView: UIView, UITextFieldDelegate {
         addressField.delegate = self
         
         finishedButton.addTarget(self, action: #selector(doneWithForm), for: .touchUpInside)
+        
+        backgroundImage.image = UIImage(named: "Welcome.jpg")
     }
     
     func viewAppearing() {

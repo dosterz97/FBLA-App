@@ -159,29 +159,44 @@ extension ShopView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //create the cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCell
         
-
+        //open up the database
         let realm = AppDelegate.getInstance().realm!
         let categoryList = realm.objects(Category.self)
         
+        //create the image view
         let imageView = cell.contentView.subviews.first {$0.tag == -1234} as? UIImageView  ?? {
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: cell.frame.width, height: cell.frame.height))
             imageView.contentMode = .scaleAspectFill
             imageView.clipsToBounds = true
             imageView.tag = -1234
-            cell.contentView.addSubview(imageView)
+            cell.addSubview(imageView)
             return imageView
         }()
-        cell.contentView.sendSubview(toBack: imageView)
         
+        //apply the image to the image view and clear the background color of the cell
         let image = UIImage(named: categoryList[indexPath.row].picURL)
         cell.backgroundColor = .clear
         imageView.image = image
         
-        cell.customLabel?.text = categoryList[indexPath.row].name//Set the text for each cell
-        cell.customLabel?.textColor = .black
-        cell.customLabel?.textAlignment = .center
+        //Add the view behind the text
+        let opacityView = UIView(frame: CGRect(x: 0, y: cell.frame.height/5, width: cell.frame.width, height: cell.frame.height * 0.6))
+        opacityView.backgroundColor = .black
+        opacityView.alpha = 0.6
+        cell.addSubview(opacityView)
+        cell.bringSubview(toFront: opacityView)
+        
+        //Add the label,style it, and bring to the front of the view
+        let cellLabel = UILabel(frame: CGRect(x: 0, y: 0, width: cell.frame.width, height: cell.frame.height))
+        cellLabel.text = categoryList[indexPath.row].name
+        cellLabel.font = cellLabel.font.withSize(40)
+        cellLabel.textColor = .white
+        cellLabel.textAlignment = .center
+        cell.customLabel = cellLabel
+        cell.addSubview(cellLabel)
+        cell.bringSubview(toFront: cellLabel)
         return cell
     }
 }

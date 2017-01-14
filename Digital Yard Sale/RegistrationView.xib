@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationView" customModule="Digital_Yard_Sale" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundImage" destination="Bs5-EU-fow" id="MWI-ni-tng"/>
                 <outlet property="emailField" destination="bXv-CN-fUY" id="eEh-tq-4sE"/>
                 <outlet property="errorLabel" destination="kC9-nD-o9m" id="gor-6e-4q8"/>
                 <outlet property="joinButton" destination="mKR-EG-RRa" id="vDE-xe-kaX"/>
@@ -21,6 +22,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bs5-EU-fow"/>
+                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbv-4E-W4g">
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IwD-wc-1OM">
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKR-EG-RRa">
@@ -80,21 +85,29 @@
                 <constraint firstItem="bXv-CN-fUY" firstAttribute="top" secondItem="Q2h-5R-djk" secondAttribute="bottom" constant="15" id="23c-C3-NFY"/>
                 <constraint firstItem="18k-NP-Eq9" firstAttribute="width" secondItem="mKR-EG-RRa" secondAttribute="width" id="4z6-vx-eH7"/>
                 <constraint firstItem="kC9-nD-o9m" firstAttribute="leading" secondItem="mKR-EG-RRa" secondAttribute="leading" id="5iW-cg-9Wr"/>
+                <constraint firstItem="fbv-4E-W4g" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="86T-4B-eTU"/>
                 <constraint firstItem="bXv-CN-fUY" firstAttribute="width" secondItem="mKR-EG-RRa" secondAttribute="width" id="AIE-yc-Wpj"/>
                 <constraint firstItem="01n-JU-plY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="D4M-Ss-veF"/>
                 <constraint firstItem="18k-NP-Eq9" firstAttribute="leading" secondItem="mKR-EG-RRa" secondAttribute="leading" id="DJe-3F-v7d"/>
                 <constraint firstItem="01n-JU-plY" firstAttribute="leading" secondItem="mKR-EG-RRa" secondAttribute="leading" id="FI9-o2-oyO"/>
+                <constraint firstItem="Bs5-EU-fow" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="FP5-Ey-q42"/>
+                <constraint firstItem="fbv-4E-W4g" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.75" id="JyC-nL-nph"/>
+                <constraint firstItem="Bs5-EU-fow" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KFo-Ea-hJT"/>
                 <constraint firstItem="kC9-nD-o9m" firstAttribute="height" secondItem="mKR-EG-RRa" secondAttribute="height" id="LIh-Lu-QdO"/>
                 <constraint firstItem="nJq-Wz-6l1" firstAttribute="top" secondItem="aV6-ew-isQ" secondAttribute="bottom" constant="15" id="Qdg-hp-yot"/>
                 <constraint firstItem="nJq-Wz-6l1" firstAttribute="width" secondItem="mKR-EG-RRa" secondAttribute="width" id="TQc-eh-rWi"/>
                 <constraint firstItem="aV6-ew-isQ" firstAttribute="leading" secondItem="mKR-EG-RRa" secondAttribute="leading" id="ZDs-Y9-JSd"/>
                 <constraint firstItem="kC9-nD-o9m" firstAttribute="top" secondItem="bXv-CN-fUY" secondAttribute="bottom" constant="25" id="bYZ-Ks-nEh"/>
                 <constraint firstItem="IwD-wc-1OM" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.6" id="cM5-W0-8a4"/>
+                <constraint firstItem="Bs5-EU-fow" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="cUe-7l-xoE"/>
+                <constraint firstAttribute="bottom" secondItem="fbv-4E-W4g" secondAttribute="bottom" id="dz7-ar-aJn"/>
                 <constraint firstItem="bXv-CN-fUY" firstAttribute="leading" secondItem="mKR-EG-RRa" secondAttribute="leading" id="eju-iH-cmp"/>
+                <constraint firstItem="fbv-4E-W4g" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hQC-Nn-SjR"/>
                 <constraint firstItem="IwD-wc-1OM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ihN-nY-mDm"/>
                 <constraint firstAttribute="bottom" secondItem="IwD-wc-1OM" secondAttribute="bottom" constant="66" id="iqk-Tu-CXl"/>
                 <constraint firstItem="kC9-nD-o9m" firstAttribute="width" secondItem="mKR-EG-RRa" secondAttribute="width" id="jJr-aM-hof"/>
                 <constraint firstItem="18k-NP-Eq9" firstAttribute="top" secondItem="01n-JU-plY" secondAttribute="bottom" constant="15" id="mkD-8d-Amc"/>
+                <constraint firstItem="Bs5-EU-fow" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="npr-8C-iaO"/>
                 <constraint firstItem="Q2h-5R-djk" firstAttribute="leading" secondItem="mKR-EG-RRa" secondAttribute="leading" id="rxt-C8-JL8"/>
                 <constraint firstItem="Q2h-5R-djk" firstAttribute="top" secondItem="nJq-Wz-6l1" secondAttribute="bottom" constant="25" id="uNr-D0-uzD"/>
                 <constraint firstItem="aV6-ew-isQ" firstAttribute="top" secondItem="18k-NP-Eq9" secondAttribute="bottom" constant="25" id="vge-7P-VP0"/>

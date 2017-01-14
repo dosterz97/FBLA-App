@@ -92,9 +92,10 @@ class CartView: UIView {
         addSubview(view)
         
         //table setup
-        self.cartList.register(UITableViewCell.self, forCellReuseIdentifier: "CHANGEME")
+        self.cartList.register(CustomCell.self, forCellReuseIdentifier: "CustomCell")
         self.cartList.dataSource = self
         self.cartList.delegate = self
+        self.cartList.rowHeight = 125
         
         self.checkOutButton.addTarget(self, action: #selector(checkOutPressed), for: .touchUpInside)
     }
@@ -126,23 +127,54 @@ extension CartView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CHANGEME", for: indexPath)
-
         //get the current user ID
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let userNum = appDelegate.userID
         
-        //open the realm to find the user
+        //create the cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomCell
+        
+        //open up the database
         let realm = AppDelegate.getInstance().realm!
         var user = User()
-        
         try! realm.write {
             let users = realm.objects(User.self)
             user = users[userNum!]
         }
-
-        cell.textLabel?.text = user.userCart[indexPath.row].itemName
+        
+        //create the image view
+        let imageView = cell.contentView.subviews.first {$0.tag == -1234} as? UIImageView  ?? {
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: cell.frame.width, height: cell.frame.height))
+            imageView.contentMode = .scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.tag = -1234
+            cell.addSubview(imageView)
+            return imageView
+            }()
+        
+        //apply the image to the image view and clear the background color of the cell
+        let image = UIImage(named: user.userCart[indexPath.row].image)
+        cell.backgroundColor = .clear
+        imageView.image = image
+        
+        //Add the view behind the text
+        let opacityView = UIView(frame: CGRect(x: 0, y: cell.frame.height/5, width: cell.frame.width, height: cell.frame.height * 0.6))
+        opacityView.backgroundColor = .black
+        opacityView.alpha = 0.6
+        cell.addSubview(opacityView)
+        cell.bringSubview(toFront: opacityView)
+        
+        //Add the label,style it, and bring to the front of the view
+        let cellLabel = UILabel(frame: CGRect(x: 0, y: 0, width: cell.frame.width, height: cell.frame.height))
+        cellLabel.text = user.userCart[indexPath.row].itemName
+        cellLabel.font = cellLabel.font.withSize(40)
+        cellLabel.textColor = .white
+        cellLabel.textAlignment = .center
+        cell.customLabel = cellLabel
+        cell.addSubview(cellLabel)
+        cell.bringSubview(toFront: cellLabel)
         return cell
+
     }
 }
 
