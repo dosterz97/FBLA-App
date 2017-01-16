@@ -162,5 +162,11 @@ class PaymentView: UIView, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
+    //close the text editing field
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
 }
 

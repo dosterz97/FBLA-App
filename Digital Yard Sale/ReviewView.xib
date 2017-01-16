@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReviewView" customModule="Digital_Yard_Sale" customModuleProvider="target">
             <connections>
                 <outlet property="commentList" destination="P4w-Xj-LpN" id="ufK-Wo-ufN"/>
+                <outlet property="emptyListLabel" destination="bV8-VI-HNa" id="dqB-kP-Li1"/>
                 <outlet property="submitButton" destination="31I-Rx-pge" id="KHR-Nf-bdn"/>
                 <outlet property="userComment" destination="Jwm-dV-QAl" id="nb2-CQ-8gR"/>
             </connections>
@@ -45,12 +46,18 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P4w-Xj-LpN">
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bV8-VI-HNa">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="P4w-Xj-LpN" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="4e6-sF-lKg"/>
                 <constraint firstItem="P4w-Xj-LpN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="63" id="Ibd-x0-uIK"/>
                 <constraint firstItem="P4w-Xj-LpN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="OTX-KE-Wpv"/>
+                <constraint firstItem="bV8-VI-HNa" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="OYT-tz-yCJ"/>
                 <constraint firstItem="K2C-aH-H9Y" firstAttribute="top" secondItem="P4w-Xj-LpN" secondAttribute="bottom" constant="8" id="UNx-3U-e7A"/>
                 <constraint firstAttribute="bottom" secondItem="K2C-aH-H9Y" secondAttribute="bottom" constant="1" id="giW-jn-Ztk"/>
                 <constraint firstItem="31I-Rx-pge" firstAttribute="centerY" secondItem="K2C-aH-H9Y" secondAttribute="centerY" id="jR9-UZ-m1q"/>
@@ -60,6 +67,7 @@
                 <constraint firstItem="Jwm-dV-QAl" firstAttribute="centerY" secondItem="K2C-aH-H9Y" secondAttribute="centerY" id="ngr-fl-mRJ"/>
                 <constraint firstItem="Jwm-dV-QAl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="p6D-kk-KII"/>
                 <constraint firstItem="31I-Rx-pge" firstAttribute="leading" secondItem="Jwm-dV-QAl" secondAttribute="trailing" constant="22" id="ug7-vl-Jfd"/>
+                <constraint firstItem="bV8-VI-HNa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wce-g4-vWA"/>
             </constraints>
             <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>

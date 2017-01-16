@@ -17,6 +17,8 @@ class ReviewView: UIView {
     
     @IBOutlet var userComment: UITextField!
     
+    @IBOutlet var emptyListLabel: UILabel!
+    
     var activeItem: Item!
     
     //required intializers
@@ -45,7 +47,7 @@ class ReviewView: UIView {
         submitButton.addTarget(self, action: #selector(addComment), for: .touchUpInside)
     }
     
-    //adds a comment to the lis
+    //adds a comment to the list
     func addComment() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let userNum = appDelegate.userID
@@ -73,6 +75,15 @@ class ReviewView: UIView {
             }
             commentList.reloadData()
         }
+        
+        //hide the empty list label
+        self.sendSubview(toBack: emptyListLabel)
+    }
+    
+    //close the text editing field
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.endEditing(true)
+        super.touchesBegan(touches, with: event)
     }
 }
 
@@ -80,14 +91,24 @@ class ReviewView: UIView {
 extension ReviewView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let realm = AppDelegate.getInstance().realm!
-
+        
+        //display label if list is empty
+        if(activeItem.reviews.count == 0) {
+            emptyListLabel.text = "No comments yet! Be the first."
+        }
+        else {
+            emptyListLabel.text = ""
+        }
+        
         let items = realm.objects(Item.self)
         //find the item
         for item in items {
             if (item.itemName == activeItem.itemName) {
+                self.sendSubview(toBack: emptyListLabel)
                 return item.reviews.count
             }
         }
+        
         return 0
     }
     
