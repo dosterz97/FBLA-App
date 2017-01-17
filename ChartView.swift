@@ -45,25 +45,25 @@ class ChartView: UIView {
     }
     
     func animateCircle(duration: TimeInterval) {
-        // We want to animate the strokeEnd property of the circleLayer
+        //animate the strokeEnd property of the circleLayer
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         
-        // Set the animation duration appropriately
+        //Set the animation duration appropriately
         animation.duration = duration
         
-        // Animate from 0 (no circle) to the precent of the goal
+        //Animate from 0 (no circle) to the precent of the goal
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let precent = appDelegate.money! / 10000
         animation.fromValue = 0
         animation.toValue = precent
         
-        // Do a linear animation (i.e. the speed of the animation stays the same)
+        //Do a linear animation (i.e. the speed of the animation stays the same)
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         
-        // Set the circleLayer's strokeEnd property to 1.0 now so that it's the
-        // right value when the animation ends.
+        //Set the circleLayer's strokeEnd property to moneyRaised now so that it's the
+        //right value when the animation ends.
         circleLayer.strokeEnd = CGFloat(precent)
-        // Do the actual animation
+        //do the animation
         circleLayer.add(animation, forKey: "animateCircle")
     }
     
