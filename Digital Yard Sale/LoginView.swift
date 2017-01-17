@@ -97,6 +97,7 @@ class LoginView:UIView {
             }
         }
         
+        //push out errors
         if(error) {
             errorLabel.textColor = .red
             errorLabel.numberOfLines = 0

@@ -100,6 +100,7 @@ class CartView: UIView {
         self.checkOutButton.addTarget(self, action: #selector(checkOutPressed), for: .touchUpInside)
     }
     
+    //move to the item page
     func checkOutPressed () {
         if(itemsInCart!) {
             cartToItemDelegate.checkOutPressed()

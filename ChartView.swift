@@ -79,6 +79,7 @@ class ChartView: UIView {
     }
 }
 
+//center the chart
 extension CGRect {
     var center: CGPoint {
         return CGPoint(x: width / 2.0, y: height / 2.0)

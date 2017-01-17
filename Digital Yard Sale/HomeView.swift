@@ -65,6 +65,7 @@ class HomeView: UIView {
         view.sendSubview(toBack: backgroundPicture)
     }
     
+    //animation of circle and update money whenever the view appears
     func viewAppearing() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
@@ -84,12 +85,13 @@ class HomeView: UIView {
         precentRaised.text = ((money)!/100).description + "%"
         
         animation()
-
     }
     
     func animation() {
+        //move to the middle to the screen
         self.moneyRaised.center.x -= self.bounds.width
         
+        //animate
         UIView.animate(withDuration: 0.5, animations: {
             self.moneyRaised.center.x += self.bounds.width
         })

@@ -138,6 +138,7 @@ class ItemView: UIView {
         }
     }
     
+    //move to the comment page
     func commentButtonPressed() {
         self.itemDelegate.goToItemComments(sender: activeItem)
     }
