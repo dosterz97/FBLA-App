@@ -4,17 +4,17 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>B92AEB4F-AD6A-331C-BF49-206652D8240E.bcsymbolmap</key>
+		<key>08A3F4AC-030B-35E9-B217-09E082EB3832.bcsymbolmap</key>
 		<data>
-		z48Be6EpcPqNo7VLPc4tPPODbmQ=
+		PA8wfxBi5VIRYRGX6H9+kREwwms=
 		</data>
 		<key>CHANGELOG.md</key>
 		<data>
-		WpmHCdEBbu15j8IkSxfXOuSDpJw=
+		JEjORuBSzo781E6HoXy97vay5ME=
 		</data>
-		<key>F7408B2D-F0C4-3011-A211-49DA2D21BA04.bcsymbolmap</key>
+		<key>EBFD683A-190D-39A5-BC2C-D1B5E43015F7.bcsymbolmap</key>
 		<data>
-		WG5J17lAb9Y6weiuWRb/QbmumUc=
+		GFRZFLSPXFEq5QiXGihEbpy/cMg=
 		</data>
 		<key>Headers/RLMArray.h</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/RLMConstants.h</key>
 		<data>
-		zEXFGqdb+Qf/cdi4pMP1evU2ZYE=
+		h1khzQk5My7pZpt8MflP7GlCSrU=
 		</data>
 		<key>Headers/RLMMigration.h</key>
 		<data>
@@ -86,11 +86,11 @@
 		</data>
 		<key>Headers/RLMSyncCredentials.h</key>
 		<data>
-		IOdkgA8oattEZYKRLU0khc8tZdo=
+		foG++rDbpZBYOd59YvEaXUibk8c=
 		</data>
 		<key>Headers/RLMSyncManager.h</key>
 		<data>
-		6bjRrex6gQiVb7sRm3tYA4x0TQE=
+		iGWdITvm8ESCbqGrCdKZr8bF2CE=
 		</data>
 		<key>Headers/RLMSyncPermissionChange.h</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Headers/RLMSyncUtil.h</key>
 		<data>
-		sFK3PGpNNunSbL2GX/2zYQS2BHU=
+		eK8F8HVqxgj6ATVoC2KEUBRQYKg=
 		</data>
 		<key>Headers/Realm.h</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Ke3p4Fxz95tpD1geyN1oJYv5pbY=
+		dm0JQZ9fk7iVfq5kLKZUtKIJjOU=
 		</data>
 		<key>LICENSE</key>
 		<data>
@@ -186,7 +186,7 @@
 		</data>
 		<key>PrivateHeaders/RLMSyncUtil_Private.h</key>
 		<data>
-		0LmvfLIe9Fk1dz8EXO6d0Fzmq+w=
+		rjryuUsoT8gYUeSYuaAXxgHIIlU=
 		</data>
 		<key>strip-frameworks.sh</key>
 		<data>
@@ -195,37 +195,37 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>B92AEB4F-AD6A-331C-BF49-206652D8240E.bcsymbolmap</key>
+		<key>08A3F4AC-030B-35E9-B217-09E082EB3832.bcsymbolmap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			z48Be6EpcPqNo7VLPc4tPPODbmQ=
+			PA8wfxBi5VIRYRGX6H9+kREwwms=
 			</data>
 			<key>hash2</key>
 			<data>
-			gYRLOonCNDahnRkf5zo1wl+J8hxlQ+IvcDorhHZ68e8=
+			DLyza/ziyTAjVgYp/tN06dXSG379l9wbeVLDVAfxXz8=
 			</data>
 		</dict>
 		<key>CHANGELOG.md</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WpmHCdEBbu15j8IkSxfXOuSDpJw=
+			JEjORuBSzo781E6HoXy97vay5ME=
 			</data>
 			<key>hash2</key>
 			<data>
-			4Wd+ZGHWtr423hA5fruCTIjAEKS9jTYE58tZu3ukpfk=
+			dul8nCT5RhElIndDL+Uciywx759RIMsRBhBcfCEKWvM=
 			</data>
 		</dict>
-		<key>F7408B2D-F0C4-3011-A211-49DA2D21BA04.bcsymbolmap</key>
+		<key>EBFD683A-190D-39A5-BC2C-D1B5E43015F7.bcsymbolmap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WG5J17lAb9Y6weiuWRb/QbmumUc=
+			GFRZFLSPXFEq5QiXGihEbpy/cMg=
 			</data>
 			<key>hash2</key>
 			<data>
-			tg3QfXc2DU3SN7wXKN0uTbx7w5ILrSW8+xHqtNku3kw=
+			PkbnBf0OHx9DJ7NsHMI/OfZVQLfOClc0gPW8AjIsV5c=
 			</data>
 		</dict>
 		<key>Headers/RLMArray.h</key>
@@ -254,11 +254,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zEXFGqdb+Qf/cdi4pMP1evU2ZYE=
+			h1khzQk5My7pZpt8MflP7GlCSrU=
 			</data>
 			<key>hash2</key>
 			<data>
-			Wuoh8cW/LahhxtQ+V3XJthLaMoP/tlUQxLKT6bIoIj0=
+			nOK09WnmDqkyHkr8uoKtWTJZKBfTp5tSYzbEcYkGv70=
 			</data>
 		</dict>
 		<key>Headers/RLMMigration.h</key>
@@ -419,22 +419,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IOdkgA8oattEZYKRLU0khc8tZdo=
+			foG++rDbpZBYOd59YvEaXUibk8c=
 			</data>
 			<key>hash2</key>
 			<data>
-			nWQMdSKFXlfXGHw7XeL3kUlqfQToEUzzCgrQV3uMnJA=
+			zqbo0rPBI6KJBRc4bf8an0oC6+e54x6giVnRGHVG0Z8=
 			</data>
 		</dict>
 		<key>Headers/RLMSyncManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6bjRrex6gQiVb7sRm3tYA4x0TQE=
+			iGWdITvm8ESCbqGrCdKZr8bF2CE=
 			</data>
 			<key>hash2</key>
 			<data>
-			5dYo4G9PbiAeDy3Et99zxonLSM1Qnmt5xUIeModj81k=
+			+IjELiW40iLAd1RgYloeFf1oLEwREJaheUl2mA41Tsc=
 			</data>
 		</dict>
 		<key>Headers/RLMSyncPermissionChange.h</key>
@@ -474,11 +474,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sFK3PGpNNunSbL2GX/2zYQS2BHU=
+			eK8F8HVqxgj6ATVoC2KEUBRQYKg=
 			</data>
 			<key>hash2</key>
 			<data>
-			rGZMCLtYhoJB2KrKk0uGrAobDpF4ovOhPI3AIYfj4oU=
+			RZQQmnAnhXaX3YO1MhnhiyiVxlSHHwsMLeUK1TyWTcA=
 			</data>
 		</dict>
 		<key>Headers/Realm.h</key>
@@ -683,11 +683,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0LmvfLIe9Fk1dz8EXO6d0Fzmq+w=
+			rjryuUsoT8gYUeSYuaAXxgHIIlU=
 			</data>
 			<key>hash2</key>
 			<data>
-			fA1V7j+A07Wv4vMbdZB85w5/3h5u+TtEIA20AHP0y5I=
+			pMrv4nvYddDE3UNVq6KMUv9/pLRLVPlcGqgxuPSRn/M=
 			</data>
 		</dict>
 		<key>strip-frameworks.sh</key>
