@@ -76,7 +76,7 @@ extension CategoryView: UITableViewDataSource {
                 category = categories[i]
             }
         }
-        
+
         //create the image view
         let imageView = cell.contentView.subviews.first {$0.tag == -1234} as? UIImageView  ?? {
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: cell.frame.width, height: cell.frame.height))
