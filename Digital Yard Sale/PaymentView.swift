@@ -77,6 +77,7 @@ class PaymentView: UIView, UITextFieldDelegate {
         
         //Set the price label 
         totalCost.text = "$0.00"
+        totalCost.textColor = .white
         if (total > 0) {
             //set the string of price to two places
             let numberFormatter = NumberFormatter()
@@ -92,6 +93,7 @@ class PaymentView: UIView, UITextFieldDelegate {
     }
     
     func doneWithForm() {
+        errorLabel.text = ""//reset label
         //validate information
         guard  cardNumberField.hasText,
         securityCodeField.hasText,
