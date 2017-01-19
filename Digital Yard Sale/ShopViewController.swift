@@ -54,4 +54,9 @@ class ShopViewController: UIViewController, MainViewDelegate, ShopViewDelegate {
         self.performSegue(withIdentifier: "ShopToCategorySegueID", sender: nil)
         self.shopDelegate.setCategory(sender: sender)
     }
+    
+    //segue to welcom page
+    func logoutPressed() {
+        self.performSegue(withIdentifier: "ShopToWelcomeSegueID", sender: nil)
+    }
 }

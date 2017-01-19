@@ -4,17 +4,21 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>88AD87D1-B97C-3602-8BE5-7EEFFD3A933F.bcsymbolmap</key>
+		<key>24ACAC3C-7D71-35D0-99B4-29BE37B4F0A7.bcsymbolmap</key>
 		<data>
-		FAPqPatxjUKK/CRRs6lt4FyySTQ=
-		</data>
-		<key>A244D238-1E9C-310A-B0F9-38284AD79266.bcsymbolmap</key>
-		<data>
-		/Fm9/DQiXRV7tUVlZnQeEm/ky8k=
+		dyW4RqqLx5WmFYFyzkzAds7xLLs=
 		</data>
 		<key>CHANGELOG.md</key>
 		<data>
-		jblrp75ESUL6WmoXWmx0kAgWRYk=
+		U+/++2PAsaCmtRc76jXSq8DzGN0=
+		</data>
+		<key>E131BAF3-749C-356D-ACE1-C809A9511C61.bcsymbolmap</key>
+		<data>
+		QEwTbtkX4J1LaB9e4hLQ0PNgBXg=
+		</data>
+		<key>Headers/NSError+RLMSync.h</key>
+		<data>
+		ul9sWrAw8GQiHj9DgJ3edl988LU=
 		</data>
 		<key>Headers/RLMArray.h</key>
 		<data>
@@ -94,19 +98,27 @@
 		</data>
 		<key>Headers/RLMSyncPermissionChange.h</key>
 		<data>
-		q1uwbJbbVDTQlOPVXWUCxTQrhGw=
+		k2t2t4+EXCgSGt1XLruCPwjs9qk=
+		</data>
+		<key>Headers/RLMSyncPermissionOffer.h</key>
+		<data>
+		wgK0M7Du/BTGhvF9yuHhGmy2Pbk=
+		</data>
+		<key>Headers/RLMSyncPermissionOfferResponse.h</key>
+		<data>
+		1FXB8VCXwxC0EIwRAvRF+cBOoAY=
 		</data>
 		<key>Headers/RLMSyncSession.h</key>
 		<data>
-		d2/NmNxZ6nVme6vxISJvav81T1w=
+		am8fLBmkgdS+zuqe7aCD4Xlqgao=
 		</data>
 		<key>Headers/RLMSyncUser.h</key>
 		<data>
-		dgId3tJDowtNAAXW7jKrWYTIW4k=
+		VqYuz5NGvBdT08VuOaJxg39IHBc=
 		</data>
 		<key>Headers/RLMSyncUtil.h</key>
 		<data>
-		Q3mGdZqmYHTUSg52VWPi91W0GF0=
+		2FXwC4ay9HK62iUpg6gdfLg4on8=
 		</data>
 		<key>Headers/RLMThreadSafeReference.h</key>
 		<data>
@@ -114,11 +126,11 @@
 		</data>
 		<key>Headers/Realm.h</key>
 		<data>
-		jqxKBpwoJHmNUyJzjNl2GCQrluw=
+		qTErePHMiOv4RAVE+oBNMiuihe4=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		4b9MU2TzgYedlrE18lw+awWS7uI=
+		8c/oy4gBb0SO7+bj7m5MNrZAaWE=
 		</data>
 		<key>LICENSE</key>
 		<data>
@@ -190,7 +202,7 @@
 		</data>
 		<key>PrivateHeaders/RLMSyncUtil_Private.h</key>
 		<data>
-		rjryuUsoT8gYUeSYuaAXxgHIIlU=
+		DEQ570o6V6PI7K2kxPvqvAaV1GM=
 		</data>
 		<key>strip-frameworks.sh</key>
 		<data>
@@ -199,37 +211,48 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>88AD87D1-B97C-3602-8BE5-7EEFFD3A933F.bcsymbolmap</key>
+		<key>24ACAC3C-7D71-35D0-99B4-29BE37B4F0A7.bcsymbolmap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FAPqPatxjUKK/CRRs6lt4FyySTQ=
+			dyW4RqqLx5WmFYFyzkzAds7xLLs=
 			</data>
 			<key>hash2</key>
 			<data>
-			DXR9EdaV4e7TZpyJDXJkz00Ypa38bCBestj/wDiuKRQ=
-			</data>
-		</dict>
-		<key>A244D238-1E9C-310A-B0F9-38284AD79266.bcsymbolmap</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			/Fm9/DQiXRV7tUVlZnQeEm/ky8k=
-			</data>
-			<key>hash2</key>
-			<data>
-			PZxPDNycGv4ORC9x3us9ORl6hAXHdieWu54rUDf31Do=
+			OU9kYgCXNPGCG9/TbUrpxINIc8XDVXukZsAwj+aPWm4=
 			</data>
 		</dict>
 		<key>CHANGELOG.md</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jblrp75ESUL6WmoXWmx0kAgWRYk=
+			U+/++2PAsaCmtRc76jXSq8DzGN0=
 			</data>
 			<key>hash2</key>
 			<data>
-			gLz+elrL0WESBjqX8XY0Ii1BeyiHFlrGrYCxQAFfaTk=
+			0VvO1QfpA9jt77x3y1/7apddyETvn+jh8NvnOpknpnE=
+			</data>
+		</dict>
+		<key>E131BAF3-749C-356D-ACE1-C809A9511C61.bcsymbolmap</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QEwTbtkX4J1LaB9e4hLQ0PNgBXg=
+			</data>
+			<key>hash2</key>
+			<data>
+			kcr+d5eFohd07B1dMOCxYTBS7d5doKxULCSM0UIV7uY=
+			</data>
+		</dict>
+		<key>Headers/NSError+RLMSync.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ul9sWrAw8GQiHj9DgJ3edl988LU=
+			</data>
+			<key>hash2</key>
+			<data>
+			t6vPr4+2AiIQV8jwTwfVnoK/J9J8ck+kKbz5408LbF8=
 			</data>
 		</dict>
 		<key>Headers/RLMArray.h</key>
@@ -445,44 +468,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			q1uwbJbbVDTQlOPVXWUCxTQrhGw=
+			k2t2t4+EXCgSGt1XLruCPwjs9qk=
 			</data>
 			<key>hash2</key>
 			<data>
-			rRskFtH6qUk+sghY92NJDyqBA/a1k6gkQ26H9FNXtYA=
+			L/ZVc/HpIpsv1H9uOyVbZeH7QjfgVA4vdZ165NBYn2U=
+			</data>
+		</dict>
+		<key>Headers/RLMSyncPermissionOffer.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wgK0M7Du/BTGhvF9yuHhGmy2Pbk=
+			</data>
+			<key>hash2</key>
+			<data>
+			revXyLUAou2+9BGZ3TF/h5oGWSJR8YH8hCZeQ1Oaono=
+			</data>
+		</dict>
+		<key>Headers/RLMSyncPermissionOfferResponse.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1FXB8VCXwxC0EIwRAvRF+cBOoAY=
+			</data>
+			<key>hash2</key>
+			<data>
+			XxpFSZuUoZjfI7774CSbDkNrOuTMGe41OQ11fDuMV2M=
 			</data>
 		</dict>
 		<key>Headers/RLMSyncSession.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			d2/NmNxZ6nVme6vxISJvav81T1w=
+			am8fLBmkgdS+zuqe7aCD4Xlqgao=
 			</data>
 			<key>hash2</key>
 			<data>
-			ap2R5PUReLDv27JAc8QL1DA2QhPIxQw/3eBAXCuvjYs=
+			09YKJaFQZWDxhWap37c8LtyB6dnGzA0Z3dD4DiMuUK8=
 			</data>
 		</dict>
 		<key>Headers/RLMSyncUser.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dgId3tJDowtNAAXW7jKrWYTIW4k=
+			VqYuz5NGvBdT08VuOaJxg39IHBc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Dkn2gJAEKLHFyPAJtThYP9wwMg0y86sKobvbXbnWRi4=
+			KCXxzMNqt7LDWvVF9+ClXpVjgkBP8XOvUQO9FIodVkI=
 			</data>
 		</dict>
 		<key>Headers/RLMSyncUtil.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Q3mGdZqmYHTUSg52VWPi91W0GF0=
+			2FXwC4ay9HK62iUpg6gdfLg4on8=
 			</data>
 			<key>hash2</key>
 			<data>
-			htK3GhOixNkTVBPBbvNUNBbXeq+ZD9XBlgRFL1lzWLs=
+			2hu4dq28n49s4+hdvlGPYXHGv1q1GdDkpUGgkaS+W1M=
 			</data>
 		</dict>
 		<key>Headers/RLMThreadSafeReference.h</key>
@@ -500,11 +545,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jqxKBpwoJHmNUyJzjNl2GCQrluw=
+			qTErePHMiOv4RAVE+oBNMiuihe4=
 			</data>
 			<key>hash2</key>
 			<data>
-			0KDJCgptQpfr+xQeS8MNvvb+DMS7LNf2mXQFMGJ9aq8=
+			dXX1mpIVREDWyrSBzVUCoCho0vsb8jxlvtQUgZ+6KWU=
 			</data>
 		</dict>
 		<key>LICENSE</key>
@@ -698,11 +743,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rjryuUsoT8gYUeSYuaAXxgHIIlU=
+			DEQ570o6V6PI7K2kxPvqvAaV1GM=
 			</data>
 			<key>hash2</key>
 			<data>
-			pMrv4nvYddDE3UNVq6KMUv9/pLRLVPlcGqgxuPSRn/M=
+			TTYWhxEItJ2v7/OGncYVJPaaKWH4MmlJBIbvb32p1Cc=
 			</data>
 		</dict>
 		<key>strip-frameworks.sh</key>

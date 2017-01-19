@@ -11,6 +11,7 @@ import UIKit
 protocol CartToItemDelegate: AnyObject {
     func itemSelected(sender: Item)
     func checkOutPressed()
+    func logoutPressed()
 }
 
 class CartView: UIView {
@@ -20,6 +21,8 @@ class CartView: UIView {
     @IBOutlet var checkOutButton: UIButton!
     
     @IBOutlet var costLabel: UILabel!
+    
+    @IBOutlet var profileButton: UIButton!
     
     weak var cartDelegate: MainViewDelegate!
     
@@ -81,8 +84,7 @@ class CartView: UIView {
             let temp = numberFormatter.string(from: tempNum)
             costLabel.text = "$" + temp!
         }
-        cartList.reloadData()
-        
+        cartList.reloadData()        
     }
     
     func setupView() {
@@ -101,6 +103,12 @@ class CartView: UIView {
         
         self.checkOutButton.addTarget(self, action: #selector(checkOutPressed), for: .touchUpInside)
         
+        //logout button image
+        let image = UIImage(named: "user.png") //User by Jose Moya from the Noun Project
+        profileButton.setImage(image, for: .normal)
+        profileButton.imageView?.contentMode = .scaleAspectFit
+        profileButton.tintColor = .white
+        profileButton.addTarget(self, action: #selector(logout), for: .touchUpInside)
     }
     
     //move to the item page
@@ -110,7 +118,10 @@ class CartView: UIView {
         }
     }
     
-    
+    //logout
+    func logout() {
+        cartToItemDelegate.logoutPressed()
+    }
 }
 
 //table view extensions

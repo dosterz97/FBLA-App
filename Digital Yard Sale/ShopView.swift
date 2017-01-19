@@ -11,11 +11,14 @@ import RealmSwift
 
 protocol ShopViewDelegate: AnyObject {
     func categoryPressed(sender: Category)
+    func logoutPressed()
 }
 
 class ShopView: UIView {
     
     @IBOutlet var categoryTable: UITableView!
+    
+    @IBOutlet var profileButton: UIButton!
     
     weak var shopDelegate: MainViewDelegate!
     
@@ -48,6 +51,17 @@ class ShopView: UIView {
         
         //set up the list content
         giveListsContent()
+        
+        //logout button image
+        let image = UIImage(named: "user.png") //User by Jose Moya from the Noun Project
+        profileButton.setImage(image, for: .normal)
+        profileButton.imageView?.contentMode = .scaleAspectFit
+        profileButton.tintColor = .white
+        profileButton.addTarget(self, action: #selector(logout), for: .touchUpInside)
+    }
+    
+    func logout() {
+        categoryDelegate.logoutPressed()
     }
     
     func giveListsContent() {

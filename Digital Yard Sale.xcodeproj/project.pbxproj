@@ -97,6 +97,7 @@
 		BDDA1C0A1E1309DF00CBE6E8 /* ItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDA1C091E1309DF00CBE6E8 /* ItemView.xib */; };
 		BDDA1C0C1E1309F200CBE6E8 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1C0B1E1309F200CBE6E8 /* ItemViewController.swift */; };
 		BDDA1C0E1E1309FB00CBE6E8 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA1C0D1E1309FB00CBE6E8 /* ItemView.swift */; };
+		BDDAD53D1E317468008EF832 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = BDDAD53C1E317468008EF832 /* user.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -205,6 +206,7 @@
 		BDDA1C091E1309DF00CBE6E8 /* ItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemView.xib; sourceTree = "<group>"; };
 		BDDA1C0B1E1309F200CBE6E8 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		BDDA1C0D1E1309FB00CBE6E8 /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		BDDAD53C1E317468008EF832 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user.png; path = Images/user.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 		3B3731971E28202B0078331E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				BDDAD53C1E317468008EF832 /* user.png */,
 				3B3731A01E2822910078331E /* basketball.jpg */,
 				3B3731A11E2822910078331E /* blackjeresey.jpg */,
 				3B3731A21E2822910078331E /* blueshirt.jpg */,
@@ -435,6 +438,7 @@
 			files = (
 				3B0F02FA1DEE30A8005BD9A1 /* ShopView.xib in Resources */,
 				3B3731B11E2822910078331E /* tutu.jpg in Resources */,
+				BDDAD53D1E317468008EF832 /* user.png in Resources */,
 				3B0F02F81DEE30A1005BD9A1 /* AboutView.xib in Resources */,
 				3B3731A91E2822910078331E /* basketball.jpg in Resources */,
 				BD1ABD1E1E15ABD500EC997F /* WelcomeView.xib in Resources */,

@@ -8,11 +8,14 @@
 
 import UIKit
 
+
 class AboutView: UIView {
     
     weak var aboutDelegate: MainViewDelegate!
     
     @IBOutlet var numberOfDaysLeft:UILabel!
+    
+    @IBOutlet var profileButton: UIButton!
     
     //required initializers
     override init(frame aFrame: CGRect) {
@@ -41,5 +44,16 @@ class AboutView: UIView {
         
         let time = Int(((NLCdate?.timeIntervalSinceReferenceDate)! - date.timeIntervalSinceReferenceDate)/86400)
         numberOfDaysLeft.text = time.description + " days left!"
+        
+        //logout button image
+        let image = UIImage(named: "user.png") //User by Jose Moya from the Noun Project
+        profileButton.setImage(image, for: .normal)
+        profileButton.imageView?.contentMode = .scaleAspectFit
+        profileButton.tintColor = .white
+        profileButton.addTarget(self, action: #selector(logout), for: .touchUpInside)
+    }
+    
+    func logout() {
+        aboutDelegate.profileButtonPressed(sender: self)
     }
 }

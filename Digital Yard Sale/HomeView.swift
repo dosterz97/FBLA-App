@@ -6,6 +6,7 @@
 //  Copyright © 2016 Zachary Doster. All rights reserved.
 //
 
+
 import UIKit
 
 protocol MainViewDelegate: AnyObject {
@@ -52,17 +53,21 @@ class HomeView: UIView {
         
         //set up  days until the conference
         let date = Date()
-        
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd HH:mm"
         let NLCdate = formatter.date(from: "2017/06/24 00:00")
-        
         let time = Int(((NLCdate?.timeIntervalSinceReferenceDate)! - date.timeIntervalSinceReferenceDate)/86400)
         numberOfDaysLeft.text = time.description + " days left!"
         
         backgroundPicture.image = UIImage(named: "welcome.jpg")
 
-        view.sendSubview(toBack: backgroundPicture)
+        view.sendSubview(toBack: backgroundPicture)//background picture to back
+        
+        //logout button image
+        let image = UIImage(named: "user.png") //User by Jose Moya from the Noun Project
+        profileButton.setImage(image, for: .normal)
+        profileButton.imageView?.contentMode = .scaleAspectFit
+        profileButton.tintColor = .white
     }
     
     //animation of circle and update money whenever the view appears

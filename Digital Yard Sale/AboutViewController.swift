@@ -15,10 +15,12 @@ class AboutViewController: UIViewController,MainViewDelegate {
         aboutView.aboutDelegate = self
         self.navigationItem.title = "About"
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     //show the navigation bar on this page
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
@@ -27,7 +29,8 @@ class AboutViewController: UIViewController,MainViewDelegate {
     func navbarButtonPressed(sender: String) {
         self.performSegue(withIdentifier: sender, sender: nil)
     }
+    
     func profileButtonPressed(sender: AnyObject) {
-        //do nothing
+        self.performSegue(withIdentifier: "AboutToWelcomeSegueID", sender: nil)
     }
 }

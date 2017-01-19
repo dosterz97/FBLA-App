@@ -135,6 +135,7 @@
                         <outlet property="cartView" destination="zw7-qU-fUf" id="DJi-eY-oK2"/>
                         <segue destination="ETb-0c-j6B" kind="show" identifier="CartToPaymentSegueID" id="EC6-kS-dSw"/>
                         <segue destination="vZO-eJ-sWS" kind="show" identifier="CartToItemSegueID" id="4a7-7K-Wsc"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="CartToWelcomeSegueID" id="lXz-df-LII"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Phy-r5-TwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -158,11 +159,12 @@
                     <connections>
                         <outlet property="shopView" destination="wAM-a5-Lqd" id="cMD-Fq-3eP"/>
                         <segue destination="l3h-ql-bLM" kind="show" identifier="ShopToCategorySegueID" id="zjg-CS-qwq"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ShopToWelcomeSegueID" id="rfo-mT-Iul"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnB-0i-Rfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4201" y="1428"/>
+            <point key="canvasLocation" x="4201" y="1427"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="pQc-kX-YgE">
@@ -239,6 +241,7 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="zWi-6U-5m0"/>
                     <connections>
                         <outlet property="aboutView" destination="qOB-qI-SRz" id="pM9-b8-fO9"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="AboutToWelcomeSegueID" id="3Cy-K3-wgu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1V9-pH-Cpx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -306,8 +309,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mLv-KO-005"/>
-        <segue reference="vti-kN-eDJ"/>
         <segue reference="4a7-7K-Wsc"/>
+        <segue reference="vti-kN-eDJ"/>
+        <segue reference="rfo-mT-Iul"/>
     </inferredMetricsTieBreakers>
 </document>

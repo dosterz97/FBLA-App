@@ -64,4 +64,9 @@ class CartViewController: UIViewController, MainViewDelegate, CategoryViewContro
     func checkOutPressed() {
         self.performSegue(withIdentifier: "CartToPaymentSegueID", sender: nil)
     }
+    
+    //segue to payment page
+    func logoutPressed() {
+        self.performSegue(withIdentifier: "CartToWelcomeSegueID", sender: nil)
+    }
 }

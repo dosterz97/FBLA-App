@@ -12,6 +12,7 @@
                 <outlet property="cartList" destination="fdh-a3-mjM" id="rJw-q5-N9g"/>
                 <outlet property="checkOutButton" destination="hfj-5A-VDP" id="8AI-8G-foy"/>
                 <outlet property="costLabel" destination="iAn-eF-5OG" id="L8i-wt-zUM"/>
+                <outlet property="profileButton" destination="6Zx-Oi-wdO" id="zAX-E8-nRo"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -53,12 +54,23 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Zx-Oi-wdO">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="55" id="1ND-hj-JB8"/>
+                            </constraints>
+                            <state key="normal" title="Log Out">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.1058823529" green="0.4823529412" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="125" id="1pC-6a-cip"/>
+                        <constraint firstItem="6Zx-Oi-wdO" firstAttribute="height" secondItem="Vgt-d2-VmG" secondAttribute="height" multiplier="0.4" id="GK5-yf-uDN"/>
                         <constraint firstItem="iAn-eF-5OG" firstAttribute="centerY" secondItem="Vgt-d2-VmG" secondAttribute="centerY" id="GpV-O6-cKw"/>
                         <constraint firstItem="ap9-Ne-hAp" firstAttribute="width" secondItem="Vgt-d2-VmG" secondAttribute="width" id="H1y-np-y4W"/>
+                        <constraint firstAttribute="trailing" secondItem="6Zx-Oi-wdO" secondAttribute="trailing" constant="30" id="IgH-Pr-9rv"/>
+                        <constraint firstItem="6Zx-Oi-wdO" firstAttribute="centerY" secondItem="Vgt-d2-VmG" secondAttribute="centerY" constant="-6" id="mxh-3b-XfZ"/>
                         <constraint firstItem="ap9-Ne-hAp" firstAttribute="leading" secondItem="Vgt-d2-VmG" secondAttribute="leading" id="qc8-f7-lMt"/>
                         <constraint firstItem="iAn-eF-5OG" firstAttribute="centerX" secondItem="Vgt-d2-VmG" secondAttribute="centerX" id="uwI-ak-Ji4"/>
                         <constraint firstAttribute="bottom" secondItem="ap9-Ne-hAp" secondAttribute="bottom" id="wyl-GS-wdI"/>

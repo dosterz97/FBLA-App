@@ -21,12 +21,16 @@
             <rect key="frame" x="0.0" y="0.0" width="443" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VkQ-Xv-ChW"/>
                 <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfT-Ho-jGr">
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fuo-EM-BQh">
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppF-eX-Bph">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="55" id="oOS-59-xRw"/>
+                            </constraints>
                             <state key="normal" title="Log Out">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -68,7 +72,7 @@
                         <constraint firstItem="GmI-hL-cIG" firstAttribute="top" secondItem="Fuo-EM-BQh" secondAttribute="top" constant="158" id="BaO-UZ-IlQ"/>
                         <constraint firstAttribute="height" constant="125" id="CQM-Sn-2iH"/>
                         <constraint firstItem="AZG-VD-HLC" firstAttribute="leading" secondItem="Fuo-EM-BQh" secondAttribute="leading" id="IbG-rc-Ly5"/>
-                        <constraint firstItem="ppF-eX-Bph" firstAttribute="height" secondItem="Fuo-EM-BQh" secondAttribute="height" id="NLB-iU-ep6"/>
+                        <constraint firstItem="ppF-eX-Bph" firstAttribute="height" secondItem="Fuo-EM-BQh" secondAttribute="height" multiplier="0.4" id="NLB-iU-ep6"/>
                         <constraint firstAttribute="trailing" secondItem="ppF-eX-Bph" secondAttribute="trailing" constant="30" id="OSb-zz-v1M"/>
                         <constraint firstAttribute="bottom" secondItem="AZG-VD-HLC" secondAttribute="bottom" id="Ora-FC-K4U"/>
                         <constraint firstItem="RKK-Hc-QZF" firstAttribute="centerX" secondItem="Fuo-EM-BQh" secondAttribute="centerX" id="P5T-qg-JPt"/>
@@ -80,7 +84,6 @@
                         <constraint firstItem="RLx-ED-X1A" firstAttribute="leading" secondItem="Fuo-EM-BQh" secondAttribute="leading" constant="27" id="wWo-VJ-xkW"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VkQ-Xv-ChW"/>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>

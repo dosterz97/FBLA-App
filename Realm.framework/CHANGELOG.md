@@ -1,12 +1,41 @@
+2.3.0 Release notes (2017-01-19)
+=============================================================
+
+### Sync Breaking Changes
+
+* Make `PermissionChange`'s `id` property a primary key.
+
+### API Breaking Changes
+
+* None.
+
+### Enhancements
+
+* Add `SyncPermissionOffer` and `SyncPermissionOfferResponse` classes to allow
+  creating and accepting permission change events to synchronized Realms between
+  different users.
+* Support monitoring sync transfer progress by registering notification blocks
+  on `SyncSession`. Specify the transfer direction (`.upload`/`.download`) and
+  mode (`.reportIndefinitely`/`.forCurrentlyOutstandingWork`) to monitor.
+
+### Bugfixes
+
+* Fix a call to `commitWrite(withoutNotifying:)` committing a transaction that
+  would not have triggered a notification incorrectly skipping the next
+  notification.
+* Fix incorrect results and crashes when conflicting object insertions are
+  merged by the synchronization mechanism when there is a collection
+  notification registered for that object type.
+
 2.2.0 Release notes (2017-01-12)
 =============================================================
 
 ### Sync Breaking Changes (In Beta)
 
-* Underlying sync engine upgraded to version BETA-6.5.
 * Sync-related error reporting behavior has been changed. Errors not related
   to a particular user or session are only reported if they are classed as
   'fatal' by the underlying sync engine.
+* Added `RLMSyncErrorClientResetError` to `RLMSyncError` enum.
 
 ### API Breaking Changes
 
@@ -39,6 +68,8 @@
   constructor, which you can then safely pass to another thread to resolve in
   the new Realm with `-[RLMRealm resolveThreadSafeReference:]`/`Realm.resolve(_:)`.
 * Realm collections can now be sorted by properties over to-one relationships.
+* Optimized `CONTAINS` queries to use Boyer-Moore algorithm
+  (around 10x speedup on large datasets).
 
 ### Bugfixes
 
@@ -48,6 +79,7 @@
 * Fix queries containing nested `SUBQUERY` expressions.
 * Fix spurious incorrect thread exceptions when a thread id happens to be
   reused while an RLMRealm instance from the old thread still exists.
+* Fixed various bugs in aggregate methods (max, min, avg, sum).
 
 2.1.2 Release notes (2016--12-19)
 =============================================================
