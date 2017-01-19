@@ -27,6 +27,8 @@ class CartView: UIView {
     
     var itemsInCart: Bool?
     
+    var deletingItems: Bool?
+    
     var total: Double?
     
     //required intializers
@@ -98,6 +100,7 @@ class CartView: UIView {
         self.cartList.rowHeight = 125
         
         self.checkOutButton.addTarget(self, action: #selector(checkOutPressed), for: .touchUpInside)
+        
     }
     
     //move to the item page
@@ -106,10 +109,39 @@ class CartView: UIView {
             cartToItemDelegate.checkOutPressed()
         }
     }
+    
+    
 }
 
 //table view extensions
 extension CartView: UITableViewDataSource {
+    
+    //allow for the user to delete from the cart
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == .delete
+        {
+            //get the current user ID
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let userNum = appDelegate.userID
+            
+            //open the realm to find the user
+            let realm = AppDelegate.getInstance().realm!
+            let users = realm.objects(User.self)
+            let user = users[userNum!]
+            try! realm.write {
+                user.userCart.remove(at: indexPath.row)
+            }
+            cartList.reloadData()
+            self.viewLoading()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //get the current user ID
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -178,6 +210,8 @@ extension CartView: UITableViewDataSource {
 
     }
 }
+
+
 
 extension CartView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
