@@ -8,7 +8,6 @@
 
 
 import UIKit
-import Alamofire
 
 protocol WelcomeDelegate:AnyObject {
     func onButtonPressed(sender:UIButton)

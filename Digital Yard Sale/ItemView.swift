@@ -8,7 +8,6 @@
 
 import UIKit
 import RealmSwift
-import Alamofire
 
 protocol ItemDelegate: AnyObject {
     func addItemToCart(sender: Item)
