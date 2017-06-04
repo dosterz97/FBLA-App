@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,18 +22,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JsJ-qd-ua4">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NLC Yardsale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtX-OQ-fvc">
+                            <rect key="frame" x="27" y="20" width="189" height="38.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="32"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X Days Left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03y-br-UMD">
+                            <rect key="frame" x="27" y="72.5" width="87.5" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z66-Qo-BJL">
+                            <rect key="frame" x="290" y="31.5" width="55" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="55" id="hhe-9L-0GJ"/>
                             </constraints>
@@ -52,15 +59,17 @@
                     </constraints>
                 </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BoO-1F-j2K">
+                    <rect key="frame" x="22" y="326" width="300" height="101"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="101" id="hJH-Dy-THU"/>
                     </constraints>
-                    <string key="text">I need the funds to pay for my 3-day, 2-night stay in Anaheim, my food, and my hotel for the duration while im competeing. I have already fun-raised for the fees and trip to state and districts.</string>
+                    <string key="text">I need the funds to pay for my 3-day, 2-night stay in Anaheim, my food, and my hotel for the duration while I'm competeing. I have already fun-raised for the fees and trip to state and districts.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I hope I am able to gain your help in y chance to win a national title in the App Development and Design categories." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HIQ-vE-Ezj">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I hope I am able to gain your help in a chance to win a national title in the App Development and Design category." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HIQ-vE-Ezj">
+                    <rect key="frame" x="22" y="435" width="300" height="67"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="67" id="iGQ-db-LdX"/>
@@ -69,22 +78,25 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fundrasing for NLC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6m-Er-tVk">
+                    <rect key="frame" x="27" y="145" width="173.5" height="24"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b9u-qa-XTq">
+                    <rect key="frame" x="0.0" y="113" width="375" height="12"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="12" id="iwK-pj-FlM"/>
                     </constraints>
                 </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VGQ-Ne-DRO">
+                    <rect key="frame" x="22" y="182" width="300" height="136"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="136" id="Ud2-8p-1CW"/>
                     </constraints>
-                    <string key="text">Please help me fundraise for nlc by participating in my digital yard sale. The NLC gives young people like me a chance to participate and be active in a competitive environment that pushes us to become better in our respective fields by putting us to the test in Anaheim, California</string>
+                    <string key="text">Please help me fundraise for NLC by participating in my digital yard sale. The NLC gives young people like me a chance to participate and be active in a competitive environment that pushes us to become better in our respective fields by putting us to the test in Anaheim, California</string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
