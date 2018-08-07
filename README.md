@@ -1,4 +1,4 @@
-###FBLA-APP Digital Yard Sale
+###FBLA-APP Digital Yard Sale###
 <a>https://github.com/dosterz97/FBLA-App</a>
 
 Digital Yard Sale is an IOS app that simulates a virtual store.
